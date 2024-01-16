@@ -1,14 +1,14 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { CommonModule } from '@angular/common'
 
-import { ButtonComponent } from './button.component';
-import type { User } from './user';
+import { ButtonComponent } from './button.component'
+import type { User } from './user'
 
 @Component({
-  selector: 'storybook-header',
-  standalone: true,
-  imports: [CommonModule, ButtonComponent],
-  template: `<header>
+    selector: 'storybook-header',
+    standalone: true,
+    imports: [CommonModule, ButtonComponent],
+    template: `<header>
     <div class="storybook-header">
       <div>
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -62,18 +62,18 @@ import type { User } from './user';
       </div>
     </div>
   </header>`,
-  styleUrls: ['./header.css'],
+    styleUrls: ['./header.css'],
 })
 export class HeaderComponent {
   @Input()
-  user: User | null = null;
+      user: User | null = null
 
   @Output()
-  onLogin = new EventEmitter<Event>();
+      onLogin = new EventEmitter<Event>()
 
   @Output()
-  onLogout = new EventEmitter<Event>();
+      onLogout = new EventEmitter<Event>()
 
   @Output()
-  onCreateAccount = new EventEmitter<Event>();
+      onCreateAccount = new EventEmitter<Event>()
 }
