@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-game',
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './game.component.html',
+  styleUrl: './game.component.css'
 })
-export class AppComponent {
-  title = 'first-angular';
+export class GameComponent {
+  tiles = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 }
