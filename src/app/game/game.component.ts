@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core'
+import { Component, ViewChild } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterLink, RouterOutlet } from '@angular/router'
+import { } from '@storybook/angular'
 import { ReactiveFormsModule } from '@angular/forms'
 import { ElementRef } from '@angular/core';
 
@@ -15,6 +16,7 @@ let tileCount = 9
 })
 
 export class GameComponent {
+  trueOrFalse = true
   @ViewChild('form') myElement!: ElementRef;
   ngAfterViewInit(): void {
     console.log(this.myElement.nativeElement)
