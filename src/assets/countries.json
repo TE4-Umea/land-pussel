@@ -1,12 +1,14 @@
 {
-    "Sverige": {
+    "Sweden": {
+        "name": "Sweden",
         "easy": [
             1,
             4,
             7
         ]
     },
-    "Norge": {
+    "Norway": {
+        "name": "Norway",
         "easy": [
             2,
             4,

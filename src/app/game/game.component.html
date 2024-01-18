@@ -1,9 +1,9 @@
 <main>
-    <h1>Rita Sverige</h1>
+    <h1>Draw {{ countries.Sweden.name }}</h1> <!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->
     <form #form id="form" action="" ng-controller="ExampleController">
-        <input *ngFor="let tile of tiles" [checked]="trueOrFalse" type="checkbox">
+        <input *ngFor="let tile of tiles" [checked]="checkboxCheckBoolean" type="checkbox">
         <label for=""></label>
     </form>
-    <h1></h1>
+    <button>Confirm</button>
     <router-outlet></router-outlet>
 </main>
