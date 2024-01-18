@@ -4,7 +4,7 @@
 
 .tile-outer {
     border: 4px #E5E6E7 solid;
-    width: calc(100%-4px);
+    width: calc(100% - 4px);
     aspect-ratio: 1;
 }
 

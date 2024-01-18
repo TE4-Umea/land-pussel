@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+let id
+
 @Component({
   selector: 'app-tile',
   standalone: true,

@@ -3,24 +3,32 @@ import { CommonModule } from '@angular/common'
 import { RouterLink, RouterOutlet } from '@angular/router'
 import { } from '@storybook/angular'
 import { ReactiveFormsModule } from '@angular/forms'
-import { ElementRef } from '@angular/core';
-
-let tileCount = 9
+import { ElementRef } from '@angular/core'
+import { TileComponent } from '../tile/tile.component'
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule],
+  imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.css'
 })
 
 export class GameComponent {
+  tileElements: Element[] = []
+  tiles = new Array(9)
   trueOrFalse = true
-  @ViewChild('form') myElement!: ElementRef;
-  ngAfterViewInit(): void {
-    console.log(this.myElement.nativeElement)
-  }
 
-  tiles = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  @ViewChild('form') form!: ElementRef
+
+  ngAfterViewInit(): void {
+    this.tileElements = Array.from(this.form.nativeElement.children)
+    let index = 0
+    this.tileElements.forEach(tile => {
+      tile.id = index.toString()
+      console.log(tile.children)
+      index++
+      console.log(tile.id)
+    })
+  }
 }

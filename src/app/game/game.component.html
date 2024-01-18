@@ -1,8 +1,7 @@
 <main>
     <h1>Rita Sverige</h1>
     <form #form id="form" action="" ng-controller="ExampleController">
-        <input *ngFor="let tile of tiles" [checked]="trueOrFalse" type="checkbox">
-        <label for=""></label>
+        <app-tile *ngFor="let tile of tiles"></app-tile>
     </form>
     <h1></h1>
     <router-outlet></router-outlet>
