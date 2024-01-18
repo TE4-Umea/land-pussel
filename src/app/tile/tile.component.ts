@@ -24,10 +24,10 @@ export class TileComponent {
             Array.from(tile.children).forEach((element: Element, index) => {
                 const labelElement = element as HTMLLabelElement
                 if (index === 0) {
-                    labelElement.id = id.toString()
+                    labelElement.id = 'tile' + id.toString()
                 }
                 else {
-                    labelElement.htmlFor = id.toString()
+                    labelElement.htmlFor = 'tile' + id.toString()
                 }
             })
             console.log(tile.id)
