@@ -25,10 +25,11 @@ export class TileComponent {
     this.tileElements.forEach((tile, index) => {
       tile.id = index.toString()
       console.log(tile.children)
-      Array.from(tile.children).forEach((element: HTMLLabelElement) => {
-        element.id = index.toString()
-        element[htmlFor] = index.toString()
-      })
+      Array.from(tile.children).forEach((element: Element) => {
+        const labelElement = element as HTMLLabelElement;
+        labelElement.id = index.toString();
+        labelElement.htmlFor = index.toString();
+      });
       console.log(tile.id)
     })
   }
