@@ -18,13 +18,17 @@ export class TileComponent {
 
     ngAfterViewInit(): void {
         this.tileElements = Array.from(this.form.nativeElement.children)
-        this.tileElements.forEach((tile, index) => {
-            tile.id = index.toString()
+        this.tileElements.forEach((tile, id) => {
+            tile.id = id.toString()
             console.log(tile.children)
-            Array.from(tile.children).forEach((element: Element) => {
+            Array.from(tile.children).forEach((element: Element, index) => {
                 const labelElement = element as HTMLLabelElement
-                labelElement.id = index.toString()
-                labelElement.htmlFor = index.toString()
+                if (index === 0) {
+                    labelElement.id = id.toString()
+                }
+                else {
+                    labelElement.htmlFor = id.toString()
+                }
             })
             console.log(tile.id)
         })
