@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ViewChild } from '@angular/core'
+import { CommonModule } from '@angular/common'
 import { ElementRef } from '@angular/core'
 
 @Component({
@@ -22,9 +22,9 @@ export class TileComponent {
             tile.id = index.toString()
             console.log(tile.children)
             Array.from(tile.children).forEach((element: Element) => {
-                const labelElement = element as HTMLLabelElement;
-                labelElement.id = index.toString();
-                labelElement.htmlFor = index.toString();
+                const labelElement = element as HTMLLabelElement
+                labelElement.id = index.toString()
+                labelElement.htmlFor = index.toString()
             })
             console.log(tile.id)
         })
