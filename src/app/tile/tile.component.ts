@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ElementRef } from '@angular/core'
+import countries from '../../assets/countries.json'
 
 @Component({
     selector: 'app-tile',
@@ -11,26 +12,45 @@ import { ElementRef } from '@angular/core'
 })
 export class TileComponent {
     tileElements: Element[] = []
+    tileElementId: number[] = []
     tiles = new Array(9)
-    trueOrFalse = true
+    inputTileElements: HTMLInputElement[] = []
+    correctTestAnswerId: number[] = []
+    markedTiles: number[] = []
+
+    countries = countries
 
     @ViewChild('form') form!: ElementRef
 
     ngAfterViewInit(): void {
+        this.correctTestAnswerId = countries.Sweden.easy
+
         this.tileElements = Array.from(this.form.nativeElement.children)
         this.tileElements.forEach((tile, id) => {
             tile.id = id.toString()
-            console.log(tile.children)
             Array.from(tile.children).forEach((element: Element, index) => {
-                const labelElement = element as HTMLLabelElement
                 if (index === 0) {
-                    labelElement.id = 'tile' + id.toString()
+                    const inputElement = element as HTMLInputElement
+                    inputElement.id = 'tile' + id.toString()
+                    this.inputTileElements.push(inputElement)
+                    this.tileElementId.push(id)
                 }
                 else {
+                    const labelElement = element as HTMLLabelElement
                     labelElement.htmlFor = 'tile' + id.toString()
                 }
             })
-            console.log(tile.id)
         })
+    }
+    onCheckConfirm() {
+        this.tileElementId.forEach((id) => {
+            if (this.inputTileElements[id].checked) {
+                this.markedTiles.push(id)
+            }
+        })
+        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
+            alert('Horay! :D')
+        }
+        this.markedTiles = []
     }
 }
