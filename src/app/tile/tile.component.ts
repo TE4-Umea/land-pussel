@@ -20,10 +20,12 @@ export class TileComponent {
 
     countries = countries
 
+    randomCountryIndex = Math.floor(Math.random() * countries.length)
+
     @ViewChild('form') form!: ElementRef
 
     ngAfterViewInit(): void {
-        this.correctTestAnswerId = countries.Sweden.easy
+        this.correctTestAnswerId = countries[this.randomCountryIndex].easy
 
         this.tileElements = Array.from(this.form.nativeElement.children)
         this.tileElements.forEach((tile, id) => {
