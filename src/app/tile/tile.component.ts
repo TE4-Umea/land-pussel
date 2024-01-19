@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ElementRef } from '@angular/core'
+import countries from '../../assets/countries.json'
 
 @Component({
     selector: 'app-tile',
@@ -14,12 +15,16 @@ export class TileComponent {
     tileElementId: number[] = []
     tiles = new Array(9)
     inputTileElements: HTMLInputElement[] = []
-    correctTestAnswerId: number[] = [1, 4, 7]
-    markedTiles: string[] = []
+    correctTestAnswerId: number[] = []
+    markedTiles: number[] = []
+
+    countries = countries
 
     @ViewChild('form') form!: ElementRef
 
     ngAfterViewInit(): void {
+        this.correctTestAnswerId = countries.Sweden.easy
+
         this.tileElements = Array.from(this.form.nativeElement.children)
         this.tileElements.forEach((tile, id) => {
             tile.id = id.toString()
@@ -38,11 +43,14 @@ export class TileComponent {
         })
     }
     onCheckConfirm() {
-        console.log(this.tileElementId)
         this.tileElementId.forEach((id) => {
-            if (this.correctTestAnswerId.includes(id) && this.inputTileElements[id].checked) {
-                console.log(id)
+            if (this.inputTileElements[id].checked) {
+                this.markedTiles.push(id)
             }
         })
+        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
+            alert('Horay! :D')
+        }
+        this.markedTiles = []
     }
 }
