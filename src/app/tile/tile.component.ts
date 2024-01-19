@@ -20,17 +20,17 @@ export class TileComponent {
         this.tileElements = Array.from(this.form.nativeElement.children)
         this.tileElements.forEach((tile, id) => {
             tile.id = id.toString()
-            console.log(tile.children)
             Array.from(tile.children).forEach((element: Element, index) => {
-                const labelElement = element as HTMLLabelElement
                 if (index === 0) {
-                    labelElement.id = 'tile' + id.toString()
+                    const inputElement = element as HTMLInputElement
+                    inputElement.id = 'tile' + id.toString()
+                    console.log(inputElement.checked)
                 }
                 else {
+                    const labelElement = element as HTMLLabelElement
                     labelElement.htmlFor = 'tile' + id.toString()
                 }
             })
-            console.log(tile.id)
         })
     }
 }
