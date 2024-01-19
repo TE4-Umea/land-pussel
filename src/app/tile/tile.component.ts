@@ -11,8 +11,11 @@ import { ElementRef } from '@angular/core'
 })
 export class TileComponent {
     tileElements: Element[] = []
+    tileElementId: number[] = []
     tiles = new Array(9)
-    trueOrFalse = true
+    inputTileElements: HTMLInputElement[] = []
+    correctTestAnswerId: number[] = [1, 4, 7]
+    markedTiles: string[] = []
 
     @ViewChild('form') form!: ElementRef
 
@@ -24,13 +27,22 @@ export class TileComponent {
                 if (index === 0) {
                     const inputElement = element as HTMLInputElement
                     inputElement.id = 'tile' + id.toString()
-                    console.log(inputElement.checked)
+                    this.inputTileElements.push(inputElement)
+                    this.tileElementId.push(id)
                 }
                 else {
                     const labelElement = element as HTMLLabelElement
                     labelElement.htmlFor = 'tile' + id.toString()
                 }
             })
+        })
+    }
+    onCheckConfirm() {
+        console.log(this.tileElementId)
+        this.tileElementId.forEach((id) => {
+            if (this.correctTestAnswerId.includes(id) && this.inputTileElements[id].checked) {
+                console.log(id)
+            }
         })
     }
 }
