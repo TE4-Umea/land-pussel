@@ -1,5 +1,5 @@
-{
-    "Sweden": {
+[
+    {
         "name": "Sweden",
         "easy": [
             1,
@@ -7,7 +7,7 @@
             7
         ]
     },
-    "Norway": {
+    {
         "name": "Norway",
         "easy": [
             2,
@@ -15,4 +15,4 @@
             6
         ]
     }
-}
+]
