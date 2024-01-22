@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core'
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ElementRef } from '@angular/core'
 import countries from '../../assets/countries.json'
@@ -19,7 +19,9 @@ export class TileComponent {
     markedTiles: number[] = []
     scoreMultiplier = 1  // TODO: implement score multiplier that increases with each correct answer
 
+    @Output() sendMessage = new EventEmitter()
 
+    conditionToSend = 'end'
 
     countries = countries
 
@@ -55,6 +57,9 @@ export class TileComponent {
         })
         if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
             alert('Horay! :D')
+        }
+        else {
+            this.sendMessage.emit(this.conditionToSend)
         }
         this.markedTiles = []
     }

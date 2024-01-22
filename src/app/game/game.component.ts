@@ -19,5 +19,11 @@ import { EndingScreenComponent } from '../ending-screen/ending-screen.component'
 
 export class GameComponent {
     countries = countries
-    condition = 'end'
+
+    condition = 'start'
+
+    getMsgFromHome($event: string) { this.condition = $event, console.log('hej') }
+    getMsgFromEndingScreen($event: string) { this.condition = $event }
+    getMsgFromTile($event: string) { this.condition = $event }
+
 }
