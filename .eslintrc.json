@@ -5,8 +5,7 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+        "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -14,8 +13,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint",
-        "react"
+        "@typescript-eslint"
     ],
     "rules": {
         "indent": [
@@ -24,7 +22,7 @@
         ],
         "linebreak-style": [
             "error",
-            "windows"
+            "unix"
         ],
         "quotes": [
             "error",
