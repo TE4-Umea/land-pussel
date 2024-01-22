@@ -14,9 +14,12 @@ export class TileComponent {
     tileElements: Element[] = []
     tileElementId: number[] = []
     tiles = new Array(9)
-    inputTileElements: HTMLInputElement[] = []
+    userInputTileElements: HTMLInputElement[] = []
     correctTestAnswerId: number[] = []
     markedTiles: number[] = []
+    scoreMultiplier = 1  // TODO: implement score multiplier that increases with each correct answer
+
+
 
     countries = countries
 
@@ -34,7 +37,7 @@ export class TileComponent {
                 if (index === 0) {
                     const inputElement = element as HTMLInputElement
                     inputElement.id = 'tile' + id.toString()
-                    this.inputTileElements.push(inputElement)
+                    this.userInputTileElements.push(inputElement)
                     this.tileElementId.push(id)
                 }
                 else {
@@ -46,7 +49,7 @@ export class TileComponent {
     }
     onCheckConfirm() {
         this.tileElementId.forEach((id) => {
-            if (this.inputTileElements[id].checked) {
+            if (this.userInputTileElements[id].checked) {
                 this.markedTiles.push(id)
             }
         })
@@ -56,3 +59,4 @@ export class TileComponent {
         this.markedTiles = []
     }
 }
+
