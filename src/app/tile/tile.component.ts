@@ -1,7 +1,9 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core'
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ElementRef } from '@angular/core'
 import countries from '../../assets/countries.json'
+
+
 
 @Component({
     selector: 'app-tile',
@@ -10,7 +12,7 @@ import countries from '../../assets/countries.json'
     templateUrl: './tile.component.html',
     styleUrl: './tile.component.css'
 })
-export class TileComponent {
+export class TileComponent implements OnInit {
     tileElements: Element[] = []
     tileElementId: number[] = []
     tiles = new Array(9)
@@ -18,20 +20,28 @@ export class TileComponent {
     correctTestAnswerId: number[] = []
     markedTiles: number[] = []
     scoreMultiplier = 1  // TODO: implement score multiplier that increases with each correct answer
+    randomCountryIndex: number = 0
 
     @Output() sendMessage = new EventEmitter()
 
     conditionToSend = 'end'
-
     countries = countries
 
-    randomCountryIndex = Math.floor(Math.random() * countries.length)
+    getRandomCountry() {
+        this.randomCountryIndex = Math.floor(Math.random() * countries.length)
+    }
 
     @ViewChild('form') form!: ElementRef
 
-    ngAfterViewInit(): void {
-        this.correctTestAnswerId = countries[this.randomCountryIndex].easy
+    ngOnInit() {
+        this.getRandomCountry()
+        alert(this.randomCountryIndex)
+    }
 
+    ngAfterViewInit(): void {
+        this.getRandomCountry()
+        this.correctTestAnswerId = countries[this.randomCountryIndex].easy
+        console.log(this.correctTestAnswerId)
         this.tileElements = Array.from(this.form.nativeElement.children)
         this.tileElements.forEach((tile, id) => {
             tile.id = id.toString()
@@ -39,6 +49,7 @@ export class TileComponent {
                 if (index === 0) {
                     const inputElement = element as HTMLInputElement
                     inputElement.id = 'tile' + id.toString()
+                    inputElement.checked = false
                     this.userInputTileElements.push(inputElement)
                     this.tileElementId.push(id)
                 }
@@ -56,12 +67,15 @@ export class TileComponent {
             }
         })
         if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
+            this.markedTiles = []
+            this.userInputTileElements = []
+            this.tileElementId = []
             alert('Horay! :D')
+            this.ngAfterViewInit()
         }
         else {
             this.sendMessage.emit(this.conditionToSend)
         }
-        this.markedTiles = []
     }
 }
 
