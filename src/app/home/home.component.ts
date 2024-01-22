@@ -1,6 +1,7 @@
-import { Component } from '@angular/core'
+import { Component, EventEmitter, Output } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterLink, RouterOutlet } from '@angular/router'
+
 
 @Component({
     selector: 'app-home',
@@ -10,5 +11,13 @@ import { RouterLink, RouterOutlet } from '@angular/router'
     styleUrl: './home.component.css'
 })
 export class HomeComponent {
-    show = false
+
+    @Output() sendMessage = new EventEmitter()
+
+    conditionToSend = 'game'
+
+    onClickStart() {
+        this.sendMessage.emit(this.conditionToSend)
+        console.log('hej')
+    }
 }

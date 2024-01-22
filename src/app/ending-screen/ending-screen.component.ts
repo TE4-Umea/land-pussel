@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, EventEmitter, Output } from '@angular/core'
 
 @Component({
     selector: 'app-end',
@@ -9,4 +9,16 @@ import { Component } from '@angular/core'
 })
 export class EndingScreenComponent {
 
+    @Output() sendMessage = new EventEmitter()
+
+    conditionToSendRestart = 'game'
+    conditionToSendExit = 'start'
+
+
+    onClickRestart() {
+        this.sendMessage.emit(this.conditionToSendRestart)
+    }
+    onClickExit() {
+        this.sendMessage.emit(this.conditionToSendExit)
+    }
 }
