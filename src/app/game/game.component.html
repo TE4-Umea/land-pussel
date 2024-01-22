@@ -1,4 +1,6 @@
 <main>
-    <app-tile></app-tile>
+    <app-home *ngIf="condition == 'start'"></app-home>
+    <app-tile *ngIf="condition == 'game'"></app-tile>
+    <app-end *ngIf="condition == 'end'"></app-end>
     <router-outlet></router-outlet>
 </main>
