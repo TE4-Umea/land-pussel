@@ -14,5 +14,72 @@
             4,
             6
         ]
+    },
+    {
+        "name": "Spain",
+        "easy": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+        ]
+    },
+    {
+        "name": "United States of America",
+        "easy": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8
+        ]
+    },
+    {
+        "name": "Poland",
+        "easy": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8
+        ]
+    },
+    {
+        "name": "Germany",
+        "easy": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+        ]
+    },
+    {
+        "name": "Great Britain",
+        "easy": [
+            1,
+            4,
+            7,
+            8
+        ]
+    },
+    {
+        "name": "Iceland",
+        "easy": [
+            0,
+            4,
+            5,
+            7,
+            8
+        ]
     }
 ]

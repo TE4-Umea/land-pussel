@@ -101,10 +101,20 @@ export class TileComponent implements OnInit {
                 this.sendMessage.emit(this.conditionToSend)
             }
         }
+        this.resetValues()
+    }
+    resetValues() {
         markedTiles = []
-        this.userSelectedInputTiles = []
+        this.userInputTileElements = []
         this.tileElementId = []
         this.ngAfterViewInit()
+    }
+    onClickRestart() {
+        this.getRandomCountry()
+        this.lives = 3
+        this.score = 0
+        this.scoreMultiplier = 1
+        this.resetValues()
     }
     onClickHome() {
         this.sendMessage.emit(this.conditionToSendStart)
