@@ -24,6 +24,7 @@ export class TileComponent implements OnInit {
 
     @Output() sendMessage = new EventEmitter()
 
+    scoreToSend: number = 0
     conditionToSend = 'end'
     conditionToSendStart = 'start'
     countries = countries
@@ -98,7 +99,9 @@ export class TileComponent implements OnInit {
             this.scoreMultiplier = 1
             this.showSnackbar('Oh no! D:')
             if (this.lives <= 0) {
+                this.scoreToSend = this.score
                 this.sendMessage.emit(this.conditionToSend)
+                this.sendMessage.emit(this.scoreToSend)
             }
         }
         this.resetValues()
