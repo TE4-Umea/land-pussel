@@ -22,6 +22,7 @@ export class TileComponent {
     @Output() sendMessage = new EventEmitter()
 
     conditionToSend = 'end'
+    conditionToSendStart = 'start'
 
     countries = countries
 
@@ -62,6 +63,9 @@ export class TileComponent {
             this.sendMessage.emit(this.conditionToSend)
         }
         this.markedTiles = []
+    }
+    onClickHome() {
+        this.sendMessage.emit(this.conditionToSendStart)
     }
 }
 
