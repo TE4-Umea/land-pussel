@@ -10,13 +10,12 @@ import countries from '../../assets/countries.json'
     templateUrl: './tile.component.html',
     styleUrl: './tile.component.css'
 })
+
 export class TileComponent implements OnInit {
-    tileElements: Element[] = []
     tileElementId: number[] = []
     tiles = new Array(9)
-    userInputTileElements: HTMLInputElement[] = []
+    userSelectedInputTiles: HTMLInputElement[] = []
     correctTestAnswerId: number[] = []
-    markedTiles: number[] = []
     scoreMultiplier: number = 1
     score: number = 0
     lives: number = 3
@@ -33,6 +32,16 @@ export class TileComponent implements OnInit {
     }
 
     @ViewChild('form') form!: ElementRef
+    @ViewChild('snackbar') snackbar!: ElementRef
+
+    showSnackbar(message: string) {
+        const snackbarHTML: Element = this.snackbar.nativeElement
+        snackbarHTML.innerHTML = message
+        snackbarHTML.className = 'show'
+        setTimeout(function () {
+            snackbarHTML.className = snackbarHTML.className.replace('show', '')
+        }, 3000)
+    }
 
     ngOnInit(): void {
         this.getRandomCountry()
@@ -40,8 +49,8 @@ export class TileComponent implements OnInit {
 
     ngAfterViewInit(): void {
         this.correctTestAnswerId = this.getCorrectTestAnswerId()
-        this.tileElements = Array.from(this.form.nativeElement.children)
-        this.tileElements.forEach((tile, id) => {
+        const tileElements: Element[] = Array.from(this.form.nativeElement.children)
+        tileElements.forEach((tile, id) => {
             tile.id = id.toString()
             Array.from(tile.children).forEach((element: Element, index) => {
                 if (index === 0) {
@@ -62,7 +71,7 @@ export class TileComponent implements OnInit {
         const inputElement = element as HTMLInputElement
         inputElement.id = 'tile' + id.toString()
         inputElement.checked = false
-        this.userInputTileElements.push(inputElement)
+        this.userSelectedInputTiles.push(inputElement)
         this.tileElementId.push(id)
     }
 
@@ -72,21 +81,22 @@ export class TileComponent implements OnInit {
     }
 
     onCheckConfirm() {
+        let markedTiles: number[] = []
         this.tileElementId.forEach((id) => {
-            if (this.userInputTileElements[id].checked) {
-                this.markedTiles.push(id)
+            if (this.userSelectedInputTiles[id].checked) {
+                markedTiles.push(id)
             }
         })
-        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
+        if (markedTiles.toString() === this.correctTestAnswerId.toString()) {
             this.score += (100 * this.scoreMultiplier)
             this.scoreMultiplier += .15
-            alert('Horay! :D')
+            this.showSnackbar('Horay! :D')
             this.getRandomCountry()
         }
         else {
             this.lives--
             this.scoreMultiplier = 1
-            alert('Oh no! D:')
+            this.showSnackbar('Oh no! D:')
             if (this.lives <= 0) {
                 this.sendMessage.emit(this.conditionToSend)
             }
@@ -94,7 +104,7 @@ export class TileComponent implements OnInit {
         this.resetValues()
     }
     resetValues() {
-        this.markedTiles = []
+        markedTiles = []
         this.userInputTileElements = []
         this.tileElementId = []
         this.ngAfterViewInit()

@@ -34,7 +34,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-7d75109b3c6cb3c1ffe830d69f7834b3bea3a0359668c4e319aa0eb39d409a5865b9aca4e22d8686d57302ca78091252613c539b48831dfef2e144f5a0406694",
+            "id": "component-AppComponent-fc7060414ddccfe4a1a7ccf0d0c00ccfbf49833b94943091fb62991c19405ab14fb4f01a5a421f26170d1a45c565c1aecbbf2397e1e74af9e063ab26bd82c177",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -84,17 +84,55 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { RouterLink, RouterOutlet } from '@angular/router';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, RouterLink, RouterOutlet],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css'\n})\nexport class AppComponent {\n  title = 'first-angular';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\n\n@Component({\n    selector: 'app-root',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet],\n    templateUrl: './app.component.html',\n    styleUrl: './app.component.css'\n})\nexport class AppComponent {\n    title = 'first-angular'\n}\n",
             "styleUrl": "./app.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<main class=\"main\">\n  <a routerLink=\"/game\">Game</a>\n  <router-outlet></router-outlet>\n</main>"
+            "templateData": "<main class=\"main\">\n  <router-outlet></router-outlet>\n</main>"
+        },
+        {
+            "name": "BackgroundComponent",
+            "id": "component-BackgroundComponent-91f2bdbbe2899ff99345b09918f2873156d40d9eb3cbc1a9384d9bbb0ed6f0565f2e4059b7a9542eed5da8d5c85c092cbfa82f46d5cad984f680286f2c928246",
+            "file": "src/app/background/background.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-background",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./background.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-background',\n  standalone: true,\n  imports: [],\n  templateUrl: './background.component.html',\n  styleUrl: './background.component.css'\n})\nexport class BackgroundComponent {\n\n}\n",
+            "styleUrl": "./background.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<p>background works!</p>\n"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-86e2311c54fbca7431c12e070d0fd5b0ebe343eec0553a392f182ba0e04a8f86613233d26ee47718fd0e7a65078f580c76a1fcc928ce55de81193d6618025bc4",
+            "id": "component-ButtonComponent-03c3ef85f19ace4cb4bf41b92211c8a46965132c224ac534923823146b7825cebd9942feb075ee8f4939491be8fe4744f48bc32d3d11e7e519a0fdfeae257b54",
             "file": "src/stories/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -128,15 +166,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 798,
-                            "end": 811,
+                            "pos": 815,
+                            "end": 828,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
-                                "pos": 799,
-                                "end": 807,
+                                "pos": 816,
+                                "end": 824,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -203,7 +241,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule],\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, Input, Output, EventEmitter } from '@angular/core'\n\n@Component({\n    selector: 'storybook-button',\n    standalone: true,\n    imports: [CommonModule],\n    template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n    styleUrls: ['./button.css'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n      primary = false\n\n  /**\n   * What background color to use\n   */\n  @Input()\n      backgroundColor?: string\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n      size: 'small' | 'medium' | 'large' = 'medium'\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n      label = 'Button'\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n      onClick = new EventEmitter<Event>()\n\n  public get classes(): string[] {\n      const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary'\n\n      return ['storybook-button', `storybook-button--${this.size}`, mode]\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -226,8 +264,97 @@
             }
         },
         {
+            "name": "EndingScreenComponent",
+            "id": "component-EndingScreenComponent-43a7015f26393ca320ce4c5c88148f6222f0c40c7d42025023019dfb2264dde656267946a1eeb55572d5f8e086d8dc19cd766ac6b3f2e94a62887af9eea54e61",
+            "file": "src/app/ending-screen/ending-screen.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-end",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./ending-screen.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "sendMessage",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "conditionToSendExit",
+                    "defaultValue": "'start'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "conditionToSendRestart",
+                    "defaultValue": "'game'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onClickExit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onClickRestart",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\n\n@Component({\n    selector: 'app-end',\n    standalone: true,\n    imports: [],\n    templateUrl: './ending-screen.component.html',\n    styleUrl: './ending-screen.component.css'\n})\nexport class EndingScreenComponent {\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendRestart = 'game'\n    conditionToSendExit = 'start'\n\n\n    onClickRestart() {\n        this.sendMessage.emit(this.conditionToSendRestart)\n    }\n    onClickExit() {\n        this.sendMessage.emit(this.conditionToSendExit)\n    }\n}\n",
+            "styleUrl": "./ending-screen.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<h1>You died!</h1>\n<button type=\"button\" (click)=\"onClickRestart()\">Restart</button>\n<button type=\"button\" (click)=\"onClickExit()\">Exit</button>"
+        },
+        {
             "name": "GameComponent",
-            "id": "component-GameComponent-a8e2bf9c05c7fc991edc478445cd3bfeab34bda996de7527548613f10b6b91409b9ed21eb8ad679f938b2485a6e806c423420d17c3957df316788a76abe35b53",
+            "id": "component-GameComponent-d09a34a6ed4ef483c7d8df17d29ce622635657d59142d6826e4eb9214b17a525d1c6dd65854919a5747ec9c96d3f79e84ac2abbf045820bc4617579e013eb549",
             "file": "src/app/game/game.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -246,17 +373,112 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "tiles",
-                    "defaultValue": "[1, 2, 3, 4, 5, 6, 7, 8, 9]",
+                    "name": "condition",
+                    "defaultValue": "'start'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "[]",
+                    "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 13
+                    "line": 23
+                },
+                {
+                    "name": "countries",
+                    "defaultValue": "countries",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
                 }
             ],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "getMsgFromEndingScreen",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getMsgFromHome",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getMsgFromTile",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -272,22 +494,38 @@
                 },
                 {
                     "name": "RouterOutlet"
+                },
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "TileComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "HomeComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "EndingScreenComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { RouterLink, RouterOutlet } from '@angular/router';\n\n@Component({\n  selector: 'app-game',\n  standalone: true,\n  imports: [CommonModule, RouterLink, RouterOutlet],\n  templateUrl: './game.component.html',\n  styleUrl: './game.component.css'\n})\nexport class GameComponent {\n  tiles = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n}\n",
+            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\nimport { } from '@storybook/angular'\nimport { ReactiveFormsModule } from '@angular/forms'\nimport countries from '../../assets/countries.json'\n\nimport { TileComponent } from '../tile/tile.component'\nimport { HomeComponent } from '../home/home.component'\nimport { EndingScreenComponent } from '../ending-screen/ending-screen.component'\n\n@Component({\n    selector: 'app-game',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent, HomeComponent, EndingScreenComponent],\n    templateUrl: './game.component.html',\n    styleUrl: './game.component.css'\n})\n\nexport class GameComponent {\n    countries = countries\n\n    condition = 'start'\n\n    getMsgFromHome($event: string) { this.condition = $event, console.log('hej') }\n    getMsgFromEndingScreen($event: string) { this.condition = $event }\n    getMsgFromTile($event: string) { this.condition = $event }\n\n}\n",
             "styleUrl": "./game.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<main>\n    <form action=\"\">\n        <input *ngFor=\"let tile of tiles\" type=\"checkbox\">\n        <label for=\"\"></label>\n    </form>\n    <router-outlet></router-outlet>\n</main>"
+            "templateData": "<main>\n    <app-home (sendMessage)='getMsgFromHome($event)' *ngIf=\"condition == 'start'\"></app-home>\n    <app-tile (sendMessage)='getMsgFromTile($event)' *ngIf=\"condition == 'game'\"></app-tile>\n    <app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf=\"condition == 'end'\"></app-end>\n    <router-outlet></router-outlet>\n</main>"
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-cad94b233ec8e80ceb541e7972c5f9737e08237b4e137112f3987ca48ee0cce5c0d57798d41daa5d4d24d6bdbb2df1606ab68cca2aa0a1785e38f99f3cac0729",
+            "id": "component-HeaderComponent-82a00302293dbc4222aed8e65358e53191ec501579dd8c99d12cad4ae0a44064b79851fd36d2525d925033234c8a4227acfeb369303b653e3856def6a1b4cae4",
             "file": "src/stories/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -360,7 +598,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { ButtonComponent } from './button.component';\nimport type { User } from './user';\n\n@Component({\n  selector: 'storybook-header',\n  standalone: true,\n  imports: [CommonModule, ButtonComponent],\n  template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            [primary]=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core'\nimport { CommonModule } from '@angular/common'\n\nimport { ButtonComponent } from './button.component'\nimport type { User } from './user'\n\n@Component({\n    selector: 'storybook-header',\n    standalone: true,\n    imports: [CommonModule, ButtonComponent],\n    template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            [primary]=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n    styleUrls: ['./header.css'],\n})\nexport class HeaderComponent {\n  @Input()\n      user: User | null = null\n\n  @Output()\n      onLogin = new EventEmitter<Event>()\n\n  @Output()\n      onLogout = new EventEmitter<Event>()\n\n  @Output()\n      onCreateAccount = new EventEmitter<Event>()\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -372,8 +610,88 @@
             "extends": []
         },
         {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-70f4b395e3fdce53c9f5d4bf4f61b0c65cf01872a56448d970e5a3055c9ab642fcec951ee9b7824182462066ffcbd5b7eef242b7ee106c67dc1aee2ff4987c9b",
+            "file": "src/app/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "sendMessage",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "conditionToSend",
+                    "defaultValue": "'game'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onClickStart",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "RouterLink"
+                },
+                {
+                    "name": "RouterOutlet"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\n\n\n@Component({\n    selector: 'app-home',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet],\n    templateUrl: './home.component.html',\n    styleUrl: './home.component.css'\n})\nexport class HomeComponent {\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSend = 'game'\n\n    onClickStart() {\n        this.sendMessage.emit(this.conditionToSend)\n        console.log('hej')\n    }\n}\n",
+            "styleUrl": "./home.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<h1>Land Puzzle</h1>\n<button type=\"button\" (click)=\"onClickStart()\">Start</button>"
+        },
+        {
             "name": "PageComponent",
-            "id": "component-PageComponent-d32b0f19628254ea3fc5526c4d4564ada1cc83cf936759006d90a46f5874b02a3359e331bddda20b22e74a616a6443c660602ba74dd38ebe1160759e0de6f7ba",
+            "id": "component-PageComponent-a7895963f593a58acedd73ee23212a18c0d2b5e00ca1ca5e0b89bd6274e18a9d33e6e72237f9bc68ddc1ad8d1d25f37d92844e4c2c7a4907fbdb2ec3f287541e",
             "file": "src/stories/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -453,7 +771,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { HeaderComponent } from './header.component';\nimport type { User } from './user';\n\n@Component({\n  selector: 'storybook-page',\n  standalone: true,\n  imports: [CommonModule, HeaderComponent],\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\n\nimport { HeaderComponent } from './header.component'\nimport type { User } from './user'\n\n@Component({\n    selector: 'storybook-page',\n    standalone: true,\n    imports: [CommonModule, HeaderComponent],\n    template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n    styleUrls: ['./page.css'],\n})\nexport class PageComponent {\n    user: User | null = null\n\n    doLogout() {\n        this.user = null\n    }\n\n    doLogin() {\n        this.user = { name: 'Jane Doe' }\n    }\n\n    doCreateAccount() {\n        this.user = { name: 'Jane Doe' }\n    }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -466,7 +784,7 @@
         },
         {
             "name": "TileComponent",
-            "id": "component-TileComponent-db18edf1897e374474eeeb448fe6c10098b92116b7e4517256ca80834454deb10054dd488226a18d3f7a16cda7ced50961791911f8b952e4947313c1a149bab1",
+            "id": "component-TileComponent-6fdbe3d7029b35133c0bfba825e11714d76e719c60aee32be7b3b491f452ed7fecf587d78f3df2e0be1ea06cea73aa7d53bee3edeb8f6f7eaf86803fc26947d9",
             "file": "src/app/tile/tile.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -482,25 +800,179 @@
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "outputsClass": [
+                {
+                    "name": "sendMessage",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "conditionToSend",
+                    "defaultValue": "'end'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                },
+                {
+                    "name": "correctTestAnswerId",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "countries",
+                    "defaultValue": "countries",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                },
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef",
+                    "optional": false,
+                    "description": "",
+                    "line": 30,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'form'"
+                        }
+                    ],
+                    "modifierKind": [
+                        170
+                    ]
+                },
+                {
+                    "name": "markedTiles",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "randomCountryIndex",
+                    "defaultValue": "Math.floor(Math.random() * countries.length)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 28
+                },
+                {
+                    "name": "scoreMultiplier",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "tileElementId",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "tileElements",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Element[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "tiles",
+                    "defaultValue": "new Array(9)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "userInputTileElements",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HTMLInputElement[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 32,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onCheckConfirm",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 52,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
             "hostListeners": [],
             "standalone": true,
-            "imports": [],
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-tile',\n  standalone: true,\n  imports: [],\n  templateUrl: './tile.component.html',\n  styleUrl: './tile.component.css'\n})\nexport class TileComponent {\n\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Output, ViewChild } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { ElementRef } from '@angular/core'\nimport countries from '../../assets/countries.json'\n\n@Component({\n    selector: 'app-tile',\n    standalone: true,\n    imports: [CommonModule],\n    templateUrl: './tile.component.html',\n    styleUrl: './tile.component.css'\n})\nexport class TileComponent {\n    tileElements: Element[] = []\n    tileElementId: number[] = []\n    tiles = new Array(9)\n    userInputTileElements: HTMLInputElement[] = []\n    correctTestAnswerId: number[] = []\n    markedTiles: number[] = []\n    scoreMultiplier = 1  // TODO: implement score multiplier that increases with each correct answer\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSend = 'end'\n\n    countries = countries\n\n    randomCountryIndex = Math.floor(Math.random() * countries.length)\n\n    @ViewChild('form') form!: ElementRef\n\n    ngAfterViewInit(): void {\n        this.correctTestAnswerId = countries[this.randomCountryIndex].easy\n\n        this.tileElements = Array.from(this.form.nativeElement.children)\n        this.tileElements.forEach((tile, id) => {\n            tile.id = id.toString()\n            Array.from(tile.children).forEach((element: Element, index) => {\n                if (index === 0) {\n                    const inputElement = element as HTMLInputElement\n                    inputElement.id = 'tile' + id.toString()\n                    this.userInputTileElements.push(inputElement)\n                    this.tileElementId.push(id)\n                }\n                else {\n                    const labelElement = element as HTMLLabelElement\n                    labelElement.htmlFor = 'tile' + id.toString()\n                }\n            })\n        })\n    }\n    onCheckConfirm() {\n        this.tileElementId.forEach((id) => {\n            if (this.userInputTileElements[id].checked) {\n                this.markedTiles.push(id)\n            }\n        })\n        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {\n            alert('Horay! :D')\n        }\n        else {\n            this.sendMessage.emit(this.conditionToSend)\n        }\n        this.markedTiles = []\n    }\n}\n\n",
             "styleUrl": "./tile.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<section class=\"tile-outer\">\n    <input type=\"checkbox\" id=\"japp\" class=\"display-none\">\n    <label for=\"japp\" class=\"tile-inner\"></label>\n</section>"
+            "templateData": "<h1>Draw {{ countries[randomCountryIndex].name }}</h1>\n<!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->\n<form #form id=\"form\" action=\"\" ng-controller=\"ExampleController\">\n    <section *ngFor=\"let tile of tiles\" class=\"tile-outer\">\n        <input type=\"checkbox\" id=\"Placeholder\" [ngClass]=\"['display-none', 'tile-checkbox']\">\n        <label for=\"Placeholder\" class=\"tile-inner\"></label>\n    </section>\n</form>\n<button type=\"button\" (click)=\"onCheckConfirm()\">Confirm</button>"
         }
     ],
     "modules": [],
@@ -514,7 +986,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
-                "defaultValue": "{\n  providers: [provideRouter(routes)]\n}"
+                "defaultValue": "{\n    providers: [provideRouter(routes)]\n}"
             },
             {
                 "name": "Large",
@@ -524,7 +996,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button',\n    },\n}"
             },
             {
                 "name": "LoggedIn",
@@ -534,7 +1006,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe',\n        },\n    },\n}"
             },
             {
                 "name": "LoggedIn",
@@ -544,7 +1016,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
+                "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement)\n        const loginButton = canvas.getByRole('button', { name: /Log in/i })\n        await expect(loginButton).toBeInTheDocument()\n        await userEvent.click(loginButton)\n        await expect(loginButton).not.toBeInTheDocument()\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i })\n        await expect(logoutButton).toBeInTheDocument()\n    },\n}"
             },
             {
                 "name": "LoggedOut",
@@ -574,7 +1046,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  title: 'Example/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  render: (args: ButtonComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+                "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    render: (args: ButtonComponent) => ({\n        props: {\n            backgroundColor: null,\n            ...args,\n        },\n    }),\n    argTypes: {\n        backgroundColor: {\n            control: 'color',\n        },\n    },\n}"
             },
             {
                 "name": "meta",
@@ -584,7 +1056,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<HeaderComponent>",
-                "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
             },
             {
                 "name": "meta",
@@ -594,7 +1066,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PageComponent>",
-                "defaultValue": "{\n  title: 'Example/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
             },
             {
                 "name": "meta",
@@ -604,7 +1076,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TileComponent>",
-                "defaultValue": "{\n  title: 'Components/Tile',\n  component: TileComponent,\n  tags: ['autodocs'],\n  render: (args: TileComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n}"
+                "defaultValue": "{\n    title: 'Components/Tile',\n    component: TileComponent,\n    tags: ['autodocs'],\n    render: (args: TileComponent) => ({\n        props: {\n            ...args,\n        },\n    }),\n}"
             },
             {
                 "name": "preview",
@@ -624,7 +1096,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button',\n    },\n}"
             },
             {
                 "name": "Primary",
@@ -634,7 +1106,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n  },\n}"
+                "defaultValue": "{\n    args: {\n    },\n}"
             },
             {
                 "name": "Secondary",
@@ -644,7 +1116,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Button',\n    },\n}"
             },
             {
                 "name": "Small",
@@ -654,7 +1126,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button',\n    },\n}"
             }
         ],
         "functions": [],
@@ -715,7 +1187,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
-                    "defaultValue": "{\n  providers: [provideRouter(routes)]\n}"
+                    "defaultValue": "{\n    providers: [provideRouter(routes)]\n}"
                 }
             ],
             "src/stories/button.stories.ts": [
@@ -727,7 +1199,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button',\n    },\n}"
                 },
                 {
                     "name": "meta",
@@ -737,7 +1209,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  title: 'Example/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  render: (args: ButtonComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+                    "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    render: (args: ButtonComponent) => ({\n        props: {\n            backgroundColor: null,\n            ...args,\n        },\n    }),\n    argTypes: {\n        backgroundColor: {\n            control: 'color',\n        },\n    },\n}"
                 },
                 {
                     "name": "Primary",
@@ -747,7 +1219,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button',\n    },\n}"
                 },
                 {
                     "name": "Secondary",
@@ -757,7 +1229,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Button',\n    },\n}"
                 },
                 {
                     "name": "Small",
@@ -767,7 +1239,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button',\n    },\n}"
                 }
             ],
             "src/stories/header.stories.ts": [
@@ -779,7 +1251,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                    "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe',\n        },\n    },\n}"
                 },
                 {
                     "name": "LoggedOut",
@@ -799,7 +1271,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\n  title: 'Example/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                    "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
                 }
             ],
             "src/stories/page.stories.ts": [
@@ -811,7 +1283,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
+                    "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement)\n        const loginButton = canvas.getByRole('button', { name: /Log in/i })\n        await expect(loginButton).toBeInTheDocument()\n        await userEvent.click(loginButton)\n        await expect(loginButton).not.toBeInTheDocument()\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i })\n        await expect(logoutButton).toBeInTheDocument()\n    },\n}"
                 },
                 {
                     "name": "LoggedOut",
@@ -831,7 +1303,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PageComponent>",
-                    "defaultValue": "{\n  title: 'Example/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                    "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
                 }
             ],
             "src/stories/tile.stories.ts": [
@@ -843,7 +1315,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TileComponent>",
-                    "defaultValue": "{\n  title: 'Components/Tile',\n  component: TileComponent,\n  tags: ['autodocs'],\n  render: (args: TileComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n}"
+                    "defaultValue": "{\n    title: 'Components/Tile',\n    component: TileComponent,\n    tags: ['autodocs'],\n    render: (args: TileComponent) => ({\n        props: {\n            ...args,\n        },\n    }),\n}"
                 },
                 {
                     "name": "Primary",
@@ -853,7 +1325,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n  },\n}"
+                    "defaultValue": "{\n    args: {\n    },\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -961,12 +1433,39 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/background/background.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BackgroundComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/ending-screen/ending-screen.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "EndingScreenComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/game/game.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "GameComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -975,7 +1474,7 @@
                 "linktype": "component",
                 "name": "TileComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/15",
                 "status": "low"
             },
             {

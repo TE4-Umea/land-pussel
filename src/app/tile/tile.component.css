@@ -14,7 +14,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url(../../assets/tileChecked.png);
+    background-image: url(../../assets/images/tileChecked.png);
     background-size: cover;
     opacity: 0;
     transition: 0.2s;
@@ -38,4 +38,12 @@
     width: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+#snackbar {
+    visibility: hidden;
+}
+
+#snackbar.show {
+    visibility: visible;
 }
