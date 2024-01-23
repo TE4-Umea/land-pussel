@@ -22,7 +22,7 @@ export class GameComponent {
 
     condition = 'start'
 
-    getMsgFromHome($event: string) { this.condition = $event, console.log('hej') }
+    getMsgFromHome($event: string) { this.condition = $event }
     getMsgFromEndingScreen($event: string) { this.condition = $event }
     getMsgFromTile($event: string) { this.condition = $event }
 

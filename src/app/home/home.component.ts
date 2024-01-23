@@ -18,6 +18,5 @@ export class HomeComponent {
 
     onClickStart() {
         this.sendMessage.emit(this.conditionToSend)
-        console.log('hej')
     }
 }
