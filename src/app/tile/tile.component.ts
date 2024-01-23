@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common'
 import { ElementRef } from '@angular/core'
 import countries from '../../assets/countries.json'
 
-
-
 @Component({
     selector: 'app-tile',
     standalone: true,
@@ -40,26 +38,38 @@ export class TileComponent implements OnInit {
     }
 
     ngAfterViewInit(): void {
-        this.correctTestAnswerId = countries[this.randomCountryIndex].easy
-        console.log(this.correctTestAnswerId)
+        this.correctTestAnswerId = this.getCorrectTestAnswerId()
         this.tileElements = Array.from(this.form.nativeElement.children)
         this.tileElements.forEach((tile, id) => {
             tile.id = id.toString()
             Array.from(tile.children).forEach((element: Element, index) => {
                 if (index === 0) {
-                    const inputElement = element as HTMLInputElement
-                    inputElement.id = 'tile' + id.toString()
-                    inputElement.checked = false
-                    this.userInputTileElements.push(inputElement)
-                    this.tileElementId.push(id)
+                    this.setupTileInputElement(element, id)
                 }
                 else {
-                    const labelElement = element as HTMLLabelElement
-                    labelElement.htmlFor = 'tile' + id.toString()
+                    this.setupTileLabelElement(element, id)
                 }
             })
         })
     }
+
+    getCorrectTestAnswerId(): number[] {
+        return countries[this.randomCountryIndex].easy
+    }
+
+    setupTileInputElement(element: Element, id: number) {
+        const inputElement = element as HTMLInputElement
+        inputElement.id = 'tile' + id.toString()
+        inputElement.checked = false
+        this.userInputTileElements.push(inputElement)
+        this.tileElementId.push(id)
+    }
+
+    setupTileLabelElement(element: Element, id: number) {
+        const labelElement = element as HTMLLabelElement
+        labelElement.htmlFor = 'tile' + id.toString()
+    }
+
     onCheckConfirm() {
         this.tileElementId.forEach((id) => {
             if (this.userInputTileElements[id].checked) {
