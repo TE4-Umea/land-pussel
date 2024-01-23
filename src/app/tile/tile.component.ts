@@ -24,6 +24,7 @@ export class TileComponent implements OnInit {
     @Output() sendMessage = new EventEmitter()
 
     conditionToSend = 'end'
+    conditionToSendStart = 'start'
     countries = countries
 
     getRandomCountry() {
@@ -104,6 +105,9 @@ export class TileComponent implements OnInit {
         this.userSelectedInputTiles = []
         this.tileElementId = []
         this.ngAfterViewInit()
+    }
+    onClickHome() {
+        this.sendMessage.emit(this.conditionToSendStart)
     }
 }
 
