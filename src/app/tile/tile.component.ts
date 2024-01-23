@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core'
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ElementRef } from '@angular/core'
 import countries from '../../assets/countries.json'
@@ -10,46 +10,67 @@ import countries from '../../assets/countries.json'
     templateUrl: './tile.component.html',
     styleUrl: './tile.component.css'
 })
-export class TileComponent {
+export class TileComponent implements OnInit {
     tileElements: Element[] = []
     tileElementId: number[] = []
     tiles = new Array(9)
     userInputTileElements: HTMLInputElement[] = []
     correctTestAnswerId: number[] = []
     markedTiles: number[] = []
-    scoreMultiplier = 1  // TODO: implement score multiplier that increases with each correct answer
+    scoreMultiplier: number = 1
+    score: number = 0
+    lives: number = 3
+    randomCountryIndex: number = 0
 
     @Output() sendMessage = new EventEmitter()
 
     conditionToSend = 'end'
     conditionToSendStart = 'start'
-
     countries = countries
 
-    randomCountryIndex = Math.floor(Math.random() * countries.length)
+    getRandomCountry() {
+        this.randomCountryIndex = Math.floor(Math.random() * countries.length)
+    }
 
     @ViewChild('form') form!: ElementRef
 
-    ngAfterViewInit(): void {
-        this.correctTestAnswerId = countries[this.randomCountryIndex].easy
+    ngOnInit(): void {
+        this.getRandomCountry()
+    }
 
+    ngAfterViewInit(): void {
+        this.correctTestAnswerId = this.getCorrectTestAnswerId()
         this.tileElements = Array.from(this.form.nativeElement.children)
         this.tileElements.forEach((tile, id) => {
             tile.id = id.toString()
             Array.from(tile.children).forEach((element: Element, index) => {
                 if (index === 0) {
-                    const inputElement = element as HTMLInputElement
-                    inputElement.id = 'tile' + id.toString()
-                    this.userInputTileElements.push(inputElement)
-                    this.tileElementId.push(id)
+                    this.setupTileInputElement(element, id)
                 }
                 else {
-                    const labelElement = element as HTMLLabelElement
-                    labelElement.htmlFor = 'tile' + id.toString()
+                    this.setupTileLabelElement(element, id)
                 }
             })
         })
     }
+
+    getCorrectTestAnswerId(): number[] {
+        return countries[this.randomCountryIndex].easy
+    }
+
+    setupTileInputElement(element: Element, id: number) {
+        const inputElement = element as HTMLInputElement
+        inputElement.id = 'tile' + id.toString()
+        inputElement.checked = false
+        this.userInputTileElements.push(inputElement)
+        this.tileElementId.push(id)
+    }
+
+    setupTileLabelElement(element: Element, id: number) {
+        const labelElement = element as HTMLLabelElement
+        labelElement.htmlFor = 'tile' + id.toString()
+    }
+
     onCheckConfirm() {
         this.tileElementId.forEach((id) => {
             if (this.userInputTileElements[id].checked) {
@@ -57,12 +78,23 @@ export class TileComponent {
             }
         })
         if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
+            this.score += (100 * this.scoreMultiplier)
+            this.scoreMultiplier += .15
             alert('Horay! :D')
+            this.getRandomCountry()
         }
         else {
-            this.sendMessage.emit(this.conditionToSend)
+            this.lives--
+            this.scoreMultiplier = 1
+            alert('Oh no! D:')
+            if (this.lives <= 0) {
+                this.sendMessage.emit(this.conditionToSend)
+            }
         }
         this.markedTiles = []
+        this.userInputTileElements = []
+        this.tileElementId = []
+        this.ngAfterViewInit()
     }
     onClickHome() {
         this.sendMessage.emit(this.conditionToSendStart)

@@ -1,6 +1,9 @@
 <!-- <button (click)="onClickRestart()">Restart</button> -->
 <button (click)="onClickHome()">Home</button>
 <h1>Draw {{ countries[randomCountryIndex].name }}</h1>
+<h2>Lives: {{ lives }}</h2>
+<h2>Score: {{ score }}</h2>
+<h2>Score Multiplier: {{ scoreMultiplier.toFixed(2) }}</h2>
 <!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->
 <form #form id="form" action="" ng-controller="ExampleController">
     <section *ngFor="let tile of tiles" class="tile-outer">
