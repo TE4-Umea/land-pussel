@@ -20,6 +20,7 @@ export class TileComponent implements OnInit {
     score: number = 0
     lives: number = 3
     randomCountryIndex: number = 0
+    markedTiles: number[] = []
 
     @Output() sendMessage = new EventEmitter()
 
@@ -81,13 +82,12 @@ export class TileComponent implements OnInit {
     }
 
     onCheckConfirm() {
-        let markedTiles: number[] = []
         this.tileElementId.forEach((id) => {
             if (this.userSelectedInputTiles[id].checked) {
-                markedTiles.push(id)
+                this.markedTiles.push(id)
             }
         })
-        if (markedTiles.toString() === this.correctTestAnswerId.toString()) {
+        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
             this.score += (100 * this.scoreMultiplier)
             this.scoreMultiplier += .15
             this.showSnackbar('Horay! :D')
@@ -104,8 +104,8 @@ export class TileComponent implements OnInit {
         this.resetValues()
     }
     resetValues() {
-        markedTiles = []
-        this.userInputTileElements = []
+        this.markedTiles = []
+        this.userSelectedInputTiles = []
         this.tileElementId = []
         this.ngAfterViewInit()
     }
