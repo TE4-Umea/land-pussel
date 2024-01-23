@@ -19,7 +19,9 @@ export class TileComponent implements OnInit {
     userInputTileElements: HTMLInputElement[] = []
     correctTestAnswerId: number[] = []
     markedTiles: number[] = []
-    scoreMultiplier = 1  // TODO: implement score multiplier that increases with each correct answer
+    scoreMultiplier: number = 1
+    score: number = 0
+    lives: number = 3
     randomCountryIndex: number = 0
 
     @Output() sendMessage = new EventEmitter()
@@ -33,13 +35,11 @@ export class TileComponent implements OnInit {
 
     @ViewChild('form') form!: ElementRef
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.getRandomCountry()
-        alert(this.randomCountryIndex)
     }
 
     ngAfterViewInit(): void {
-        this.getRandomCountry()
         this.correctTestAnswerId = countries[this.randomCountryIndex].easy
         console.log(this.correctTestAnswerId)
         this.tileElements = Array.from(this.form.nativeElement.children)
@@ -67,15 +67,23 @@ export class TileComponent implements OnInit {
             }
         })
         if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
-            this.markedTiles = []
-            this.userInputTileElements = []
-            this.tileElementId = []
+            this.score += (100 * this.scoreMultiplier)
+            this.scoreMultiplier += .15
             alert('Horay! :D')
-            this.ngAfterViewInit()
+            this.getRandomCountry()
         }
         else {
-            this.sendMessage.emit(this.conditionToSend)
+            this.lives--
+            this.scoreMultiplier = 1
+            alert('Oh no! D:')
+            if (this.lives <= 0) {
+                this.sendMessage.emit(this.conditionToSend)
+            }
         }
+        this.markedTiles = []
+        this.userInputTileElements = []
+        this.tileElementId = []
+        this.ngAfterViewInit()
     }
 }
 
