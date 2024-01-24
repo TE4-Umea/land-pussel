@@ -1,10 +1,11 @@
 <h1>You died!</h1>
 <div *ngIf="condition === 'highscoreChart'">
     <h2>Top 3</h2>
-    <h3 *ngFor="let topScore of topScores">{{ [topScore] }} name {{ [highscore[topScore - 1]] }}</h3>
+    <h3 *ngFor="let topScore of topScores">{{ [topScore + 1] }} {{ [highscoreNames[topScore]] }} {{
+        [highscore[topScore]] }}</h3>
 </div>
 <div *ngIf="condition === 'inputHighscoreName'">
-    <input type="text" name="" id="">
+    <input type="text" name="" id="" #nameInput>
     <button type="button" (click)="setNameForHighscore()">Confirm</button>
 </div>
 <button type="button" (click)="onClickRestart()">Restart</button>
