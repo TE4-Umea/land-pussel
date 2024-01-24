@@ -1,44 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-.color{
-    color: blueviolet;
-}
-
 .storybook-button {
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'VT323';
     font-weight: 700;
     
     cursor: pointer;
     display: inline-block;
     line-height: 1;
   }
-  .storybook-button--primary {
-    color: white;
-    background-color: #1ea7fd;
-  }
-  .storybook-button--secondary {
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  }
-  .storybook-button--small {
-    font-size: 12px;
-    padding: 10px 16px;
-    border-radius: 20px;
-  }
-  .storybook-button--medium {
+
+.storybook-button--blue {
     font-size: 20px;
     font-family: 'VT323', monospace;
     padding: 6px 50px;
+    color: rgb(0, 0, 0);
     border-width: 5px;
-    border-color: #adc5d4;
+    border-color: #697d8a27;
     background-color: #CEEBFF;
     border-style: solid;
-    
-    
   }
-  .storybook-button--large {
-    font-size: 16px;
-    padding: 12px 24px;
+.storybook-button--green {
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    padding: 6px 50px;
+    color: rgb(0, 0, 0);
+    border-width: 5px;
+    border-color: #697d8a27;
+    background-color: #BCFFB1;
+    border-style: solid;
   }
+
+.storybook-button--yellow {
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    padding: 6px 50px;
+    color: rgb(0, 0, 0);
+    border-width: 5px;
+    border-color: #697d8a27;
+    background-color: #FFF067;
+    border-style: solid;
+  }
+  
+.storybook-button--red {
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    padding: 6px 50px;
+    color: rgb(0, 0, 0);
+    border-width: 5px;
+    border-color: #697d8a27;
+    background-color: #FF9999;
+    border-style: solid;
+  }
+
+.storybook-button--black {
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    padding: 6px 50px;
+    color: #B92713;
+    border-width: 5px;
+    border-color: #141414;
+    background-color: #2B2B2B;
+    border-style: solid;
+  }
+
+  .storybook-button--none {
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    padding: 6px 50px;
+    color: #000000;
+    border-width: 5px;
+    border-color: #141414;
+    background-color: #2B2B2B;
+    border-style: solid;
+  }
+
+
+
+
+
+  
+
+
   

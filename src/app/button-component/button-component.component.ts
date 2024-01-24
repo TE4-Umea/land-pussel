@@ -20,16 +20,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 export class ButtonComponentComponent {
   
   @Input()
-      primary = false
-
-  
-  @Input()
       backgroundColor?: string
-
   
   @Input()
-      size: 'small' | 'medium' | 'large' = 'medium'
-
+      color: 'blue' | 'green' | 'yellow' | 'red' | 'black' | 'none' = 'black'
+  
+  
+  
   /**
    * @required
    */
@@ -43,8 +40,6 @@ export class ButtonComponentComponent {
       onClick = new EventEmitter<Event>()
 
   public get classes(): string[] {
-      const mode = this.primary ? 'storybook-button--start' : 'storybook-button--secondary'
-
-      return ['storybook-button', `storybook-button--${this.size}`, mode]
+      return ['storybook-button', `storybook-button--${this.color}`]
   }
 }
