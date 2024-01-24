@@ -11,17 +11,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
     type="button"
     (click)="onClick.emit($event)"
     [ngClass]="classes"
-    [ngStyle]="{ 'background-color': backgroundColor }"
   >
     {{ label }}
   </button>`,
     styleUrls: ['./button-component.component.css'],
 })
 export class ButtonComponentComponent {
-  
-  @Input()
-      backgroundColor?: string
-  
+    
   @Input()
       color: 'blue' | 'green' | 'yellow' | 'red' | 'black' | 'none' = 'black'
   
@@ -40,6 +36,6 @@ export class ButtonComponentComponent {
       onClick = new EventEmitter<Event>()
 
   public get classes(): string[] {
-      return ['storybook-button', `storybook-button--${this.color}`]
+      return ['button', `button--${this.color}`]
   }
 }

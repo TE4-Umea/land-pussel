@@ -1,84 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
-.storybook-button {
-    font-family: 'VT323';
-    font-weight: 700;
-    
-    cursor: pointer;
-    display: inline-block;
-    line-height: 1;
-  }
-
-.storybook-button--blue {
-    font-size: 20px;
-    font-family: 'VT323', monospace;
-    padding: 6px 50px;
-    color: rgb(0, 0, 0);
-    border-width: 5px;
-    border-color: #697d8a27;
-    background-color: #CEEBFF;
-    border-style: solid;
-  }
-.storybook-button--green {
-    font-size: 20px;
-    font-family: 'VT323', monospace;
-    padding: 6px 50px;
-    color: rgb(0, 0, 0);
-    border-width: 5px;
-    border-color: #697d8a27;
-    background-color: #BCFFB1;
-    border-style: solid;
-  }
-
-.storybook-button--yellow {
-    font-size: 20px;
-    font-family: 'VT323', monospace;
-    padding: 6px 50px;
-    color: rgb(0, 0, 0);
-    border-width: 5px;
-    border-color: #697d8a27;
-    background-color: #FFF067;
-    border-style: solid;
-  }
+.button {
+  display: inline-block;
+  cursor: pointer;
   
-.storybook-button--red {
-    font-size: 20px;
-    font-family: 'VT323', monospace;
-    padding: 6px 50px;
-    color: rgb(0, 0, 0);
-    border-width: 5px;
-    border-color: #697d8a27;
-    background-color: #FF9999;
-    border-style: solid;
-  }
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "VT323", monospace;
+  line-height: 1;
 
-.storybook-button--black {
-    font-size: 20px;
-    font-family: 'VT323', monospace;
-    padding: 6px 50px;
-    color: #B92713;
-    border-width: 5px;
-    border-color: #141414;
-    background-color: #2B2B2B;
-    border-style: solid;
-  }
-
-  .storybook-button--none {
-    font-size: 20px;
-    font-family: 'VT323', monospace;
-    padding: 6px 50px;
-    color: #000000;
-    border-width: 5px;
-    border-color: #141414;
-    background-color: #2B2B2B;
-    border-style: solid;
-  }
-
-
-
-
-
+  padding: 6px 50px;
+  border-width: 5px;
+  border-style: solid;
   
+  color: rgb(0, 0, 0);
+}
 
+.button--blue {
+  border-color: #697d8a27;
+  background-color: #ceebff;
+}
+.button--green {
+  border-color: #697d8a27;
+  background-color: #bcffb1;
+}
 
-  
+.button--yellow {
+  border-color: #697d8a27;
+  background-color: #fff067;
+}
+
+.button--red {
+  border-color: #697d8a27;
+  background-color: #ff9999;
+}
+
+.button--black {
+  color: #b92713;
+  border-color: #141414;
+  background-color: #2b2b2b;
+}
+
+.button--none {
+  border-color: #141414;
+  background-color: #2b2b2b;
+}
