@@ -21,12 +21,13 @@ export class TileComponent implements OnInit {
     lives: number = 3
     randomCountryIndex: number = 0
     markedTiles: number[] = []
+    highscore: number[] = []
+
 
     @Output() sendMessage = new EventEmitter()
 
-    scoreToSend: number = 0
-    conditionToSend = 'end'
-    conditionToSendStart = 'start'
+    conditionToSendEnd: string = 'end'
+    conditionToSendStart: string = 'start'
     countries = countries
 
     getRandomCountry() {
@@ -82,6 +83,17 @@ export class TileComponent implements OnInit {
         labelElement.htmlFor = 'tile' + id.toString()
     }
 
+    getHighscoreSorted() {
+        this.highscore = JSON.parse(localStorage.getItem('highscore') || '[]')
+        localStorage.setItem('oldHighscore', JSON.stringify(this.highscore))
+        this.highscore.push(this.score)
+        this.highscore.sort((a, b) => b - a)
+        if (this.highscore.length > 3) {
+            this.highscore.pop()
+        }
+        localStorage.setItem('highscore', JSON.stringify(this.highscore))
+    }
+
     onCheckConfirm() {
         this.tileElementId.forEach((id) => {
             if (this.userSelectedInputTiles[id].checked) {
@@ -99,9 +111,8 @@ export class TileComponent implements OnInit {
             this.scoreMultiplier = 1
             this.showSnackbar('Oh no! D:')
             if (this.lives <= 0) {
-                this.scoreToSend = this.score
-                this.sendMessage.emit(this.conditionToSend)
-                this.sendMessage.emit(this.scoreToSend)
+                this.getHighscoreSorted()
+                this.sendMessage.emit(this.conditionToSendEnd)
             }
         }
         this.resetValues()

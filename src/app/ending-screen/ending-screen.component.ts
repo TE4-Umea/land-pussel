@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { Component, EventEmitter, Output } from '@angular/core'
+import { Component, EventEmitter, OnInit, Output } from '@angular/core'
 import { TileComponent } from '../tile/tile.component'
 
 @Component({
@@ -9,16 +9,26 @@ import { TileComponent } from '../tile/tile.component'
     templateUrl: './ending-screen.component.html',
     styleUrl: './ending-screen.component.css'
 })
-export class EndingScreenComponent {
-    topScores: number[] = [1, 2, 3]
-    condition = 'highscoreChart'
-    score: number = 0
-
-    @Output() sendMessage = new EventEmitter()
-
+export class EndingScreenComponent implements OnInit {
     conditionToSendRestart = 'game'
     conditionToSendExit = 'start'
+    topScores: number[] = [1, 2, 3]
+    highscore: number[] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : []
+    oldHighscore: number[] = localStorage.getItem('oldHighscore') ? JSON.parse(localStorage.getItem('oldHighscore')!) : []
+    condition = 'highscoreChart'
 
+    setNameForHighscore() {
+
+        this.condition = 'highscoreChart'
+    }
+
+    ngOnInit(): void {
+        if (this.oldHighscore.toString() !== this.highscore.toString()) {
+            this.condition = 'inputHighscoreName'
+        }
+    }
+
+    @Output() sendMessage = new EventEmitter()
 
     onClickRestart() {
         this.sendMessage.emit(this.conditionToSendRestart)
@@ -26,5 +36,4 @@ export class EndingScreenComponent {
     onClickExit() {
         this.sendMessage.emit(this.conditionToSendExit)
     }
-    getMsgFromTile($event: number) { this.score = $event }
 }

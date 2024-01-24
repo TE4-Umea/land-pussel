@@ -1,8 +1,11 @@
-<h1 (sendMessage)='getMsgFromTile($event)'>You died!</h1>
+<h1>You died!</h1>
 <div *ngIf="condition === 'highscoreChart'">
     <h2>Top 3</h2>
-    <h3 *ngFor="let topScore of topScores">{{ [topScore] }} name score</h3>
+    <h3 *ngFor="let topScore of topScores">{{ [topScore] }} name {{ [highscore[topScore - 1]] }}</h3>
 </div>
-<input *ngIf="condition === 'inputHighscore'" type="text" name="" id="">
+<div *ngIf="condition === 'inputHighscoreName'">
+    <input type="text" name="" id="">
+    <button type="button" (click)="setNameForHighscore()">Confirm</button>
+</div>
 <button type="button" (click)="onClickRestart()">Restart</button>
 <button type="button" (click)="onClickExit()">Exit</button>
