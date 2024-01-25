@@ -1,0 +1,73 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #668CAF;
+    position: absolute;
+    background-image: url(/assets/images/bakgrund.png);
+    background-size: 110%;
+    background-position: top right;
+    z-index: -2;
+    margin: 0;
+}
+
+.clouds-fg {
+    position: absolute;
+    top: -10px;
+    width: 350vw;
+    z-index: -1;
+    opacity: 0.45;
+    animation: cloud-movement-fg 55s linear infinite;
+    filter: drop-shadow(-5px 5px 0px #00000025);
+}
+
+.clouds-bg {
+    transform: scaleX(-1);
+    position: absolute;
+    top: 0;
+    width: 250vw;
+    z-index: -1;
+    opacity: 0.2;
+    animation: cloud-movement-bg 65s linear -10s infinite;
+}
+
+@keyframes cloud-movement-fg {
+    0%{left: -175vw;}
+    100%{left: 0vw;}
+}
+
+@keyframes cloud-movement-bg {
+    0%{left: -125vw;}
+    100%{left: 0vw;}
+}
+
+
+
+
+@media (orientation: portrait) {
+    .background {
+        background-size: 200%;
+    }
+
+    .clouds-fg {
+        height: 210vh;
+        width: auto;
+        animation: cloud-movement-fg-small 55s linear infinite;
+    }
+
+    .clouds-bg {
+        height: 180vh;
+        width: auto;
+        animation: cloud-movement-bg-small 65s linear infinite;
+    }
+
+    @keyframes cloud-movement-fg-small {
+        0%{left: -210vh;}
+        100%{left: 0vw;}
+    }
+    
+    @keyframes cloud-movement-bg-small {
+        0%{left: -180vh;}
+        100%{left: 0vw;}
+    }
+}

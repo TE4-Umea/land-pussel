@@ -23,10 +23,11 @@ export class TileComponent implements OnInit {
     markedTiles: number[] = []
     replay: Array<object> = []
 
+
     @Output() sendMessage = new EventEmitter()
 
-    conditionToSend = 'end'
-    conditionToSendStart = 'start'
+    conditionToSendEnd: string = 'end'
+    conditionToSendStart: string = 'start'
     countries = countries
 
     getRandomCountry() {
@@ -82,6 +83,12 @@ export class TileComponent implements OnInit {
         labelElement.htmlFor = 'tile' + id.toString()
     }
 
+
+
+    getHighscoreSorted() {
+        localStorage.setItem('score', JSON.stringify(this.score))
+    }
+
     onCheckConfirm() {
         this.saveTileGrid()
         if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
@@ -106,7 +113,8 @@ export class TileComponent implements OnInit {
         this.showSnackbar('Oh no! D:')
         if (this.lives <= 0) {
             this.saveReplayToLocalStorage()
-            this.sendMessage.emit(this.conditionToSend)
+                this.getHighscoreSorted()
+                this.sendMessage.emit(this.conditionToSendEnd)
         }
     }
 
