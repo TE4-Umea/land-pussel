@@ -1,0 +1,20 @@
+.home-flex {
+    box-shadow: inset 0px 40vh 40vh -40vh black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 500px;
+    max-width: 80vw;
+}
+
+
+@media (max-width: 840px) { 
+    .logo {
+        width: 300px;
+    }
+}

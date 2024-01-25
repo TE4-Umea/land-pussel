@@ -1,77 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-html {
-    overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --color-background: #668caf;
+    --color-light: #e5e6e7;
+    --color-dark: #1e1e1e;
+    --color-secondary: #4f5c7c;
+    --color-tertiary: #ceebff;
+
+    --shadow1: 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
-.background {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #668CAF;
-    position: absolute;
-    background-image: url(/assets/images/bakgrund.png);
-    background-size: 120%;
-    background-position: -20px;
-    z-index: -2;
+body {
     margin: 0;
-}
-
-.clouds-fg {
-    position: absolute;
-    top: -10px;
-    width: 350vw;
-    z-index: -1;
-    opacity: 0.45;
-    animation: cloud-movement-fg 45s linear infinite;
-    filter: drop-shadow(-5px 5px 0px #00000025);
-}
-
-.clouds-bg {
-    transform: scaleX(-1);
-    position: absolute;
-    top: 0;
-    width: 250vw;
-    z-index: -1;
-    opacity: 0.2;
-    animation: cloud-movement-bg 55s linear -10s infinite;
-}
-
-@keyframes cloud-movement-fg {
-    0%{left: -175vw;}
-    100%{left: 0vw;}
-}
-
-@keyframes cloud-movement-bg {
-    0%{left: -125vw;}
-    100%{left: 0vw;}
-}
-
-
-
-
-@media (orientation: portrait) {
-    .background {
-        background-size: 200%;
-    }
-
-    .clouds-fg {
-        height: 210vh;
-        width: auto;
-    }
-
-    .clouds-bg {
-        height: 180vh;
-        width: auto;
-    }
-
-    @keyframes cloud-movement-fg {
-        0%{left: -210vh;}
-        100%{left: 0vw;}
-    }
-    
-    @keyframes cloud-movement-bg {
-        0%{left: -180vh;}
-        100%{left: 0vw;}
-    }
 }
