@@ -21,6 +21,7 @@ export class TileComponent implements OnInit {
     lives: number = 3
     randomCountryIndex: number = 0
     markedTiles: number[] = []
+    replay: Array<object> = []
 
     @Output() sendMessage = new EventEmitter()
 
@@ -82,27 +83,62 @@ export class TileComponent implements OnInit {
     }
 
     onCheckConfirm() {
+        this.saveTileGrid()
+        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
+            this.correctAnswer()
+        }
+        else {
+            this.invalidAnswer()
+        }
+        this.resetValues()
+    }
+
+    correctAnswer() {
+        this.score += (100 * this.scoreMultiplier)
+        this.scoreMultiplier += .15
+        this.showSnackbar('Horay! :D')
+        this.getRandomCountry()
+    }
+
+    invalidAnswer() {
+        this.lives--
+        this.scoreMultiplier = 1
+        this.showSnackbar('Oh no! D:')
+        if (this.lives <= 0) {
+            this.saveReplayToLocalStorage()
+            this.sendMessage.emit(this.conditionToSend)
+        }
+    }
+
+    saveReplayToLocalStorage() {
+        localStorage.setItem('latestReplay', JSON.stringify(this.replay))
+    }
+
+    updateReplayTiles() {
+        const replayTiles: number[] = []
+        this.tileElementId.forEach((id) => {
+            if (this.userSelectedInputTiles[id].checked) {
+                replayTiles.push(id)
+            }
+        })
+        const replayTurn = {
+            'moves': replayTiles,
+            'country': countries[this.randomCountryIndex].name,
+            'score': this.score,
+            'multiplier': this.scoreMultiplier
+        }
+        this.replay.push(replayTurn)
+        console.log(this.replay)
+    }
+
+    saveTileGrid() {
         this.tileElementId.forEach((id) => {
             if (this.userSelectedInputTiles[id].checked) {
                 this.markedTiles.push(id)
             }
         })
-        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
-            this.score += (100 * this.scoreMultiplier)
-            this.scoreMultiplier += .15
-            this.showSnackbar('Horay! :D')
-            this.getRandomCountry()
-        }
-        else {
-            this.lives--
-            this.scoreMultiplier = 1
-            this.showSnackbar('Oh no! D:')
-            if (this.lives <= 0) {
-                this.sendMessage.emit(this.conditionToSend)
-            }
-        }
-        this.resetValues()
     }
+
     resetValues() {
         this.markedTiles = []
         this.userSelectedInputTiles = []

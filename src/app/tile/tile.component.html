@@ -7,7 +7,8 @@
 <!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->
 <form #form id="form" action="" ng-controller="ExampleController">
     <section *ngFor="let tile of tiles" class="tile-outer">
-        <input type="checkbox" id="Placeholder" [ngClass]="['display-none', 'tile-checkbox']">
+        <input type="checkbox" id="Placeholder" (change)="updateReplayTiles()"
+            [ngClass]="['display-none', 'tile-checkbox']">
         <label for="Placeholder" class="tile-inner"></label>
     </section>
 </form>
