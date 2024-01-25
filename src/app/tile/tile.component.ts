@@ -20,11 +20,13 @@ export class TileComponent implements OnInit {
     score: number = 0
     lives: number = 3
     randomCountryIndex: number = 0
+    markedTiles: number[] = []
+
 
     @Output() sendMessage = new EventEmitter()
 
-    conditionToSend = 'end'
-    conditionToSendStart = 'start'
+    conditionToSendEnd: string = 'end'
+    conditionToSendStart: string = 'start'
     countries = countries
 
     getRandomCountry() {
@@ -80,14 +82,19 @@ export class TileComponent implements OnInit {
         labelElement.htmlFor = 'tile' + id.toString()
     }
 
+
+
+    getHighscoreSorted() {
+        localStorage.setItem('score', JSON.stringify(this.score))
+    }
+
     onCheckConfirm() {
-        let markedTiles: number[] = []
         this.tileElementId.forEach((id) => {
             if (this.userSelectedInputTiles[id].checked) {
-                markedTiles.push(id)
+                this.markedTiles.push(id)
             }
         })
-        if (markedTiles.toString() === this.correctTestAnswerId.toString()) {
+        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
             this.score += (100 * this.scoreMultiplier)
             this.scoreMultiplier += .15
             this.showSnackbar('Horay! :D')
@@ -98,13 +105,24 @@ export class TileComponent implements OnInit {
             this.scoreMultiplier = 1
             this.showSnackbar('Oh no! D:')
             if (this.lives <= 0) {
-                this.sendMessage.emit(this.conditionToSend)
+                this.getHighscoreSorted()
+                this.sendMessage.emit(this.conditionToSendEnd)
             }
         }
-        markedTiles = []
+        this.resetValues()
+    }
+    resetValues() {
+        this.markedTiles = []
         this.userSelectedInputTiles = []
         this.tileElementId = []
         this.ngAfterViewInit()
+    }
+    onClickRestart() {
+        this.getRandomCountry()
+        this.lives = 3
+        this.score = 0
+        this.scoreMultiplier = 1
+        this.resetValues()
     }
     onClickHome() {
         this.sendMessage.emit(this.conditionToSendStart)

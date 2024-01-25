@@ -1,4 +1,3 @@
-<!-- <button (click)="onClickRestart()">Restart</button> -->
 <section class="tile">
     <section class="top-flex">
         <section class="statistic">
@@ -8,13 +7,13 @@
         </section>
 
         <section class="">
+            <button (click)="onClickRestart()">Restart</button>
             <button (click)="onClickHome()">Home</button>
         </section>
     </section>
 
     <section class="draw-container">
         <h1 class="draw-country">Draw {{ countries[randomCountryIndex].name }}</h1>
-        <!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->
         <section class="form-padding">
             <form #form id="form" action="" ng-controller="ExampleController">
                 <section *ngFor="let tile of tiles" class="tile-outer">
