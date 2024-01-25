@@ -113,8 +113,8 @@ export class TileComponent implements OnInit {
         this.showSnackbar('Oh no! D:')
         if (this.lives <= 0) {
             this.saveReplayToLocalStorage()
-                this.getHighscoreSorted()
-                this.sendMessage.emit(this.conditionToSendEnd)
+            this.getHighscoreSorted()
+            this.sendMessage.emit(this.conditionToSendEnd)
         }
     }
 

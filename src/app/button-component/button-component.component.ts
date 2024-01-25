@@ -17,20 +17,20 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
     styleUrls: ['./button-component.component.css'],
 })
 export class ButtonComponentComponent {
-    
-  @Input()
-      color: 'blue' | 'green' | 'yellow' | 'smallYellow' | 'red' | 'black' | 'none' = 'blue'
-  
 
-  
-  @Input()
-      label = 'Button'
+    @Input()
+        color: 'blue' | 'green' | 'yellow' | 'smallYellow' | 'red' | 'black' | 'none' = 'blue'
 
-  
-  @Output()
-      onClick = new EventEmitter<Event>()
 
-  public get classes(): string[] {
-      return ['button', `button--${this.color}`,]
-  }
+
+    @Input()
+        label = 'Button'
+
+
+    @Output()
+        onClick = new EventEmitter<Event>()
+
+    public get classes(): string[] {
+        return ['button', `button--${this.color}`,]
+    }
 }
