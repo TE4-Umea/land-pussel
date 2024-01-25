@@ -5,14 +5,16 @@
   cursor: pointer;
   
   font-weight: 700;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "VT323", monospace;
   line-height: 1;
 
-  padding: 6px 50px;
+  width: 9em;
+  padding: 6px;
   border-width: 5px;
   border-style: solid;
   
+
   color: rgb(0, 0, 0);
 }
 
@@ -30,6 +32,12 @@
   background-color: #fff067;
 }
 
+.button--smallYellow {
+  border-color: #697d8a27;
+  background-color: #fff067;
+  width: 4.5em;
+}
+
 .button--red {
   border-color: #697d8a27;
   background-color: #ff9999;
@@ -42,6 +50,6 @@
 }
 
 .button--none {
-  border-color: #141414;
-  background-color: #2b2b2b;
+  border-color: transparent;
+  background-color: transparent;
 }

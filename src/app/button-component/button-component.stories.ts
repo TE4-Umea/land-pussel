@@ -1,23 +1,26 @@
 
-// src/app/my-component/my-component.stories.ts
 import { ButtonComponentComponent } from './button-component.component';
 import { StoryObj, Meta } from '@storybook/angular';
+//import imageFile from 'src/app/button-component/exit.png';
 
 export default {
   title: 'Components/Button',
   component: ButtonComponentComponent,
 } as Meta<ButtonComponentComponent>;
 
+
+
 type ButtonComponentStory = StoryObj<ButtonComponentComponent>;
 const Template: ButtonComponentStory = {
   args: {},
 };
 
+
 export const Tips: ButtonComponentStory = {
   ...Template,
   args: {
     label: 'Tips',
-    color: 'yellow',
+    color: 'smallYellow',
     
   },
 };
@@ -95,7 +98,17 @@ export const Return: ButtonComponentStory = {
 export const Exit: ButtonComponentStory = {
   ...Template,
   args: {
-    label: 'Exit',
+    label: 'EXIT',
+    color: 'none',
+    
+  },
+};
+
+export const Restart: ButtonComponentStory = {
+  ...Template,
+  args: {
+    label: 'RESTART',
+    color: 'none',
     
   },
 };

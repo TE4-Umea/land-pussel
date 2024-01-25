@@ -19,23 +19,18 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 export class ButtonComponentComponent {
     
   @Input()
-      color: 'blue' | 'green' | 'yellow' | 'red' | 'black' | 'none' = 'black'
+      color: 'blue' | 'green' | 'yellow' | 'smallYellow' | 'red' | 'black' | 'none' = 'blue'
   
+
   
-  
-  /**
-   * @required
-   */
   @Input()
       label = 'Button'
 
-  /**
-   * Optional click handler
-   */
+  
   @Output()
       onClick = new EventEmitter<Event>()
 
   public get classes(): string[] {
-      return ['button', `button--${this.color}`]
+      return ['button', `button--${this.color}`,]
   }
 }
