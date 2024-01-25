@@ -6,7 +6,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
     selector: 'app-button-component',
     standalone: true,
     imports: [CommonModule],
-    templateUrl: './button-component.component.html',
     template: ` <button
     type="button"
     (click)="onClick.emit($event)"
