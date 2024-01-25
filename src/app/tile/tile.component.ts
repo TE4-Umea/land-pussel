@@ -21,7 +21,6 @@ export class TileComponent implements OnInit {
     lives: number = 3
     randomCountryIndex: number = 0
     markedTiles: number[] = []
-    highscore: number[] = []
 
 
     @Output() sendMessage = new EventEmitter()
@@ -83,15 +82,10 @@ export class TileComponent implements OnInit {
         labelElement.htmlFor = 'tile' + id.toString()
     }
 
+
+
     getHighscoreSorted() {
-        this.highscore = JSON.parse(localStorage.getItem('highscore') || '[]')
-        localStorage.setItem('oldHighscore', JSON.stringify(this.highscore))
-        this.highscore.push(this.score)
-        this.highscore.sort((a, b) => b - a)
-        if (this.highscore.length > 3) {
-            this.highscore.pop()
-        }
-        localStorage.setItem('highscore', JSON.stringify(this.highscore))
+        localStorage.setItem('score', JSON.stringify(this.score))
     }
 
     onCheckConfirm() {
