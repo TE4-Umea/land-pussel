@@ -13,7 +13,7 @@ export class EndingScreenComponent implements OnInit {
     conditionToSendRestart: string = 'game'
     conditionToSendExit: string = 'start'
     topScores: number[] = [0, 1, 2]
-    highscore: { name: string, score: number }[] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]
+    highscore: [{ name: string, score: number }] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]
     condition: string = 'highscoreChart'
 
     @ViewChild('nameInput') nameInput!: ElementRef
