@@ -1,6 +1,5 @@
-<main>
-    <app-home (sendMessage)='getMsgFromHome($event)' *ngIf="condition === 'start'"></app-home>
-    <app-tile (sendMessage)='getMsgFromTile($event)' *ngIf="condition === 'game'"></app-tile>
-    <app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf="condition === 'end'"></app-end>
-    <router-outlet></router-outlet>
-</main>
+
+<app-home (sendMessage)='getMsgFromHome($event)' *ngIf="condition == 'start'"></app-home>
+<app-tile (sendMessage)='getMsgFromTile($event)' *ngIf="condition == 'game'"></app-tile>
+<app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf="condition == 'end'"></app-end>
+<router-outlet></router-outlet>

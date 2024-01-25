@@ -1,14 +1,29 @@
-<button (click)="onClickRestart()">Restart</button>
-<button (click)="onClickHome()">Home</button>
-<h1>Draw {{ countries[randomCountryIndex].name }}</h1>
-<h2>Lives: {{ lives }}</h2>
-<h2>Score: {{ score }}</h2>
-<h2>Score Multiplier: {{ scoreMultiplier.toFixed(2) }}</h2>
-<form #form id="form" action="" ng-controller="ExampleController">
-    <section *ngFor="let tile of tiles" class="tile-outer">
-        <input type="checkbox" id="Placeholder" [ngClass]="['display-none', 'tile-checkbox']">
-        <label for="Placeholder" class="tile-inner"></label>
+<section class="tile">
+    <section class="top-flex">
+        <section class="statistic">
+            <p class="statistics-text">Lives: {{ lives }}</p>
+            <p class="statistics-text">Score: {{ score }}</p>
+            <p class="statistics-text">Multiplier: {{ scoreMultiplier.toFixed(2) }}</p>
+        </section>
+
+        <section class="">
+            <button (click)="onClickRestart()">Restart</button>
+            <button (click)="onClickHome()">Home</button>
+        </section>
     </section>
-</form>
-<button type="button" (click)="onCheckConfirm()">Confirm</button>
+
+    <section class="draw-container">
+        <h1 class="draw-country">Draw {{ countries[randomCountryIndex].name }}</h1>
+        <section class="form-padding">
+            <form #form id="form" action="" ng-controller="ExampleController">
+                <section *ngFor="let tile of tiles" class="tile-outer">
+                    <input type="checkbox" id="Placeholder" [ngClass]="['display-none', 'tile-checkbox']">
+                    <label for="Placeholder" class="tile-inner"></label>
+                </section>
+            </form>
+        </section>
+        <button type="button" (click)="onCheckConfirm()">Confirm</button>
+    </section>
+</section>
+
 <div #snackbar id="snackbar"></div>
