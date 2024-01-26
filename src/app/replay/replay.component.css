@@ -1,0 +1,161 @@
+.display-none {
+    display: none;
+}
+
+.tile {
+    box-shadow: inset 0px 40vh 40vh -40vh black;
+    height: 100vh;
+}
+
+.tile-outer {
+    box-sizing: border-box;
+    border: 3px #E5E6E7 solid;
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 1;
+}
+
+.tile-inner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/images/tileChecked.png);
+    background-size: cover;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.tile-inner:hover {
+    opacity: 0.35;
+}
+
+.tile-checkbox:checked+label {
+    opacity: 0.6;
+}
+
+
+.tile-hint {
+    background-color: azure;
+}
+
+#form {
+    border: 3px #E5E6E7 solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#snackbar {
+    visibility: hidden;
+}
+
+#snackbar.show {
+    visibility: visible;
+}
+
+
+.form-padding {
+    padding: 20px;
+    background-color: var(--color-secondary);
+}
+
+
+.statistics-text {
+    color: var(--color-light);
+    font-family: 'VT323', monospace;
+    font-size: 56px;
+    text-shadow: var(--shadow1);
+    margin: 0;
+}
+
+.draw-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    max-width: 33vw;
+    padding: 0px;
+}
+
+
+.draw-country {
+    padding: 2px 0px 10px 0px;
+    color: var(--color-light);
+    text-shadow: var(--shadow1);
+    font-weight: 400;
+    background-color: var(--color-secondary);
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+
+.top-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px 4vh 30px;
+}
+
+
+
+@media (max-width: 840px) {
+    @media (orientation: portrait) {
+        .draw-container {
+            top: 55%;
+            width: 420px;
+            max-width: 75vw;
+        }
+    }
+
+    .tile-outer {
+        border: 2px #E5E6E7 solid;
+    }
+
+    #form {
+        border: 2px #E5E6E7 solid;
+    }
+
+    .top-flex {
+        padding: 8px 16px 4vh 16px;
+    }
+
+    .draw-country {
+        font-size: 48px;
+    }
+
+    .statistics-text {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-height: 840px) {
+    @media (orientation: landscape) {
+        .draw-container {
+            width: 360px;
+            max-width: 55vh;
+        }
+    }
+
+    .tile-outer {
+        border: 2px #E5E6E7 solid;
+    }
+
+    #form {
+        border: 2px #E5E6E7 solid;
+    }
+
+    .draw-country {
+        font-size: 36px;
+    }
+
+    .statistics-text {
+        font-size: 32px;
+    }
+}

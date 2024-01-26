@@ -12,6 +12,7 @@ import { TileComponent } from '../tile/tile.component'
 export class EndingScreenComponent implements OnInit {
     conditionToSendRestart: string = 'game'
     conditionToSendExit: string = 'start'
+    conditionToSendReplay: string = 'replay'
     topScores: number[] = [0, 1, 2]
     highscore: [{ name: string, score: number }] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]
     condition: string = 'highscoreChart'
@@ -53,5 +54,8 @@ export class EndingScreenComponent implements OnInit {
     }
     onClickExit() {
         this.sendMessage.emit(this.conditionToSendExit)
+    }
+    onClickReplay() {
+        this.sendMessage.emit(this.conditionToSendReplay)
     }
 }
