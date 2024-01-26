@@ -17,11 +17,16 @@ export class HomeComponent {
 
     conditionToSendGame: string = 'game'
     conditionToSendCredits: string = 'credits'
+    conditionToSendEnd: string = 'end'
 
     onClickStart() {
         this.sendMessage.emit(this.conditionToSendGame)
     }
     onClickCredits() {
         this.sendMessage.emit(this.conditionToSendCredits)
+    }
+    onClickHighscore() {
+        localStorage.setItem('score', JSON.stringify(0))
+        this.sendMessage.emit(this.conditionToSendEnd)
     }
 }
