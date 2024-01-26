@@ -30,7 +30,6 @@ export const Start: ButtonComponentStory = {
     args: {
         label: 'Start',
         color: 'blue',
-        parameters: 'hover',
     },
 }
 
