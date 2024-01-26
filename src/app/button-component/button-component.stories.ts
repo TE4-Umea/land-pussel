@@ -34,6 +34,14 @@ export const Start: ButtonComponentStory = {
     },
 }
 
+export const Credits: ButtonComponentStory = {
+    ...Template,
+    args: {
+        label: 'Credits',
+        color: 'blue',
+    },
+}
+
 export const Confirm: ButtonComponentStory = {
     ...Template,
     args: {
@@ -113,6 +121,7 @@ export const Restart: ButtonComponentStory = {
 
     },
 }
+
 
 
 
