@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common'
 import { ElementRef } from '@angular/core'
 import countries from '../../assets/countries.json'
 
+import { ButtonComponentComponent } from '../button-component/button-component.component'
+
 @Component({
     selector: 'app-tile',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule,ButtonComponentComponent,],
     templateUrl: './tile.component.html',
     styleUrl: './tile.component.css'
 })

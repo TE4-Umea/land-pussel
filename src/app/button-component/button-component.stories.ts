@@ -21,6 +21,7 @@ export const Tips: ButtonComponentStory = {
     args: {
         label: 'Tips 😀',
         color: 'smallYellow',
+        
     },
 }
 
@@ -29,6 +30,7 @@ export const Start: ButtonComponentStory = {
     args: {
         label: 'Start',
         color: 'blue',
+        parameters: 'hover',
     },
 }
 
