@@ -19,7 +19,7 @@ const Template: ButtonComponentStory = {
 export const Tips: ButtonComponentStory = {
     ...Template,
     args: {
-        label: 'Tips 😀',
+        label: 'Tips😀',
         color: 'smallYellow',
         
     },
