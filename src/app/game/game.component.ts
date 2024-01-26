@@ -9,6 +9,7 @@ import { TileComponent } from '../tile/tile.component'
 import { HomeComponent } from '../home/home.component'
 import { EndingScreenComponent } from '../ending-screen/ending-screen.component'
 
+
 @Component({
     selector: 'app-game',
     standalone: true,

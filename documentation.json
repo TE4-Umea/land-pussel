@@ -1,31 +1,6 @@
 {
     "pipes": [],
-    "interfaces": [
-        {
-            "name": "User",
-            "id": "interface-User-d4821beac0e4a852e513391b7470981c4353fdd95a18628bb68136c8695b489ee15b926e2e5031bc26cf30e1508e0a362c3ee13a06734702b4d15af140e485d5",
-            "file": "src/stories/user.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "export interface User {\n  name: string;\n}\n",
-            "properties": [
-                {
-                    "name": "name",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 2
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 171,
-            "methods": [],
-            "extends": []
-        }
-    ],
+    "interfaces": [],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -34,7 +9,11 @@
     "components": [
         {
             "name": "AppComponent",
+<<<<<<< HEAD
             "id": "component-AppComponent-fc7060414ddccfe4a1a7ccf0d0c00ccfbf49833b94943091fb62991c19405ab14fb4f01a5a421f26170d1a45c565c1aecbbf2397e1e74af9e063ab26bd82c177",
+=======
+            "id": "component-AppComponent-cb2c56d29318085ce0346d51d49301a684aa29ff4f1f79b5b7ce9c0501044272d365472ea0c5212e0deb1c280f84cc5af904803a87601af28b4e73fe9adda9eb",
+>>>>>>> Angelica
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -84,13 +63,18 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
+<<<<<<< HEAD
             "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\n\n@Component({\n    selector: 'app-root',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet],\n    templateUrl: './app.component.html',\n    styleUrl: './app.component.css'\n})\nexport class AppComponent {\n    title = 'first-angular'\n}\n",
+=======
+            "sourceCode": "import { Component } from '@angular/core'\r\nimport { CommonModule } from '@angular/common'\r\nimport { RouterLink, RouterOutlet } from '@angular/router'\r\n\r\n@Component({\r\n    selector: 'app-root',\r\n    standalone: true,\r\n    imports: [CommonModule, RouterLink, RouterOutlet],\r\n    templateUrl: './app.component.html',\r\n    styleUrl: './app.component.css'\r\n})\r\nexport class AppComponent {\r\n    title = 'first-angular'\r\n}\r\n",
+>>>>>>> Angelica
             "styleUrl": "./app.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
             "templateData": "<main class=\"main\">\n  <router-outlet></router-outlet>\n</main>"
+<<<<<<< HEAD
         },
         {
             "name": "BackgroundComponent",
@@ -134,29 +118,37 @@
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-03c3ef85f19ace4cb4bf41b92211c8a46965132c224ac534923823146b7825cebd9942feb075ee8f4939491be8fe4744f48bc32d3d11e7e519a0fdfeae257b54",
             "file": "src/stories/button.component.ts",
+=======
+        },
+        {
+            "name": "ButtonComponentComponent",
+            "id": "component-ButtonComponentComponent-279e7d92525fd601c6df88eee822d48cc1d28037ccb7609a3fb051baf6d16a71893d3c73ae6ca43de3810fe90d2e1d01502d188e7e7716d85fb40b62b5146930",
+            "file": "src/app/button-component/button-component.component.ts",
+>>>>>>> Angelica
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-button",
+            "selector": "app-button-component",
             "styleUrls": [
-                "./button.css"
+                "./button-component.component.css"
             ],
             "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
-            "templateUrl": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [
+                "./button-component.component.html"
+            ],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
                 {
-                    "name": "backgroundColor",
+                    "name": "color",
+                    "defaultValue": "'blue'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat background color to use\n",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 29,
-                    "type": "string",
+                    "line": 22,
+                    "type": "\"blue\" | \"green\" | \"yellow\" | \"red\" | \"black\" | \"none\"",
                     "decorators": []
                 },
                 {
@@ -166,15 +158,25 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
+<<<<<<< HEAD
                             "pos": 815,
                             "end": 828,
+=======
+                            "pos": 620,
+                            "end": 633,
+>>>>>>> Angelica
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
+<<<<<<< HEAD
                                 "pos": 816,
                                 "end": 824,
+=======
+                                "pos": 621,
+                                "end": 629,
+>>>>>>> Angelica
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -184,32 +186,8 @@
                             "comment": ""
                         }
                     ],
-                    "rawdescription": "\n\nButton contents\n\n",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 43,
+                    "line": 30,
                     "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "primary",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 23,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'medium'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nHow large should the button be?\n",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 35,
-                    "type": "\"small\" | \"medium\" | \"large\"",
                     "decorators": []
                 }
             ],
@@ -221,7 +199,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nOptional click handler\n",
                     "description": "<p>Optional click handler</p>\n",
-                    "line": 49,
+                    "line": 36,
                     "type": "EventEmitter"
                 }
             ],
@@ -241,12 +219,16 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
+<<<<<<< HEAD
             "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, Input, Output, EventEmitter } from '@angular/core'\n\n@Component({\n    selector: 'storybook-button',\n    standalone: true,\n    imports: [CommonModule],\n    template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n    styleUrls: ['./button.css'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n      primary = false\n\n  /**\n   * What background color to use\n   */\n  @Input()\n      backgroundColor?: string\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n      size: 'small' | 'medium' | 'large' = 'medium'\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n      label = 'Button'\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n      onClick = new EventEmitter<Event>()\n\n  public get classes(): string[] {\n      const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary'\n\n      return ['storybook-button', `storybook-button--${this.size}`, mode]\n  }\n}\n",
+=======
+            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, Input, Output, EventEmitter } from '@angular/core'\n\n@Component({\n    selector: 'app-button-component',\n    standalone: true,\n    imports: [CommonModule],\n    templateUrl: './button-component.component.html',\n    template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n  >\n    {{ label }}\n  </button>`,\n    styleUrls: ['./button-component.component.css'],\n})\nexport class ButtonComponentComponent {\n    \n  @Input()\n      color: 'blue' | 'green' | 'yellow' | 'red' | 'black' | 'none' = 'blue'\n  \n  \n  \n  /**\n   * @required\n   */\n  @Input()\n      label = 'Button'\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n      onClick = new EventEmitter<Event>()\n\n  public get classes(): string[] {\n      return ['button', `button--${this.color}`]\n  }\n}\n",
+>>>>>>> Angelica
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
-                    "styleUrl": "./button.css"
+                    "data": "@import url(\"https://fonts.googleapis.com/css2?family=VT323&display=swap\");\n\n.button {\n  display: inline-block;\n  cursor: pointer;\n  \n  font-weight: 700;\n  font-size: 20px;\n  font-family: \"VT323\", monospace;\n  line-height: 1;\n\n  padding: 6px 50px;\n  border-width: 5px;\n  border-style: solid;\n  \n  color: rgb(0, 0, 0);\n}\n\n.button--blue {\n  border-color: #697d8a27;\n  background-color: #ceebff;\n}\n.button--green {\n  border-color: #697d8a27;\n  background-color: #bcffb1;\n}\n\n.button--yellow {\n  border-color: #697d8a27;\n  background-color: #fff067;\n}\n\n.button--red {\n  border-color: #697d8a27;\n  background-color: #ff9999;\n}\n\n.button--black {\n  color: #b92713;\n  border-color: #141414;\n  background-color: #2b2b2b;\n}\n\n.button--none {\n  border-color: transparent;\n  background-color: transparent;\n}\n",
+                    "styleUrl": "./button-component.component.css"
                 }
             ],
             "stylesData": "",
@@ -258,10 +240,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 51
+                        "line": 38
                     }
                 }
-            }
+            },
+            "templateData": "\n"
         },
         {
             "name": "EndingScreenComponent",
@@ -354,7 +337,11 @@
         },
         {
             "name": "GameComponent",
+<<<<<<< HEAD
             "id": "component-GameComponent-d09a34a6ed4ef483c7d8df17d29ce622635657d59142d6826e4eb9214b17a525d1c6dd65854919a5747ec9c96d3f79e84ac2abbf045820bc4617579e013eb549",
+=======
+            "id": "component-GameComponent-5186ef3041aa0ce945abae11725073f287beda4e12ffc163ed46c48880a57075e4952ed65e730aa59c0fa70f1ef0fa8b36c426938d44476c8300f6adc70d6c46",
+>>>>>>> Angelica
             "file": "src/app/game/game.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -373,6 +360,7 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
+<<<<<<< HEAD
                     "name": "condition",
                     "defaultValue": "'start'",
                     "deprecated": false,
@@ -477,6 +465,16 @@
                             }
                         }
                     ]
+=======
+                    "name": "countries",
+                    "defaultValue": "countries",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+>>>>>>> Angelica
                 }
             ],
             "deprecated": false,
@@ -502,6 +500,7 @@
                 {
                     "name": "TileComponent",
                     "type": "component"
+<<<<<<< HEAD
                 },
                 {
                     "name": "HomeComponent",
@@ -510,17 +509,74 @@
                 {
                     "name": "EndingScreenComponent",
                     "type": "component"
+=======
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\nimport { } from '@storybook/angular'\nimport { ReactiveFormsModule } from '@angular/forms'\nimport countries from '../../assets/countries.json'\n\nimport { TileComponent } from '../tile/tile.component'\nimport { HomeComponent } from '../home/home.component'\nimport { EndingScreenComponent } from '../ending-screen/ending-screen.component'\n\n@Component({\n    selector: 'app-game',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent, HomeComponent, EndingScreenComponent],\n    templateUrl: './game.component.html',\n    styleUrl: './game.component.css'\n})\n\nexport class GameComponent {\n    countries = countries\n\n    condition = 'start'\n\n    getMsgFromHome($event: string) { this.condition = $event, console.log('hej') }\n    getMsgFromEndingScreen($event: string) { this.condition = $event }\n    getMsgFromTile($event: string) { this.condition = $event }\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core'\r\nimport { CommonModule } from '@angular/common'\r\nimport { RouterLink, RouterOutlet } from '@angular/router'\r\nimport { } from '@storybook/angular'\r\nimport { ReactiveFormsModule } from '@angular/forms'\r\nimport countries from '../../assets/countries.json'\r\n\r\nimport { TileComponent } from '../tile/tile.component'\r\n\r\n@Component({\r\n    selector: 'app-game',\r\n    standalone: true,\r\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent],\r\n    templateUrl: './game.component.html',\r\n    styleUrl: './game.component.css'\r\n})\r\n\r\nexport class GameComponent {\r\n    countries = countries\r\n\r\n}\r\n",
             "styleUrl": "./game.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
+            "templateData": "<main>\n    <h1>Draw {{ countries.Sweden.name }}</h1> <!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->\n    <app-tile></app-tile>\n    <router-outlet></router-outlet>\n</main>"
+        },
+        {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-c6d7a366f37e7e16d148a230282d50cc66a3eec330a39e155031ef2dc1db7149719e9f2e2fdf0c03170f1db715bcff7d2c713340fa90d324e197e54b159a1392",
+            "file": "src/app/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "RouterLink"
+                },
+                {
+                    "name": "RouterOutlet"
+>>>>>>> Angelica
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+<<<<<<< HEAD
+            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\nimport { } from '@storybook/angular'\nimport { ReactiveFormsModule } from '@angular/forms'\nimport countries from '../../assets/countries.json'\n\nimport { TileComponent } from '../tile/tile.component'\nimport { HomeComponent } from '../home/home.component'\nimport { EndingScreenComponent } from '../ending-screen/ending-screen.component'\n\n@Component({\n    selector: 'app-game',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent, HomeComponent, EndingScreenComponent],\n    templateUrl: './game.component.html',\n    styleUrl: './game.component.css'\n})\n\nexport class GameComponent {\n    countries = countries\n\n    condition = 'start'\n\n    getMsgFromHome($event: string) { this.condition = $event, console.log('hej') }\n    getMsgFromEndingScreen($event: string) { this.condition = $event }\n    getMsgFromTile($event: string) { this.condition = $event }\n\n}\n",
+            "styleUrl": "./game.component.css",
+=======
+            "sourceCode": "import { Component } from '@angular/core'\r\nimport { CommonModule } from '@angular/common'\r\nimport { RouterLink, RouterOutlet } from '@angular/router'\r\n\r\n@Component({\r\n    selector: 'app-home',\r\n    standalone: true,\r\n    imports: [CommonModule, RouterLink, RouterOutlet],\r\n    templateUrl: './home.component.html',\r\n    styleUrl: './home.component.css'\r\n})\r\nexport class HomeComponent {\r\n\r\n}\r\n",
+            "styleUrl": "./home.component.css",
+>>>>>>> Angelica
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+<<<<<<< HEAD
             "templateData": "<main>\n    <app-home (sendMessage)='getMsgFromHome($event)' *ngIf=\"condition == 'start'\"></app-home>\n    <app-tile (sendMessage)='getMsgFromTile($event)' *ngIf=\"condition == 'game'\"></app-tile>\n    <app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf=\"condition == 'end'\"></app-end>\n    <router-outlet></router-outlet>\n</main>"
         },
         {
@@ -785,6 +841,13 @@
         {
             "name": "TileComponent",
             "id": "component-TileComponent-6fdbe3d7029b35133c0bfba825e11714d76e719c60aee32be7b3b491f452ed7fecf587d78f3df2e0be1ea06cea73aa7d53bee3edeb8f6f7eaf86803fc26947d9",
+=======
+            "templateData": "<main class=\"main\">\n    <h1>Land Puzzle</h1>\n    <a routerLink=\"/game\">Start</a>\n    <router-outlet></router-outlet>\n</main>"
+        },
+        {
+            "name": "TileComponent",
+            "id": "component-TileComponent-4c7383ad00052910782dbf06dfbb6eee096a9d79f0c50d0c0ebe529bb988232d777dfc000e76f7c426b91072ee4a29237e14737f9acdfba109bc69c6e528d1fa",
+>>>>>>> Angelica
             "file": "src/app/tile/tile.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -800,6 +863,7 @@
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
+<<<<<<< HEAD
             "outputsClass": [
                 {
                     "name": "sendMessage",
@@ -822,6 +886,11 @@
                     "line": 24
                 },
                 {
+=======
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+>>>>>>> Angelica
                     "name": "correctTestAnswerId",
                     "defaultValue": "[]",
                     "deprecated": false,
@@ -839,7 +908,11 @@
                     "type": "",
                     "optional": false,
                     "description": "",
+<<<<<<< HEAD
                     "line": 26
+=======
+                    "line": 21
+>>>>>>> Angelica
                 },
                 {
                     "name": "form",
@@ -848,7 +921,11 @@
                     "type": "ElementRef",
                     "optional": false,
                     "description": "",
+<<<<<<< HEAD
                     "line": 30,
+=======
+                    "line": 23,
+>>>>>>> Angelica
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -860,6 +937,19 @@
                     ]
                 },
                 {
+<<<<<<< HEAD
+=======
+                    "name": "inputTileElements",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HTMLInputElement[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+>>>>>>> Angelica
                     "name": "markedTiles",
                     "defaultValue": "[]",
                     "deprecated": false,
@@ -870,6 +960,7 @@
                     "line": 19
                 },
                 {
+<<<<<<< HEAD
                     "name": "randomCountryIndex",
                     "defaultValue": "Math.floor(Math.random() * countries.length)",
                     "deprecated": false,
@@ -890,6 +981,8 @@
                     "line": 20
                 },
                 {
+=======
+>>>>>>> Angelica
                     "name": "tileElementId",
                     "defaultValue": "[]",
                     "deprecated": false,
@@ -918,6 +1011,7 @@
                     "optional": false,
                     "description": "",
                     "line": 16
+<<<<<<< HEAD
                 },
                 {
                     "name": "userInputTileElements",
@@ -928,6 +1022,8 @@
                     "optional": false,
                     "description": "",
                     "line": 17
+=======
+>>>>>>> Angelica
                 }
             ],
             "methodsClass": [
@@ -937,7 +1033,11 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
+<<<<<<< HEAD
                     "line": 32,
+=======
+                    "line": 25,
+>>>>>>> Angelica
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -947,7 +1047,11 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
+<<<<<<< HEAD
                     "line": 52,
+=======
+                    "line": 45,
+>>>>>>> Angelica
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -966,13 +1070,21 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
+<<<<<<< HEAD
             "sourceCode": "import { Component, EventEmitter, Output, ViewChild } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { ElementRef } from '@angular/core'\nimport countries from '../../assets/countries.json'\n\n@Component({\n    selector: 'app-tile',\n    standalone: true,\n    imports: [CommonModule],\n    templateUrl: './tile.component.html',\n    styleUrl: './tile.component.css'\n})\nexport class TileComponent {\n    tileElements: Element[] = []\n    tileElementId: number[] = []\n    tiles = new Array(9)\n    userInputTileElements: HTMLInputElement[] = []\n    correctTestAnswerId: number[] = []\n    markedTiles: number[] = []\n    scoreMultiplier = 1  // TODO: implement score multiplier that increases with each correct answer\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSend = 'end'\n\n    countries = countries\n\n    randomCountryIndex = Math.floor(Math.random() * countries.length)\n\n    @ViewChild('form') form!: ElementRef\n\n    ngAfterViewInit(): void {\n        this.correctTestAnswerId = countries[this.randomCountryIndex].easy\n\n        this.tileElements = Array.from(this.form.nativeElement.children)\n        this.tileElements.forEach((tile, id) => {\n            tile.id = id.toString()\n            Array.from(tile.children).forEach((element: Element, index) => {\n                if (index === 0) {\n                    const inputElement = element as HTMLInputElement\n                    inputElement.id = 'tile' + id.toString()\n                    this.userInputTileElements.push(inputElement)\n                    this.tileElementId.push(id)\n                }\n                else {\n                    const labelElement = element as HTMLLabelElement\n                    labelElement.htmlFor = 'tile' + id.toString()\n                }\n            })\n        })\n    }\n    onCheckConfirm() {\n        this.tileElementId.forEach((id) => {\n            if (this.userInputTileElements[id].checked) {\n                this.markedTiles.push(id)\n            }\n        })\n        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {\n            alert('Horay! :D')\n        }\n        else {\n            this.sendMessage.emit(this.conditionToSend)\n        }\n        this.markedTiles = []\n    }\n}\n\n",
+=======
+            "sourceCode": "import { Component, ViewChild } from '@angular/core'\r\nimport { CommonModule } from '@angular/common'\r\nimport { ElementRef } from '@angular/core'\r\nimport countries from '../../assets/countries.json'\r\n\r\n@Component({\r\n    selector: 'app-tile',\r\n    standalone: true,\r\n    imports: [CommonModule],\r\n    templateUrl: './tile.component.html',\r\n    styleUrl: './tile.component.css'\r\n})\r\nexport class TileComponent {\r\n    tileElements: Element[] = []\r\n    tileElementId: number[] = []\r\n    tiles = new Array(9)\r\n    inputTileElements: HTMLInputElement[] = []\r\n    correctTestAnswerId: number[] = []\r\n    markedTiles: number[] = []\r\n\r\n    countries = countries\r\n\r\n    @ViewChild('form') form!: ElementRef\r\n\r\n    ngAfterViewInit(): void {\r\n        this.correctTestAnswerId = countries.Sweden.easy\r\n\r\n        this.tileElements = Array.from(this.form.nativeElement.children)\r\n        this.tileElements.forEach((tile, id) => {\r\n            tile.id = id.toString()\r\n            Array.from(tile.children).forEach((element: Element, index) => {\r\n                if (index === 0) {\r\n                    const inputElement = element as HTMLInputElement\r\n                    inputElement.id = 'tile' + id.toString()\r\n                    this.inputTileElements.push(inputElement)\r\n                    this.tileElementId.push(id)\r\n                }\r\n                else {\r\n                    const labelElement = element as HTMLLabelElement\r\n                    labelElement.htmlFor = 'tile' + id.toString()\r\n                }\r\n            })\r\n        })\r\n    }\r\n    onCheckConfirm() {\r\n        this.tileElementId.forEach((id) => {\r\n            if (this.inputTileElements[id].checked) {\r\n                this.markedTiles.push(id)\r\n            }\r\n        })\r\n        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {\r\n            alert('Horay! :D')\r\n        }\r\n        this.markedTiles = []\r\n    }\r\n}\r\n",
+>>>>>>> Angelica
             "styleUrl": "./tile.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
+<<<<<<< HEAD
             "templateData": "<h1>Draw {{ countries[randomCountryIndex].name }}</h1>\n<!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->\n<form #form id=\"form\" action=\"\" ng-controller=\"ExampleController\">\n    <section *ngFor=\"let tile of tiles\" class=\"tile-outer\">\n        <input type=\"checkbox\" id=\"Placeholder\" [ngClass]=\"['display-none', 'tile-checkbox']\">\n        <label for=\"Placeholder\" class=\"tile-inner\"></label>\n    </section>\n</form>\n<button type=\"button\" (click)=\"onCheckConfirm()\">Confirm</button>"
+=======
+            "templateData": "<form #form id=\"form\" action=\"\" ng-controller=\"ExampleController\">\n    <section *ngFor=\"let tile of tiles\" class=\"tile-outer\">\n        <input type=\"checkbox\" id=\"Placeholder\" [ngClass]=\"['display-none', 'tile-checkbox']\">\n        <label for=\"Placeholder\" class=\"tile-inner\"></label>\n    </section>\n</form>\n<button type=\"button\" (click)=\"onCheckConfirm()\">Confirm</button>"
+>>>>>>> Angelica
         }
     ],
     "modules": [],
@@ -986,65 +1098,85 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
+<<<<<<< HEAD
                 "defaultValue": "{\n    providers: [provideRouter(routes)]\n}"
+=======
+                "defaultValue": "{\r\n    providers: [provideRouter(routes)]\r\n}"
+>>>>>>> Angelica
             },
             {
-                "name": "Large",
+                "name": "Confirm",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
+<<<<<<< HEAD
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button',\n    },\n}"
+=======
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Confirm',\n    color: 'blue',\n  },\n}"
+>>>>>>> Angelica
             },
             {
-                "name": "LoggedIn",
+                "name": "Easy",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/header.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
+<<<<<<< HEAD
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe',\n        },\n    },\n}"
+=======
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Easy',\n    color: 'green',\n    \n  },\n}"
+>>>>>>> Angelica
             },
             {
-                "name": "LoggedIn",
+                "name": "Exit",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/page.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
+<<<<<<< HEAD
                 "type": "Story",
                 "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement)\n        const loginButton = canvas.getByRole('button', { name: /Log in/i })\n        await expect(loginButton).toBeInTheDocument()\n        await userEvent.click(loginButton)\n        await expect(loginButton).not.toBeInTheDocument()\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i })\n        await expect(logoutButton).toBeInTheDocument()\n    },\n}"
+=======
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'EXTI',\n    color: 'none',\n    \n  },\n}"
+>>>>>>> Angelica
             },
             {
-                "name": "LoggedOut",
+                "name": "Extreme",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/header.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Extreme',\n    color: 'black',\n    \n  },\n}"
             },
             {
-                "name": "LoggedOut",
+                "name": "Hard",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/page.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Hard',\n    color: 'red',\n    \n  },\n}"
             },
             {
-                "name": "meta",
+                "name": "Medium",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
+<<<<<<< HEAD
                 "type": "Meta<ButtonComponent>",
                 "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    render: (args: ButtonComponent) => ({\n        props: {\n            backgroundColor: null,\n            ...args,\n        },\n    }),\n    argTypes: {\n        backgroundColor: {\n            control: 'color',\n        },\n    },\n}"
             },
@@ -1077,6 +1209,10 @@
                 "deprecationMessage": "",
                 "type": "Meta<TileComponent>",
                 "defaultValue": "{\n    title: 'Components/Tile',\n    component: TileComponent,\n    tags: ['autodocs'],\n    render: (args: TileComponent) => ({\n        props: {\n            ...args,\n        },\n    }),\n}"
+=======
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Medium',\n    color: 'yellow',\n    \n  },\n}"
+>>>>>>> Angelica
             },
             {
                 "name": "preview",
@@ -1089,87 +1225,94 @@
                 "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
             },
             {
-                "name": "Primary",
+                "name": "Restart",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
+<<<<<<< HEAD
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button',\n    },\n}"
+=======
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'RESTART',\n    color: 'none',\n    \n  },\n}"
+>>>>>>> Angelica
             },
             {
-                "name": "Primary",
+                "name": "Return",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/tile.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
+<<<<<<< HEAD
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n    },\n}"
+=======
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Return',\n    color: 'none',\n    \n  },\n}"
+>>>>>>> Angelica
             },
             {
-                "name": "Secondary",
+                "name": "Start",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
+<<<<<<< HEAD
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Button',\n    },\n}"
+=======
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Start',\n    color: 'blue',\n  },\n}"
+>>>>>>> Angelica
             },
             {
-                "name": "Small",
+                "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button.stories.ts",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
+<<<<<<< HEAD
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button',\n    },\n}"
+=======
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  args: {},\n}"
+            },
+            {
+                "name": "Tips",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button-component/button-component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Tips',\n    color: 'yellow',\n    \n  },\n}"
+            },
+            {
+                "name": "VeryEasy",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button-component/button-component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Very easy',\n    color: 'blue',\n    \n  },\n}"
+>>>>>>> Angelica
             }
         ],
         "functions": [],
         "typealiases": [
             {
-                "name": "Story",
+                "name": "ButtonComponentStory",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ButtonComponent>",
-                "file": "src/stories/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<HeaderComponent>",
-                "file": "src/stories/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<PageComponent>",
-                "file": "src/stories/page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<TileComponent>",
-                "file": "src/stories/tile.stories.ts",
+                "rawtype": "StoryObj<ButtonComponentComponent>",
+                "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1187,57 +1330,82 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
+<<<<<<< HEAD
                     "defaultValue": "{\n    providers: [provideRouter(routes)]\n}"
+=======
+                    "defaultValue": "{\r\n    providers: [provideRouter(routes)]\r\n}"
+>>>>>>> Angelica
                 }
             ],
-            "src/stories/button.stories.ts": [
+            "src/app/button-component/button-component.stories.ts": [
                 {
-                    "name": "Large",
+                    "name": "Confirm",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
+<<<<<<< HEAD
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button',\n    },\n}"
+=======
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Confirm',\n    color: 'blue',\n  },\n}"
+>>>>>>> Angelica
                 },
                 {
-                    "name": "meta",
+                    "name": "Easy",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
+<<<<<<< HEAD
                     "type": "Meta<ButtonComponent>",
                     "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    render: (args: ButtonComponent) => ({\n        props: {\n            backgroundColor: null,\n            ...args,\n        },\n    }),\n    argTypes: {\n        backgroundColor: {\n            control: 'color',\n        },\n    },\n}"
+=======
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Easy',\n    color: 'green',\n    \n  },\n}"
+>>>>>>> Angelica
                 },
                 {
-                    "name": "Primary",
+                    "name": "Exit",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
+<<<<<<< HEAD
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button',\n    },\n}"
+=======
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'EXTI',\n    color: 'none',\n    \n  },\n}"
+>>>>>>> Angelica
                 },
                 {
-                    "name": "Secondary",
+                    "name": "Extreme",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
+<<<<<<< HEAD
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        label: 'Button',\n    },\n}"
+=======
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Extreme',\n    color: 'black',\n    \n  },\n}"
+>>>>>>> Angelica
                 },
                 {
-                    "name": "Small",
+                    "name": "Hard",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
+<<<<<<< HEAD
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button',\n    },\n}"
                 }
@@ -1252,24 +1420,29 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe',\n        },\n    },\n}"
+=======
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Hard',\n    color: 'red',\n    \n  },\n}"
+>>>>>>> Angelica
                 },
                 {
-                    "name": "LoggedOut",
+                    "name": "Medium",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/header.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Medium',\n    color: 'yellow',\n    \n  },\n}"
                 },
                 {
-                    "name": "meta",
+                    "name": "Restart",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/header.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
+<<<<<<< HEAD
                     "type": "Meta<HeaderComponent>",
                     "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
                 }
@@ -1284,24 +1457,29 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement)\n        const loginButton = canvas.getByRole('button', { name: /Log in/i })\n        await expect(loginButton).toBeInTheDocument()\n        await userEvent.click(loginButton)\n        await expect(loginButton).not.toBeInTheDocument()\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i })\n        await expect(logoutButton).toBeInTheDocument()\n    },\n}"
+=======
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'RESTART',\n    color: 'none',\n    \n  },\n}"
+>>>>>>> Angelica
                 },
                 {
-                    "name": "LoggedOut",
+                    "name": "Return",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/page.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Return',\n    color: 'none',\n    \n  },\n}"
                 },
                 {
-                    "name": "meta",
+                    "name": "Start",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/page.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
+<<<<<<< HEAD
                     "type": "Meta<PageComponent>",
                     "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
                 }
@@ -1316,16 +1494,45 @@
                     "deprecationMessage": "",
                     "type": "Meta<TileComponent>",
                     "defaultValue": "{\n    title: 'Components/Tile',\n    component: TileComponent,\n    tags: ['autodocs'],\n    render: (args: TileComponent) => ({\n        props: {\n            ...args,\n        },\n    }),\n}"
+=======
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Start',\n    color: 'blue',\n  },\n}"
+>>>>>>> Angelica
                 },
                 {
-                    "name": "Primary",
+                    "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/tile.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
+<<<<<<< HEAD
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n    },\n}"
+=======
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  args: {},\n}"
+                },
+                {
+                    "name": "Tips",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button-component/button-component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Tips',\n    color: 'yellow',\n    \n  },\n}"
+                },
+                {
+                    "name": "VeryEasy",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button-component/button-component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Very easy',\n    color: 'blue',\n    \n  },\n}"
+>>>>>>> Angelica
                 }
             ],
             ".storybook/preview.ts": [
@@ -1344,52 +1551,13 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "src/stories/button.stories.ts": [
+            "src/app/button-component/button-component.stories.ts": [
                 {
-                    "name": "Story",
+                    "name": "ButtonComponentStory",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ButtonComponent>",
-                    "file": "src/stories/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "src/stories/header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<HeaderComponent>",
-                    "file": "src/stories/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "src/stories/page.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<PageComponent>",
-                    "file": "src/stories/page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "src/stories/tile.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<TileComponent>",
-                    "file": "src/stories/tile.stories.ts",
+                    "rawtype": "StoryObj<ButtonComponentComponent>",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1400,7 +1568,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 3,
+        "count": 1,
         "status": "low",
         "files": [
             {
@@ -1433,21 +1601,148 @@
                 "status": "low"
             },
             {
+<<<<<<< HEAD
                 "filePath": "src/app/background/background.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "BackgroundComponent",
+=======
+                "filePath": "src/app/button-component/button-component.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponentComponent",
+                "coveragePercent": 25,
+                "coverageCount": "1/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Confirm",
+>>>>>>> Angelica
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
+<<<<<<< HEAD
                 "filePath": "src/app/ending-screen/ending-screen.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "EndingScreenComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/6",
+=======
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Easy",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Exit",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Extreme",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Hard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Medium",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Restart",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Return",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Start",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tips",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "VeryEasy",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+>>>>>>> Angelica
                 "status": "low"
             },
             {
@@ -1469,11 +1764,21 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/tile/tile.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "TileComponent",
                 "coveragePercent": 0,
+<<<<<<< HEAD
                 "coverageCount": "0/15",
                 "status": "low"
             },
@@ -1641,6 +1946,9 @@
                 "name": "User",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+=======
+                "coverageCount": "0/11",
+>>>>>>> Angelica
                 "status": "low"
             }
         ]

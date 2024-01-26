@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { ReplayComponent } from './replay.component'
+import { ButtonComponentComponent } from './button-component.component'
 
-describe('ReplayComponent', () => {
-    let component: ReplayComponent
-    let fixture: ComponentFixture<ReplayComponent>
+describe('ButtonComponentComponent', () => {
+    let component: ButtonComponentComponent
+    let fixture: ComponentFixture<ButtonComponentComponent>
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ReplayComponent]
+            imports: [ButtonComponentComponent]
         })
             .compileComponents()
     
-        fixture = TestBed.createComponent(ReplayComponent)
+        fixture = TestBed.createComponent(ButtonComponentComponent)
         component = fixture.componentInstance
         fixture.detectChanges()
     })
@@ -21,3 +21,4 @@ describe('ReplayComponent', () => {
         expect(component).toBeTruthy()
     })
 })
+

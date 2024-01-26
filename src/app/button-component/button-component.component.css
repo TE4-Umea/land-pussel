@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  
+  font-weight: 700;
+  font-size: 25px;
+  font-family: "VT323", monospace;
+  line-height: 1;
+
+  width: 9em;
+  padding: 6px;
+  border-width: 5px;
+  border-style: solid;
+  
+
+  color: rgb(0, 0, 0);
+}
+
+.button--blue {
+  border-color: #697d8a27;
+  background-color: #ceebff;
+}
+.button--green {
+  border-color: #697d8a27;
+  background-color: #bcffb1;
+}
+
+.button--yellow {
+  border-color: #697d8a27;
+  background-color: #fff067;
+}
+
+.button--smallYellow {
+  border-color: #697d8a27;
+  background-color: #fff067;
+  width: 4.5em;
+}
+
+.button--red {
+  border-color: #697d8a27;
+  background-color: #ff9999;
+}
+
+.button--black {
+  color: #b92713;
+  border-color: #141414;
+  background-color: #2b2b2b;
+}
+
+.button--none {
+  border-color: transparent;
+  background-color: transparent;
+}
