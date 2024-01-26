@@ -25,5 +25,4 @@ export class GameComponent {
     getMsgFromHome($event: string) { this.condition = $event }
     getMsgFromEndingScreen($event: string) { this.condition = $event }
     getMsgFromTile($event: string) { this.condition = $event }
-    getMsgFromReplay($event: string) { this.condition = $event }
 }
