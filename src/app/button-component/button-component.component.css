@@ -1,27 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 .button {
+  color: rgb(0, 0, 0);
   display: inline-block;
   cursor: pointer;
   
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
   font-family: "VT323", monospace;
   line-height: 1;
 
-  width: 9em;
+  margin-top: 0.5em;
   padding: 6px;
+  padding-left: 3em;
+  padding-right: 3em;
   border-width: 5px;
   border-style: solid;
-  
 
-  color: rgb(0, 0, 0);
+  width: 400px;
+  max-width: 80vw;
+}
+
+@media (max-width: 840px) { 
+  .button {
+      width: 250px;
+  }
+}
+
+.button:hover{
+  transform: scale(1.2);
 }
 
 .button--blue {
   border-color: #697d8a27;
   background-color: #ceebff;
 }
+
 .button--green {
   border-color: #697d8a27;
   background-color: #bcffb1;

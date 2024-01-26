@@ -25,6 +25,9 @@ export class ButtonComponentComponent {
     @Input()
         label = 'Button'
 
+    @Input()
+        parameters = 'hover'
+
 
     @Output()
         onClick = new EventEmitter<Event>()

@@ -2,10 +2,12 @@ import { CommonModule } from '@angular/common'
 import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'
 import { TileComponent } from '../tile/tile.component'
 
+import { ButtonComponentComponent } from '../button-component/button-component.component'
+
 @Component({
     selector: 'app-end',
     standalone: true,
-    imports: [CommonModule, TileComponent],
+    imports: [CommonModule, TileComponent,ButtonComponentComponent,],
     templateUrl: './ending-screen.component.html',
     styleUrl: './ending-screen.component.css'
 })

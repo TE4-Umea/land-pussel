@@ -8,5 +8,5 @@
     <input type="text" name="" id="" #nameInput>
     <button type="button" (click)="sortHighscore()">Confirm</button>
 </div>
-<button type="button" (click)="onClickRestart()">Restart</button>
-<button type="button" (click)="onClickExit()">Exit</button>
+<app-button-component [color]="'none'" [label]="'Restart'" (onClick)="onClickRestart()"></app-button-component>
+<app-button-component [color]="'none'" [label]="'Exit'" (onClick)="onClickExit()"></app-button-component>
