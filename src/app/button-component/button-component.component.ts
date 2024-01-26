@@ -25,8 +25,6 @@ export class ButtonComponentComponent {
     @Input()
         label = 'Button'
 
-    @Input()
-        parameters = 'hover'
 
 
     @Output()

@@ -19,7 +19,7 @@ const Template: ButtonComponentStory = {
 export const Tips: ButtonComponentStory = {
     ...Template,
     args: {
-        label: 'Tips 😀',
+        label: 'Tips😀',
         color: 'smallYellow',
         
     },
@@ -30,7 +30,14 @@ export const Start: ButtonComponentStory = {
     args: {
         label: 'Start',
         color: 'blue',
-        parameters: 'hover',
+    },
+}
+
+export const Credits: ButtonComponentStory = {
+    ...Template,
+    args: {
+        label: 'Credits',
+        color: 'blue',
     },
 }
 
@@ -113,6 +120,7 @@ export const Restart: ButtonComponentStory = {
 
     },
 }
+
 
 
 
