@@ -15,7 +15,7 @@ export class HomeComponent {
 
     @Output() sendMessage = new EventEmitter()
 
-    conditionToSend = 'game'
+    conditionToSend: string = 'game'
 
     onClickStart() {
         this.sendMessage.emit(this.conditionToSend)

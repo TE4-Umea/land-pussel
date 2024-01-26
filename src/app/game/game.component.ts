@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common'
 import { RouterLink, RouterOutlet } from '@angular/router'
 import { } from '@storybook/angular'
 import { ReactiveFormsModule } from '@angular/forms'
-import countries from '../../assets/countries.json'
 
 import { TileComponent } from '../tile/tile.component'
 import { HomeComponent } from '../home/home.component'
@@ -20,9 +19,8 @@ import { ReplayComponent } from '../replay/replay.component'
 })
 
 export class GameComponent {
-    countries = countries
 
-    condition = 'start'
+    condition: string = 'start'
 
     getMsgFromHome($event: string) { this.condition = $event }
     getMsgFromEndingScreen($event: string) { this.condition = $event }
