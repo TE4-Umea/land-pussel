@@ -23,6 +23,8 @@ export class TileComponent implements OnInit {
     lives: number = 3
     randomCountryIndex: number = 0
     markedTiles: number[] = []
+    correctMarkedTiles: number = 0
+    numberOfCorrectTiles: number = 0
     replay: Array<object> = []
 
 
@@ -93,26 +95,31 @@ export class TileComponent implements OnInit {
 
     onCheckConfirm() {
         this.saveTileGrid()
-        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {
-            this.correctAnswer()
-        }
-        else {
+        this.pointsForCorrectTiles()
+        if (this.markedTiles.toString() !== this.correctTestAnswerId.toString()) {
             this.invalidAnswer()
         }
         this.resetValues()
     }
 
-    correctAnswer() {
-        this.score += (100 * this.scoreMultiplier)
+    pointsForCorrectTiles() {
+        this.correctTestAnswerId.forEach((correctTile) => {
+            this.numberOfCorrectTiles++
+            this.markedTiles.forEach((tile) => {
+                if (tile === correctTile) {
+                    this.score += (11 * this.scoreMultiplier)
+                    this.correctMarkedTiles++
+                }
+            })
+        })
         this.scoreMultiplier += .15
         this.showSnackbar('Horay! :D')
-        this.getRandomCountry()
     }
 
     invalidAnswer() {
         this.lives--
         this.scoreMultiplier = 1
-        this.showSnackbar('Oh no! D:')
+        this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)
         if (this.lives <= 0) {
             this.saveReplayToLocalStorage()
             this.getHighscoreSorted()
@@ -150,9 +157,12 @@ export class TileComponent implements OnInit {
     }
 
     resetValues() {
+        this.getRandomCountry()
         this.markedTiles = []
         this.userSelectedInputTiles = []
         this.tileElementId = []
+        this.correctMarkedTiles = 0
+        this.numberOfCorrectTiles = 0
         this.ngAfterViewInit()
     }
     onClickRestart() {

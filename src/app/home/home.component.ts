@@ -15,9 +15,13 @@ export class HomeComponent {
 
     @Output() sendMessage = new EventEmitter()
 
-    conditionToSend = 'game'
+    conditionToSendGame: string = 'game'
+    conditionToSendCredits: string = 'credits'
 
     onClickStart() {
-        this.sendMessage.emit(this.conditionToSend)
+        this.sendMessage.emit(this.conditionToSendGame)
+    }
+    onClickCredits() {
+        this.sendMessage.emit(this.conditionToSendCredits)
     }
 }

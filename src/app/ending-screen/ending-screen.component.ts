@@ -22,7 +22,7 @@ export class EndingScreenComponent implements OnInit {
 
     sortHighscore() {
         const score: number = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('score')!) : 0
-        this.highscore.push({ name: this.setNameForHighscore(), score: score })
+        this.highscore.push({ name: this.setNameForHighscore().toUpperCase(), score: score })
         this.highscore.sort((a, b) => b.score - a.score)
         if (this.highscore.length > 3) {
             this.highscore.pop()
