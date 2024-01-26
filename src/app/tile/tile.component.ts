@@ -104,7 +104,6 @@ export class TileComponent implements OnInit {
         this.score += (100 * this.scoreMultiplier)
         this.scoreMultiplier += .15
         this.showSnackbar('Horay! :D')
-        this.getRandomCountry()
     }
 
     invalidAnswer() {
@@ -148,6 +147,7 @@ export class TileComponent implements OnInit {
     }
 
     resetValues() {
+        this.getRandomCountry()
         this.markedTiles = []
         this.userSelectedInputTiles = []
         this.tileElementId = []
