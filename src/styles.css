@@ -12,6 +12,12 @@
     --shadow1: 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
+h1, h2, h3, h4, p {
+    font-family: 'VT323', monospace;
+    font-weight: 400;
+    margin: 0;
+}
+
 body {
     margin: 0;
 }
