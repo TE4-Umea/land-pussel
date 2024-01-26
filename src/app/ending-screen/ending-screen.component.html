@@ -1,12 +1,22 @@
-<h1>You died!</h1>
-<div *ngIf="condition === 'highscoreChart'">
-    <h2>Top 3</h2>
-    <h3 *ngFor="let topScore of topScores">{{ [topScore + 1] }} {{ [highscore[topScore].name] }} {{
-        [highscore[topScore].score] }}</h3>
-</div>
-<div *ngIf="condition === 'inputHighscoreName'">
-    <input type="text" name="" id="" #nameInput>
-    <button type="button" (click)="sortHighscore()">Confirm</button>
-</div>
-<button type="button" (click)="onClickRestart()">Restart</button>
-<button type="button" (click)="onClickExit()">Exit</button>
+<section class="ending-screen">
+    <section class="highscore-top-container">
+        <h1>You died!</h1>
+        <button type="button" (click)="onClickRestart()">Restart</button>
+        <button type="button" (click)="onClickExit()">Exit</button>
+    </section>
+    <div class="highscore" *ngIf="condition === 'highscoreChart'">
+        <h2 class="highscore-title">Highscores</h2>
+        <section class="highscore-text" *ngFor="let topScore of topScores">
+            <p class="highscore-name">{{ [topScore + 1 + "."] }} {{ [highscore[topScore].name] }}</p>
+            <p>{{ [highscore[topScore].score] }}</p>
+        </section>
+    </div>
+    <div class="input-highscore" *ngIf="condition === 'inputHighscoreName'">
+        <h2>New Highscore!</h2>
+        <p>Enter your initials</p>
+        <section class="input-highscore-name">
+            <input type="text" name="" maxlength="3" id="" #nameInput>
+            <button type="button" (click)="sortHighscore()">Confirm</button>
+        </section>
+    </div>
+</section>
