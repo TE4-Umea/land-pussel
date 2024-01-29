@@ -146,14 +146,14 @@ export class TileComponent implements OnInit {
             })
         })
         this.scoreMultiplier += .15
-        this.showSnackbar('Horay! :D')
+        this.showSnackbar('<img style="width: 36px;" src="../../assets/images/correct.png" alt=""> Horay! :D')
     }
 
     invalidAnswer() {
         this.lives--
         this.scoreMultiplier = 1
         if (this.markedTiles.length > this.correctTestAnswerId.length) {
-            this.showSnackbar('Oh no! You got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles + ' but you marked too many tiles!')
+            this.showSnackbar('<img style="width: 36px;" src="../../assets/images/incorrect.png" alt=""> Oh no! You got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles + ' but you marked too many tiles!')
         }
         else {
             this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)
