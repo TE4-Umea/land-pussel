@@ -41,6 +41,14 @@ export const Credits: ButtonComponentStory = {
     },
 }
 
+export const Highscore: ButtonComponentStory = {
+    ...Template,
+    args: {
+        label: 'Highscore',
+        color: 'blue',
+    },
+}
+
 export const Confirm: ButtonComponentStory = {
     ...Template,
     args: {
@@ -121,6 +129,14 @@ export const Restart: ButtonComponentStory = {
     },
 }
 
+export const Back: ButtonComponentStory = {
+    ...Template,
+    args: {
+        label: 'Back',
+        color: 'white',
+
+    },
+}
 
 
 

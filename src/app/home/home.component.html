@@ -1,6 +1,12 @@
 <section class="home-flex">
-    <img class="logo" src="../../assets/images/landpuzzle2.png" alt="Land Puzzle">
+
+    <div class="titleDiv">
+        <h1 class="titleLand">Land</h1>
+        <h1 class="titlePuzzle">Puzzle</h1>
+    </div>
+    
     <app-button-component [color]="'blue'" [label]="'Start'" (onClick)="onClickStart()"></app-button-component>
     <app-button-component [color]="'blue'" [label]="'Credits'" (onClick)="onClickCredits()"></app-button-component>
-    <button (click)="onClickHighscore()">Highscore</button>
+    <app-button-component [color]="'blue'" [label]="'Highscore'" (onClick)="onClickHighscore()"></app-button-component>
+
 </section>
