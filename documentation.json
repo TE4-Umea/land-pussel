@@ -9,11 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-<<<<<<< HEAD
             "id": "component-AppComponent-fc7060414ddccfe4a1a7ccf0d0c00ccfbf49833b94943091fb62991c19405ab14fb4f01a5a421f26170d1a45c565c1aecbbf2397e1e74af9e063ab26bd82c177",
-=======
-            "id": "component-AppComponent-cb2c56d29318085ce0346d51d49301a684aa29ff4f1f79b5b7ce9c0501044272d365472ea0c5212e0deb1c280f84cc5af904803a87601af28b4e73fe9adda9eb",
->>>>>>> Angelica
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -63,68 +59,18 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-<<<<<<< HEAD
             "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\n\n@Component({\n    selector: 'app-root',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet],\n    templateUrl: './app.component.html',\n    styleUrl: './app.component.css'\n})\nexport class AppComponent {\n    title = 'first-angular'\n}\n",
-=======
-            "sourceCode": "import { Component } from '@angular/core'\r\nimport { CommonModule } from '@angular/common'\r\nimport { RouterLink, RouterOutlet } from '@angular/router'\r\n\r\n@Component({\r\n    selector: 'app-root',\r\n    standalone: true,\r\n    imports: [CommonModule, RouterLink, RouterOutlet],\r\n    templateUrl: './app.component.html',\r\n    styleUrl: './app.component.css'\r\n})\r\nexport class AppComponent {\r\n    title = 'first-angular'\r\n}\r\n",
->>>>>>> Angelica
             "styleUrl": "./app.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<main class=\"main\">\n  <router-outlet></router-outlet>\n</main>"
-<<<<<<< HEAD
-        },
-        {
-            "name": "BackgroundComponent",
-            "id": "component-BackgroundComponent-91f2bdbbe2899ff99345b09918f2873156d40d9eb3cbc1a9384d9bbb0ed6f0565f2e4059b7a9542eed5da8d5c85c092cbfa82f46d5cad984f680286f2c928246",
-            "file": "src/app/background/background.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-background",
-            "styleUrls": [],
-            "styles": [],
-            "templateUrl": [
-                "./background.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-background',\n  standalone: true,\n  imports: [],\n  templateUrl: './background.component.html',\n  styleUrl: './background.component.css'\n})\nexport class BackgroundComponent {\n\n}\n",
-            "styleUrl": "./background.component.css",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "extends": [],
-            "templateData": "<p>background works!</p>\n"
-        },
-        {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-03c3ef85f19ace4cb4bf41b92211c8a46965132c224ac534923823146b7825cebd9942feb075ee8f4939491be8fe4744f48bc32d3d11e7e519a0fdfeae257b54",
-            "file": "src/stories/button.component.ts",
-=======
+            "templateData": "<main class=\"background\">\n  <img class=\"clouds-bg\" src=\"/assets/images/moln.png\" alt=\"\">\n  <img class=\"clouds-fg\" src=\"/assets/images/moln.png\" alt=\"\">\n  <router-outlet></router-outlet>\n</main>"
         },
         {
             "name": "ButtonComponentComponent",
-            "id": "component-ButtonComponentComponent-279e7d92525fd601c6df88eee822d48cc1d28037ccb7609a3fb051baf6d16a71893d3c73ae6ca43de3810fe90d2e1d01502d188e7e7716d85fb40b62b5146930",
+            "id": "component-ButtonComponentComponent-a90a717821809a126676d1d9a01f418e6a58812aaef1a4109791ae270c3982f1630e88e02fa164a224344945bf9c501a9025c8c61d9692987c447d3ad468d638",
             "file": "src/app/button-component/button-component.component.ts",
->>>>>>> Angelica
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -136,9 +82,7 @@
             ],
             "styles": [],
             "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n >\n   {{ label }}\n </button>",
-            "templateUrl": [
-                "./button-component.component.html"
-            ],
+            "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -147,8 +91,8 @@
                     "defaultValue": "'blue'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
-                    "type": "\"blue\" | \"green\" | \"yellow\" | \"red\" | \"black\" | \"none\"",
+                    "line": 21,
+                    "type": "\"blue\" | \"green\" | \"yellow\" | \"smallYellow\" | \"red\" | \"black\" | \"none\"",
                     "decorators": []
                 },
                 {
@@ -156,37 +100,7 @@
                     "defaultValue": "'Button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-<<<<<<< HEAD
-                            "pos": 815,
-                            "end": 828,
-=======
-                            "pos": 620,
-                            "end": 633,
->>>>>>> Angelica
-                            "flags": 16842752,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 334,
-                            "tagName": {
-<<<<<<< HEAD
-                                "pos": 816,
-                                "end": 824,
-=======
-                                "pos": 621,
-                                "end": 629,
->>>>>>> Angelica
-                                "flags": 16842752,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 80,
-                                "escapedText": "required"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "line": 30,
+                    "line": 26,
                     "type": "string",
                     "decorators": []
                 }
@@ -197,9 +111,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 36,
+                    "line": 31,
                     "type": "EventEmitter"
                 }
             ],
@@ -219,15 +131,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-<<<<<<< HEAD
-            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, Input, Output, EventEmitter } from '@angular/core'\n\n@Component({\n    selector: 'storybook-button',\n    standalone: true,\n    imports: [CommonModule],\n    template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n    styleUrls: ['./button.css'],\n})\nexport class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n      primary = false\n\n  /**\n   * What background color to use\n   */\n  @Input()\n      backgroundColor?: string\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n      size: 'small' | 'medium' | 'large' = 'medium'\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n      label = 'Button'\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n      onClick = new EventEmitter<Event>()\n\n  public get classes(): string[] {\n      const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary'\n\n      return ['storybook-button', `storybook-button--${this.size}`, mode]\n  }\n}\n",
-=======
-            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, Input, Output, EventEmitter } from '@angular/core'\n\n@Component({\n    selector: 'app-button-component',\n    standalone: true,\n    imports: [CommonModule],\n    templateUrl: './button-component.component.html',\n    template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n  >\n    {{ label }}\n  </button>`,\n    styleUrls: ['./button-component.component.css'],\n})\nexport class ButtonComponentComponent {\n    \n  @Input()\n      color: 'blue' | 'green' | 'yellow' | 'red' | 'black' | 'none' = 'blue'\n  \n  \n  \n  /**\n   * @required\n   */\n  @Input()\n      label = 'Button'\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n      onClick = new EventEmitter<Event>()\n\n  public get classes(): string[] {\n      return ['button', `button--${this.color}`]\n  }\n}\n",
->>>>>>> Angelica
+            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, Input, Output, EventEmitter } from '@angular/core'\n\n@Component({\n    selector: 'app-button-component',\n    standalone: true,\n    imports: [CommonModule],\n    template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n  >\n    {{ label }}\n  </button>`,\n    styleUrls: ['./button-component.component.css'],\n})\nexport class ButtonComponentComponent {\n\n    @Input()\n        color: 'blue' | 'green' | 'yellow' | 'smallYellow' | 'red' | 'black' | 'none' = 'blue'\n\n\n\n    @Input()\n        label = 'Button'\n\n\n\n    @Output()\n        onClick = new EventEmitter<Event>()\n\n    public get classes(): string[] {\n        return ['button', `button--${this.color}`,]\n    }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import url(\"https://fonts.googleapis.com/css2?family=VT323&display=swap\");\n\n.button {\n  display: inline-block;\n  cursor: pointer;\n  \n  font-weight: 700;\n  font-size: 20px;\n  font-family: \"VT323\", monospace;\n  line-height: 1;\n\n  padding: 6px 50px;\n  border-width: 5px;\n  border-style: solid;\n  \n  color: rgb(0, 0, 0);\n}\n\n.button--blue {\n  border-color: #697d8a27;\n  background-color: #ceebff;\n}\n.button--green {\n  border-color: #697d8a27;\n  background-color: #bcffb1;\n}\n\n.button--yellow {\n  border-color: #697d8a27;\n  background-color: #fff067;\n}\n\n.button--red {\n  border-color: #697d8a27;\n  background-color: #ff9999;\n}\n\n.button--black {\n  color: #b92713;\n  border-color: #141414;\n  background-color: #2b2b2b;\n}\n\n.button--none {\n  border-color: transparent;\n  background-color: transparent;\n}\n",
+                    "data": "@import url(\"https://fonts.googleapis.com/css2?family=VT323&display=swap\");\n\n.button {\n  color: rgb(0, 0, 0);\n  display: inline-block;\n  cursor: pointer;\n  \n  font-weight: 700;\n  font-size: 30px;\n  font-family: \"VT323\", monospace;\n  line-height: 1;\n\n  margin-top: 0.5em;\n  padding: 6px;\n  padding-left: 3em;\n  padding-right: 3em;\n  border-width: 10px;\n  border-style: solid;\n\n  width: 400px;\n  max-width: 80vw;\n}\n\n@media (max-width: 840px) { \n  .button {\n      width: 250px;\n  }\n}\n\n.button:hover{\n  transform: scale(1.2);\n}\n\n.button--blue {\n  border-color: #AAC2D2;\n  background-color: #ceebff;\n}\n\n.button--green {\n  border-color: #78A372;\n  background-color: #bcffb1;\n}\n\n.button--yellow {\n  border-color: #CCC057;\n  background-color: #fff067;\n}\n\n.button--smallYellow {\n  border-color: #CCC057;\n  background-color: #fff067;\n  width: 4.5em;\n}\n\n.button--red {\n  border-color: #CC7A7A;\n  background-color: #ff9999;\n}\n\n.button--black {\n  color: #b92713;\n  border-color: #222222;\n  background-color: #2b2b2b;\n}\n\n.button--none {\n  border-color: transparent;\n  background-color: transparent;\n  color: white;\n}\n",
                     "styleUrl": "./button-component.component.css"
                 }
             ],
@@ -240,15 +148,83 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 38
+                        "line": 33
                     }
                 }
-            },
-            "templateData": "\n"
+            }
+        },
+        {
+            "name": "CreditsComponent",
+            "id": "component-CreditsComponent-1022ba604c1605969859d29bca2172dbb8f8a74efb503fca901e362ffee59aeafd9fb6fdf0af180e77a2281bf274abf64c8d83217c692922d2298acb5f74e30c",
+            "file": "src/app/credits/credits.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-credits",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./credits.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "sendMessage",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "conditionToSendStart",
+                    "defaultValue": "'start'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onClickHome",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\n\n@Component({\n    selector: 'app-credits',\n    standalone: true,\n    imports: [],\n    templateUrl: './credits.component.html',\n    styleUrl: './credits.component.css'\n})\nexport class CreditsComponent {\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendStart: string = 'start'\n\n    onClickHome() {\n        this.sendMessage.emit(this.conditionToSendStart)\n    }\n}\n",
+            "styleUrl": "./credits.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<button (click)=\"onClickHome()\">Back</button>"
         },
         {
             "name": "EndingScreenComponent",
-            "id": "component-EndingScreenComponent-43a7015f26393ca320ce4c5c88148f6222f0c40c7d42025023019dfb2264dde656267946a1eeb55572d5f8e086d8dc19cd766ac6b3f2e94a62887af9eea54e61",
+            "id": "component-EndingScreenComponent-45f83a2294475130cf154e5157415da2b249ef47b9db4310951333b7cca3481b0da84cd305c83bedbe3fd3980fc61e63a22d2c80014032d7bf65f086568b40b5",
             "file": "src/app/ending-screen/ending-screen.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -270,11 +246,21 @@
                     "defaultValue": "new EventEmitter()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 51,
                     "type": "EventEmitter"
                 }
             ],
             "propertiesClass": [
+                {
+                    "name": "condition",
+                    "defaultValue": "'highscoreChart'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
                 {
                     "name": "conditionToSendExit",
                     "defaultValue": "'start'",
@@ -283,7 +269,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 15
+                    "line": 16
                 },
                 {
                     "name": "conditionToSendRestart",
@@ -293,17 +279,75 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 14
+                    "line": 15
+                },
+                {
+                    "name": "highscore",
+                    "defaultValue": "localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[literal type]",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "nameInput",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'nameInput'"
+                        }
+                    ],
+                    "modifierKind": [
+                        170
+                    ]
+                },
+                {
+                    "name": "topScores",
+                    "defaultValue": "[0, 1, 2]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
                 }
             ],
             "methodsClass": [
+                {
+                    "name": "checkIfHighscore",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 47,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
                 {
                     "name": "onClickExit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 56,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -313,7 +357,27 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 18,
+                    "line": 53,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setNameForHighscore",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "sortHighscore",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -323,25 +387,37 @@
             "hostBindings": [],
             "hostListeners": [],
             "standalone": true,
-            "imports": [],
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "TileComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ButtonComponentComponent",
+                    "type": "component"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\n\n@Component({\n    selector: 'app-end',\n    standalone: true,\n    imports: [],\n    templateUrl: './ending-screen.component.html',\n    styleUrl: './ending-screen.component.css'\n})\nexport class EndingScreenComponent {\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendRestart = 'game'\n    conditionToSendExit = 'start'\n\n\n    onClickRestart() {\n        this.sendMessage.emit(this.conditionToSendRestart)\n    }\n    onClickExit() {\n        this.sendMessage.emit(this.conditionToSendExit)\n    }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'\nimport { TileComponent } from '../tile/tile.component'\n\nimport { ButtonComponentComponent } from '../button-component/button-component.component'\n\n@Component({\n    selector: 'app-end',\n    standalone: true,\n    imports: [CommonModule, TileComponent,ButtonComponentComponent,],\n    templateUrl: './ending-screen.component.html',\n    styleUrl: './ending-screen.component.css'\n})\nexport class EndingScreenComponent implements OnInit {\n    conditionToSendRestart: string = 'game'\n    conditionToSendExit: string = 'start'\n    topScores: number[] = [0, 1, 2]\n    highscore: [{ name: string, score: number }] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]\n    condition: string = 'highscoreChart'\n\n    @ViewChild('nameInput') nameInput!: ElementRef\n\n    sortHighscore() {\n        const score: number = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('score')!) : 0\n        this.highscore.push({ name: this.setNameForHighscore().toUpperCase(), score: score })\n        this.highscore.sort((a, b) => b.score - a.score)\n        if (this.highscore.length > 3) {\n            this.highscore.pop()\n        }\n        localStorage.setItem('highscore', JSON.stringify(this.highscore))\n        this.condition = 'highscoreChart'\n    }\n\n    setNameForHighscore() {\n        const nameInput: HTMLInputElement = this.nameInput.nativeElement\n        return nameInput.value\n    }\n\n    checkIfHighscore() {\n        this.highscore.forEach((element) => {\n            if (element.score < JSON.parse(localStorage.getItem('score')!)) {\n                this.condition = 'inputHighscoreName'\n            }\n        })\n    }\n\n    ngOnInit(): void {\n        this.checkIfHighscore()\n    }\n\n    @Output() sendMessage = new EventEmitter()\n\n    onClickRestart() {\n        this.sendMessage.emit(this.conditionToSendRestart)\n    }\n    onClickExit() {\n        this.sendMessage.emit(this.conditionToSendExit)\n    }\n}\n",
             "styleUrl": "./ending-screen.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<h1>You died!</h1>\n<button type=\"button\" (click)=\"onClickRestart()\">Restart</button>\n<button type=\"button\" (click)=\"onClickExit()\">Exit</button>"
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "\n<section class=\"ending-screen\">\n    <section class=\"highscore-top-container\">\n        <h1>You died!</h1>\n      <app-button-component [color]=\"'none'\" [label]=\"'Restart'\" (onClick)=\"onClickRestart()\"></app-button-component>\n      <app-button-component [color]=\"'none'\" [label]=\"'Exit'\" (onClick)=\"onClickExit()\"></app-button-component>\n    </section>\n    <div class=\"highscore\" *ngIf=\"condition === 'highscoreChart'\">\n        <h2 class=\"highscore-title\">Highscores</h2>\n        <section class=\"highscore-text\" *ngFor=\"let topScore of topScores\">\n            <p class=\"highscore-name\">{{ [topScore + 1 + \".\"] }} {{ [highscore[topScore].name] }}</p>\n            <p>{{ [highscore[topScore].score] }}</p>\n        </section>\n    </div>\n    <div class=\"input-highscore\" *ngIf=\"condition === 'inputHighscoreName'\">\n        <h2>New Highscore!</h2>\n        <p>Enter your initials</p>\n        <section class=\"input-highscore-name\">\n            <input type=\"text\" name=\"\" maxlength=\"3\" id=\"\" #nameInput>\n            <button type=\"button\" (click)=\"sortHighscore()\">Confirm</button>\n        </section>\n    </div>\n</section>"
         },
         {
             "name": "GameComponent",
-<<<<<<< HEAD
-            "id": "component-GameComponent-d09a34a6ed4ef483c7d8df17d29ce622635657d59142d6826e4eb9214b17a525d1c6dd65854919a5747ec9c96d3f79e84ac2abbf045820bc4617579e013eb549",
-=======
-            "id": "component-GameComponent-5186ef3041aa0ce945abae11725073f287beda4e12ffc163ed46c48880a57075e4952ed65e730aa59c0fa70f1ef0fa8b36c426938d44476c8300f6adc70d6c46",
->>>>>>> Angelica
+            "id": "component-GameComponent-7ca8721a87c022f7606030fffa8338b852e1462e0ba0be9cee60db945b6562a775c03d0d97f0e582a70581a0cbdfa0f52fd34e2397f905421fd51b7f43e09fd2",
             "file": "src/app/game/game.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -360,7 +436,6 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-<<<<<<< HEAD
                     "name": "condition",
                     "defaultValue": "'start'",
                     "deprecated": false,
@@ -368,7 +443,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 23
+                    "line": 24
                 },
                 {
                     "name": "countries",
@@ -378,10 +453,38 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 21
+                    "line": 22
                 }
             ],
             "methodsClass": [
+                {
+                    "name": "getMsgFromCredits",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
                 {
                     "name": "getMsgFromEndingScreen",
                     "args": [
@@ -395,7 +498,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 26,
+                    "line": 27,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -423,7 +526,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 25,
+                    "line": 26,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -451,7 +554,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 27,
+                    "line": 28,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -465,16 +568,6 @@
                             }
                         }
                     ]
-=======
-                    "name": "countries",
-                    "defaultValue": "countries",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 19
->>>>>>> Angelica
                 }
             ],
             "deprecated": false,
@@ -500,7 +593,6 @@
                 {
                     "name": "TileComponent",
                     "type": "component"
-<<<<<<< HEAD
                 },
                 {
                     "name": "HomeComponent",
@@ -509,165 +601,26 @@
                 {
                     "name": "EndingScreenComponent",
                     "type": "component"
-=======
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core'\r\nimport { CommonModule } from '@angular/common'\r\nimport { RouterLink, RouterOutlet } from '@angular/router'\r\nimport { } from '@storybook/angular'\r\nimport { ReactiveFormsModule } from '@angular/forms'\r\nimport countries from '../../assets/countries.json'\r\n\r\nimport { TileComponent } from '../tile/tile.component'\r\n\r\n@Component({\r\n    selector: 'app-game',\r\n    standalone: true,\r\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent],\r\n    templateUrl: './game.component.html',\r\n    styleUrl: './game.component.css'\r\n})\r\n\r\nexport class GameComponent {\r\n    countries = countries\r\n\r\n}\r\n",
-            "styleUrl": "./game.component.css",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "extends": [],
-            "templateData": "<main>\n    <h1>Draw {{ countries.Sweden.name }}</h1> <!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->\n    <app-tile></app-tile>\n    <router-outlet></router-outlet>\n</main>"
-        },
-        {
-            "name": "HomeComponent",
-            "id": "component-HomeComponent-c6d7a366f37e7e16d148a230282d50cc66a3eec330a39e155031ef2dc1db7149719e9f2e2fdf0c03170f1db715bcff7d2c713340fa90d324e197e54b159a1392",
-            "file": "src/app/home/home.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-home",
-            "styleUrls": [],
-            "styles": [],
-            "templateUrl": [
-                "./home.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
                 },
                 {
-                    "name": "RouterLink"
-                },
-                {
-                    "name": "RouterOutlet"
->>>>>>> Angelica
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-<<<<<<< HEAD
-            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\nimport { } from '@storybook/angular'\nimport { ReactiveFormsModule } from '@angular/forms'\nimport countries from '../../assets/countries.json'\n\nimport { TileComponent } from '../tile/tile.component'\nimport { HomeComponent } from '../home/home.component'\nimport { EndingScreenComponent } from '../ending-screen/ending-screen.component'\n\n@Component({\n    selector: 'app-game',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent, HomeComponent, EndingScreenComponent],\n    templateUrl: './game.component.html',\n    styleUrl: './game.component.css'\n})\n\nexport class GameComponent {\n    countries = countries\n\n    condition = 'start'\n\n    getMsgFromHome($event: string) { this.condition = $event, console.log('hej') }\n    getMsgFromEndingScreen($event: string) { this.condition = $event }\n    getMsgFromTile($event: string) { this.condition = $event }\n\n}\n",
-            "styleUrl": "./game.component.css",
-=======
-            "sourceCode": "import { Component } from '@angular/core'\r\nimport { CommonModule } from '@angular/common'\r\nimport { RouterLink, RouterOutlet } from '@angular/router'\r\n\r\n@Component({\r\n    selector: 'app-home',\r\n    standalone: true,\r\n    imports: [CommonModule, RouterLink, RouterOutlet],\r\n    templateUrl: './home.component.html',\r\n    styleUrl: './home.component.css'\r\n})\r\nexport class HomeComponent {\r\n\r\n}\r\n",
-            "styleUrl": "./home.component.css",
->>>>>>> Angelica
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "extends": [],
-<<<<<<< HEAD
-            "templateData": "<main>\n    <app-home (sendMessage)='getMsgFromHome($event)' *ngIf=\"condition == 'start'\"></app-home>\n    <app-tile (sendMessage)='getMsgFromTile($event)' *ngIf=\"condition == 'game'\"></app-tile>\n    <app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf=\"condition == 'end'\"></app-end>\n    <router-outlet></router-outlet>\n</main>"
-        },
-        {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-82a00302293dbc4222aed8e65358e53191ec501579dd8c99d12cad4ae0a44064b79851fd36d2525d925033234c8a4227acfeb369303b653e3856def6a1b4cae4",
-            "file": "src/stories/header.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-header",
-            "styleUrls": [
-                "./header.css"
-            ],
-            "styles": [],
-            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            [primary]=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 69,
-                    "type": "User | null",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 78,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 72,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 75,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "ButtonComponent",
+                    "name": "CreditsComponent",
                     "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core'\nimport { CommonModule } from '@angular/common'\n\nimport { ButtonComponent } from './button.component'\nimport type { User } from './user'\n\n@Component({\n    selector: 'storybook-header',\n    standalone: true,\n    imports: [CommonModule, ButtonComponent],\n    template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            [primary]=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n    styleUrls: ['./header.css'],\n})\nexport class HeaderComponent {\n  @Input()\n      user: User | null = null\n\n  @Output()\n      onLogin = new EventEmitter<Event>()\n\n  @Output()\n      onLogout = new EventEmitter<Event>()\n\n  @Output()\n      onCreateAccount = new EventEmitter<Event>()\n}\n",
+            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\nimport { } from '@storybook/angular'\nimport { ReactiveFormsModule } from '@angular/forms'\nimport countries from '../../assets/countries.json'\n\nimport { TileComponent } from '../tile/tile.component'\nimport { HomeComponent } from '../home/home.component'\nimport { EndingScreenComponent } from '../ending-screen/ending-screen.component'\nimport { CreditsComponent } from '../credits/credits.component'\n\n@Component({\n    selector: 'app-game',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent, HomeComponent, EndingScreenComponent, CreditsComponent],\n    templateUrl: './game.component.html',\n    styleUrl: './game.component.css'\n})\n\nexport class GameComponent {\n    countries = countries\n\n    condition = 'start'\n\n    getMsgFromHome($event: string) { this.condition = $event }\n    getMsgFromEndingScreen($event: string) { this.condition = $event }\n    getMsgFromTile($event: string) { this.condition = $event }\n    getMsgFromCredits($event: string) { this.condition = $event }\n\n}\n",
+            "styleUrl": "./game.component.css",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-header {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
-                    "styleUrl": "./header.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
-            "extends": []
+            "extends": [],
+            "templateData": "<app-home (sendMessage)='getMsgFromHome($event)' *ngIf=\"condition == 'start'\"></app-home>\n<app-tile (sendMessage)='getMsgFromTile($event)' *ngIf=\"condition == 'game'\"></app-tile>\n<app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf=\"condition == 'end'\"></app-end>\n<app-credits (sendMessage)=\"getMsgFromCredits($event)\" *ngIf=\"condition == 'credits'\"></app-credits>\n<router-outlet></router-outlet>"
         },
         {
             "name": "HomeComponent",
-            "id": "component-HomeComponent-70f4b395e3fdce53c9f5d4bf4f61b0c65cf01872a56448d970e5a3055c9ab642fcec951ee9b7824182462066ffcbd5b7eef242b7ee106c67dc1aee2ff4987c9b",
+            "id": "component-HomeComponent-bec4360b7ccc5dc79533b8387e1c0a276313277a54c7b996d449403c06ca7e5383c6993c0a5f134dab799284a97595ecca168994c427d70e706a8d7525aabfd7",
             "file": "src/app/home/home.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -689,30 +642,70 @@
                     "defaultValue": "new EventEmitter()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
+                    "line": 16,
                     "type": "EventEmitter"
                 }
             ],
             "propertiesClass": [
                 {
-                    "name": "conditionToSend",
+                    "name": "conditionToSendCredits",
+                    "defaultValue": "'credits'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "conditionToSendEnd",
+                    "defaultValue": "'end'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "conditionToSendGame",
                     "defaultValue": "'game'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 18
                 }
             ],
             "methodsClass": [
+                {
+                    "name": "onClickCredits",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onClickHighscore",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
                 {
                     "name": "onClickStart",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 19,
+                    "line": 22,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -732,122 +725,64 @@
                 },
                 {
                     "name": "RouterOutlet"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\n\n\n@Component({\n    selector: 'app-home',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet],\n    templateUrl: './home.component.html',\n    styleUrl: './home.component.css'\n})\nexport class HomeComponent {\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSend = 'game'\n\n    onClickStart() {\n        this.sendMessage.emit(this.conditionToSend)\n        console.log('hej')\n    }\n}\n",
-            "styleUrl": "./home.component.css",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "extends": [],
-            "templateData": "<h1>Land Puzzle</h1>\n<button type=\"button\" (click)=\"onClickStart()\">Start</button>"
-        },
-        {
-            "name": "PageComponent",
-            "id": "component-PageComponent-a7895963f593a58acedd73ee23212a18c0d2b5e00ca1ca5e0b89bd6274e18a9d33e6e72237f9bc68ddc1ad8d1d25f37d92844e4c2c7a4907fbdb2ec3f287541e",
-            "file": "src/stories/page.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-page",
-            "styleUrls": [
-                "./page.css"
-            ],
-            "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "User | null",
-                    "optional": false,
-                    "description": "",
-                    "line": 69
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "doCreateAccount",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 79,
-                    "deprecated": false,
-                    "deprecationMessage": ""
                 },
                 {
-                    "name": "doLogin",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 75,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogout",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 71,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                },
-                {
-                    "name": "HeaderComponent",
+                    "name": "ButtonComponentComponent",
                     "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\n\nimport { HeaderComponent } from './header.component'\nimport type { User } from './user'\n\n@Component({\n    selector: 'storybook-page',\n    standalone: true,\n    imports: [CommonModule, HeaderComponent],\n    template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n    styleUrls: ['./page.css'],\n})\nexport class PageComponent {\n    user: User | null = null\n\n    doLogout() {\n        this.user = null\n    }\n\n    doLogin() {\n        this.user = { name: 'Jane Doe' }\n    }\n\n    doCreateAccount() {\n        this.user = { name: 'Jane Doe' }\n    }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\n\nimport { ButtonComponentComponent } from '../button-component/button-component.component'\n\n@Component({\n    selector: 'app-home',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ButtonComponentComponent],\n    templateUrl: './home.component.html',\n    styleUrl: './home.component.css'\n})\nexport class HomeComponent {\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendGame: string = 'game'\n    conditionToSendCredits: string = 'credits'\n    conditionToSendEnd: string = 'end'\n\n    onClickStart() {\n        this.sendMessage.emit(this.conditionToSendGame)\n    }\n    onClickCredits() {\n        this.sendMessage.emit(this.conditionToSendCredits)\n    }\n    onClickHighscore() {\n        localStorage.setItem('score', JSON.stringify(0))\n        this.sendMessage.emit(this.conditionToSendEnd)\n    }\n}\n",
+            "styleUrl": "./home.component.css",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-page {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\n.storybook-page h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\n.storybook-page ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.storybook-page .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
-                    "styleUrl": "./page.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
-            "extends": []
+            "extends": [],
+            "templateData": "<section class=\"home-flex\">\n    <img class=\"logo\" src=\"../../assets/images/landpuzzle2.png\" alt=\"Land Puzzle\">\n    <app-button-component [color]=\"'blue'\" [label]=\"'Start'\" (onClick)=\"onClickStart()\"></app-button-component>\n    <app-button-component [color]=\"'blue'\" [label]=\"'Credits'\" (onClick)=\"onClickCredits()\"></app-button-component>\n    <app-button-component [color]=\"'blue'\" [label]=\"'Highscore'\" (onClick)=\"onClickHighscore()\"></app-button-component>\n</section>"
+        },
+        {
+            "name": "ReplayComponent",
+            "id": "component-ReplayComponent-69744d68fdd16099494acd23ea918c0f60af78becf05ebad84681aed3b21a9d0320206af004588a3cf2dce638547d63326aa7cb27361e1903f459c3ac7e60d9d",
+            "file": "src/app/replay/replay.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-replay",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./replay.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core'\n\n@Component({\n    selector: 'app-replay',\n    standalone: true,\n    imports: [],\n    templateUrl: './replay.component.html',\n    styleUrl: './replay.component.css'\n})\nexport class ReplayComponent {\n\n}\n",
+            "styleUrl": "./replay.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<p>replay works!</p>\n"
         },
         {
             "name": "TileComponent",
-            "id": "component-TileComponent-6fdbe3d7029b35133c0bfba825e11714d76e719c60aee32be7b3b491f452ed7fecf587d78f3df2e0be1ea06cea73aa7d53bee3edeb8f6f7eaf86803fc26947d9",
-=======
-            "templateData": "<main class=\"main\">\n    <h1>Land Puzzle</h1>\n    <a routerLink=\"/game\">Start</a>\n    <router-outlet></router-outlet>\n</main>"
-        },
-        {
-            "name": "TileComponent",
-            "id": "component-TileComponent-4c7383ad00052910782dbf06dfbb6eee096a9d79f0c50d0c0ebe529bb988232d777dfc000e76f7c426b91072ee4a29237e14737f9acdfba109bc69c6e528d1fa",
->>>>>>> Angelica
+            "id": "component-TileComponent-09d2a6056f7d141d7e6e1755cffb3c1f97c67eed3ac48839af1e3b2594f7902b052a5da5b576aa6683b732fab37212ad43469832f872f878a2b598ec3e053bcf",
             "file": "src/app/tile/tile.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -863,34 +798,48 @@
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
-<<<<<<< HEAD
             "outputsClass": [
                 {
                     "name": "sendMessage",
                     "defaultValue": "new EventEmitter()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 31,
                     "type": "EventEmitter"
                 }
             ],
             "propertiesClass": [
                 {
-                    "name": "conditionToSend",
+                    "name": "conditionToSendEnd",
                     "defaultValue": "'end'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 24
+                    "line": 33
                 },
                 {
-=======
-            "outputsClass": [],
-            "propertiesClass": [
+                    "name": "conditionToSendStart",
+                    "defaultValue": "'start'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 34
+                },
                 {
->>>>>>> Angelica
+                    "name": "correctMarkedTiles",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                },
+                {
                     "name": "correctTestAnswerId",
                     "defaultValue": "[]",
                     "deprecated": false,
@@ -898,7 +847,7 @@
                     "type": "number[]",
                     "optional": false,
                     "description": "",
-                    "line": 18
+                    "line": 20
                 },
                 {
                     "name": "countries",
@@ -908,11 +857,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-<<<<<<< HEAD
-                    "line": 26
-=======
-                    "line": 21
->>>>>>> Angelica
+                    "line": 35
                 },
                 {
                     "name": "form",
@@ -921,11 +866,7 @@
                     "type": "ElementRef",
                     "optional": false,
                     "description": "",
-<<<<<<< HEAD
-                    "line": 30,
-=======
-                    "line": 23,
->>>>>>> Angelica
+                    "line": 41,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -937,19 +878,16 @@
                     ]
                 },
                 {
-<<<<<<< HEAD
-=======
-                    "name": "inputTileElements",
-                    "defaultValue": "[]",
+                    "name": "lives",
+                    "defaultValue": "3",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "HTMLInputElement[]",
+                    "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 23
                 },
                 {
->>>>>>> Angelica
                     "name": "markedTiles",
                     "defaultValue": "[]",
                     "deprecated": false,
@@ -957,18 +895,47 @@
                     "type": "number[]",
                     "optional": false,
                     "description": "",
-                    "line": 19
+                    "line": 25
                 },
                 {
-<<<<<<< HEAD
-                    "name": "randomCountryIndex",
-                    "defaultValue": "Math.floor(Math.random() * countries.length)",
+                    "name": "numberOfCorrectTiles",
+                    "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
+                {
+                    "name": "randomCountryIndex",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                },
+                {
+                    "name": "replay",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Array<object>",
                     "optional": false,
                     "description": "",
                     "line": 28
+                },
+                {
+                    "name": "score",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
                 },
                 {
                     "name": "scoreMultiplier",
@@ -978,11 +945,27 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 20
+                    "line": 21
                 },
                 {
-=======
->>>>>>> Angelica
+                    "name": "snackbar",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef",
+                    "optional": false,
+                    "description": "",
+                    "line": 42,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'snackbar'"
+                        }
+                    ],
+                    "modifierKind": [
+                        170
+                    ]
+                },
+                {
                     "name": "tileElementId",
                     "defaultValue": "[]",
                     "deprecated": false,
@@ -990,17 +973,7 @@
                     "type": "number[]",
                     "optional": false,
                     "description": "",
-                    "line": 15
-                },
-                {
-                    "name": "tileElements",
-                    "defaultValue": "[]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Element[]",
-                    "optional": false,
-                    "description": "",
-                    "line": 14
+                    "line": 17
                 },
                 {
                     "name": "tiles",
@@ -1010,34 +983,77 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 16
-<<<<<<< HEAD
+                    "line": 18
                 },
                 {
-                    "name": "userInputTileElements",
+                    "name": "userSelectedInputTiles",
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "HTMLInputElement[]",
                     "optional": false,
                     "description": "",
-                    "line": 17
-=======
->>>>>>> Angelica
+                    "line": 19
                 }
             ],
             "methodsClass": [
+                {
+                    "name": "getCorrectTestAnswerId",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number[]",
+                    "typeParameters": [],
+                    "line": 73,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getHighscoreSorted",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 92,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getRandomCountry",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "invalidAnswer",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 119,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
                 {
                     "name": "ngAfterViewInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-<<<<<<< HEAD
-                    "line": 32,
-=======
-                    "line": 25,
->>>>>>> Angelica
+                    "line": 57,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 53,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1047,11 +1063,191 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-<<<<<<< HEAD
-                    "line": 52,
-=======
-                    "line": 45,
->>>>>>> Angelica
+                    "line": 96,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onClickHome",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 175,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onClickRestart",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 168,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "pointsForCorrectTiles",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 105,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "resetValues",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 159,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "saveReplayToLocalStorage",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 130,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "saveTileGrid",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 151,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setupTileInputElement",
+                    "args": [
+                        {
+                            "name": "element",
+                            "type": "Element",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 77,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "element",
+                            "type": "Element",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setupTileLabelElement",
+                    "args": [
+                        {
+                            "name": "element",
+                            "type": "Element",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 85,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "element",
+                            "type": "Element",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "showSnackbar",
+                    "args": [
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 44,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateReplayTiles",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 134,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1065,26 +1261,25 @@
                 {
                     "name": "CommonModule",
                     "type": "module"
+                },
+                {
+                    "name": "ButtonComponentComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-<<<<<<< HEAD
-            "sourceCode": "import { Component, EventEmitter, Output, ViewChild } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { ElementRef } from '@angular/core'\nimport countries from '../../assets/countries.json'\n\n@Component({\n    selector: 'app-tile',\n    standalone: true,\n    imports: [CommonModule],\n    templateUrl: './tile.component.html',\n    styleUrl: './tile.component.css'\n})\nexport class TileComponent {\n    tileElements: Element[] = []\n    tileElementId: number[] = []\n    tiles = new Array(9)\n    userInputTileElements: HTMLInputElement[] = []\n    correctTestAnswerId: number[] = []\n    markedTiles: number[] = []\n    scoreMultiplier = 1  // TODO: implement score multiplier that increases with each correct answer\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSend = 'end'\n\n    countries = countries\n\n    randomCountryIndex = Math.floor(Math.random() * countries.length)\n\n    @ViewChild('form') form!: ElementRef\n\n    ngAfterViewInit(): void {\n        this.correctTestAnswerId = countries[this.randomCountryIndex].easy\n\n        this.tileElements = Array.from(this.form.nativeElement.children)\n        this.tileElements.forEach((tile, id) => {\n            tile.id = id.toString()\n            Array.from(tile.children).forEach((element: Element, index) => {\n                if (index === 0) {\n                    const inputElement = element as HTMLInputElement\n                    inputElement.id = 'tile' + id.toString()\n                    this.userInputTileElements.push(inputElement)\n                    this.tileElementId.push(id)\n                }\n                else {\n                    const labelElement = element as HTMLLabelElement\n                    labelElement.htmlFor = 'tile' + id.toString()\n                }\n            })\n        })\n    }\n    onCheckConfirm() {\n        this.tileElementId.forEach((id) => {\n            if (this.userInputTileElements[id].checked) {\n                this.markedTiles.push(id)\n            }\n        })\n        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {\n            alert('Horay! :D')\n        }\n        else {\n            this.sendMessage.emit(this.conditionToSend)\n        }\n        this.markedTiles = []\n    }\n}\n\n",
-=======
-            "sourceCode": "import { Component, ViewChild } from '@angular/core'\r\nimport { CommonModule } from '@angular/common'\r\nimport { ElementRef } from '@angular/core'\r\nimport countries from '../../assets/countries.json'\r\n\r\n@Component({\r\n    selector: 'app-tile',\r\n    standalone: true,\r\n    imports: [CommonModule],\r\n    templateUrl: './tile.component.html',\r\n    styleUrl: './tile.component.css'\r\n})\r\nexport class TileComponent {\r\n    tileElements: Element[] = []\r\n    tileElementId: number[] = []\r\n    tiles = new Array(9)\r\n    inputTileElements: HTMLInputElement[] = []\r\n    correctTestAnswerId: number[] = []\r\n    markedTiles: number[] = []\r\n\r\n    countries = countries\r\n\r\n    @ViewChild('form') form!: ElementRef\r\n\r\n    ngAfterViewInit(): void {\r\n        this.correctTestAnswerId = countries.Sweden.easy\r\n\r\n        this.tileElements = Array.from(this.form.nativeElement.children)\r\n        this.tileElements.forEach((tile, id) => {\r\n            tile.id = id.toString()\r\n            Array.from(tile.children).forEach((element: Element, index) => {\r\n                if (index === 0) {\r\n                    const inputElement = element as HTMLInputElement\r\n                    inputElement.id = 'tile' + id.toString()\r\n                    this.inputTileElements.push(inputElement)\r\n                    this.tileElementId.push(id)\r\n                }\r\n                else {\r\n                    const labelElement = element as HTMLLabelElement\r\n                    labelElement.htmlFor = 'tile' + id.toString()\r\n                }\r\n            })\r\n        })\r\n    }\r\n    onCheckConfirm() {\r\n        this.tileElementId.forEach((id) => {\r\n            if (this.inputTileElements[id].checked) {\r\n                this.markedTiles.push(id)\r\n            }\r\n        })\r\n        if (this.markedTiles.toString() === this.correctTestAnswerId.toString()) {\r\n            alert('Horay! :D')\r\n        }\r\n        this.markedTiles = []\r\n    }\r\n}\r\n",
->>>>>>> Angelica
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { ElementRef } from '@angular/core'\nimport countries from '../../assets/countries.json'\n\nimport { ButtonComponentComponent } from '../button-component/button-component.component'\n\n@Component({\n    selector: 'app-tile',\n    standalone: true,\n    imports: [CommonModule,ButtonComponentComponent,],\n    templateUrl: './tile.component.html',\n    styleUrl: './tile.component.css'\n})\n\nexport class TileComponent implements OnInit {\n    tileElementId: number[] = []\n    tiles = new Array(9)\n    userSelectedInputTiles: HTMLInputElement[] = []\n    correctTestAnswerId: number[] = []\n    scoreMultiplier: number = 1\n    score: number = 0\n    lives: number = 3\n    randomCountryIndex: number = 0\n    markedTiles: number[] = []\n    correctMarkedTiles: number = 0\n    numberOfCorrectTiles: number = 0\n    replay: Array<object> = []\n\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendEnd: string = 'end'\n    conditionToSendStart: string = 'start'\n    countries = countries\n\n    getRandomCountry() {\n        this.randomCountryIndex = Math.floor(Math.random() * countries.length)\n    }\n\n    @ViewChild('form') form!: ElementRef\n    @ViewChild('snackbar') snackbar!: ElementRef\n\n    showSnackbar(message: string) {\n        const snackbarHTML: Element = this.snackbar.nativeElement\n        snackbarHTML.innerHTML = message\n        snackbarHTML.className = 'show'\n        setTimeout(function () {\n            snackbarHTML.className = snackbarHTML.className.replace('show', '')\n        }, 3000)\n    }\n\n    ngOnInit(): void {\n        this.getRandomCountry()\n    }\n\n    ngAfterViewInit(): void {\n        this.correctTestAnswerId = this.getCorrectTestAnswerId()\n        const tileElements: Element[] = Array.from(this.form.nativeElement.children)\n        tileElements.forEach((tile, id) => {\n            tile.id = id.toString()\n            Array.from(tile.children).forEach((element: Element, index) => {\n                if (index === 0) {\n                    this.setupTileInputElement(element, id)\n                }\n                else {\n                    this.setupTileLabelElement(element, id)\n                }\n            })\n        })\n    }\n\n    getCorrectTestAnswerId(): number[] {\n        return countries[this.randomCountryIndex].easy\n    }\n\n    setupTileInputElement(element: Element, id: number) {\n        const inputElement = element as HTMLInputElement\n        inputElement.id = 'tile' + id.toString()\n        inputElement.checked = false\n        this.userSelectedInputTiles.push(inputElement)\n        this.tileElementId.push(id)\n    }\n\n    setupTileLabelElement(element: Element, id: number) {\n        const labelElement = element as HTMLLabelElement\n        labelElement.htmlFor = 'tile' + id.toString()\n    }\n\n\n\n    getHighscoreSorted() {\n        localStorage.setItem('score', JSON.stringify(this.score))\n    }\n\n    onCheckConfirm() {\n        this.saveTileGrid()\n        this.pointsForCorrectTiles()\n        if (this.markedTiles.toString() !== this.correctTestAnswerId.toString()) {\n            this.invalidAnswer()\n        }\n        this.resetValues()\n    }\n\n    pointsForCorrectTiles() {\n        this.correctTestAnswerId.forEach((correctTile) => {\n            this.numberOfCorrectTiles++\n            this.markedTiles.forEach((tile) => {\n                if (tile === correctTile) {\n                    this.score += (11 * this.scoreMultiplier)\n                    this.correctMarkedTiles++\n                }\n            })\n        })\n        this.scoreMultiplier += .15\n        this.showSnackbar('Horay! :D')\n    }\n\n    invalidAnswer() {\n        this.lives--\n        this.scoreMultiplier = 1\n        this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)\n        if (this.lives <= 0) {\n            this.saveReplayToLocalStorage()\n            this.getHighscoreSorted()\n            this.sendMessage.emit(this.conditionToSendEnd)\n        }\n    }\n\n    saveReplayToLocalStorage() {\n        localStorage.setItem('latestReplay', JSON.stringify(this.replay))\n    }\n\n    updateReplayTiles() {\n        const replayTiles: number[] = []\n        this.tileElementId.forEach((id) => {\n            if (this.userSelectedInputTiles[id].checked) {\n                replayTiles.push(id)\n            }\n        })\n        const replayTurn = {\n            'moves': replayTiles,\n            'country': countries[this.randomCountryIndex].name,\n            'score': this.score,\n            'multiplier': this.scoreMultiplier\n        }\n        this.replay.push(replayTurn)\n        console.log(this.replay)\n    }\n\n    saveTileGrid() {\n        this.tileElementId.forEach((id) => {\n            if (this.userSelectedInputTiles[id].checked) {\n                this.markedTiles.push(id)\n            }\n        })\n    }\n\n    resetValues() {\n        this.getRandomCountry()\n        this.markedTiles = []\n        this.userSelectedInputTiles = []\n        this.tileElementId = []\n        this.correctMarkedTiles = 0\n        this.numberOfCorrectTiles = 0\n        this.ngAfterViewInit()\n    }\n    onClickRestart() {\n        this.getRandomCountry()\n        this.lives = 3\n        this.score = 0\n        this.scoreMultiplier = 1\n        this.resetValues()\n    }\n    onClickHome() {\n        this.sendMessage.emit(this.conditionToSendStart)\n    }\n}\n\n",
             "styleUrl": "./tile.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-<<<<<<< HEAD
-            "templateData": "<h1>Draw {{ countries[randomCountryIndex].name }}</h1>\n<!-- Den här kod delen skriver ut namnet på landet som ska ritas ut. -->\n<form #form id=\"form\" action=\"\" ng-controller=\"ExampleController\">\n    <section *ngFor=\"let tile of tiles\" class=\"tile-outer\">\n        <input type=\"checkbox\" id=\"Placeholder\" [ngClass]=\"['display-none', 'tile-checkbox']\">\n        <label for=\"Placeholder\" class=\"tile-inner\"></label>\n    </section>\n</form>\n<button type=\"button\" (click)=\"onCheckConfirm()\">Confirm</button>"
-=======
-            "templateData": "<form #form id=\"form\" action=\"\" ng-controller=\"ExampleController\">\n    <section *ngFor=\"let tile of tiles\" class=\"tile-outer\">\n        <input type=\"checkbox\" id=\"Placeholder\" [ngClass]=\"['display-none', 'tile-checkbox']\">\n        <label for=\"Placeholder\" class=\"tile-inner\"></label>\n    </section>\n</form>\n<button type=\"button\" (click)=\"onCheckConfirm()\">Confirm</button>"
->>>>>>> Angelica
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<section class=\"tile\">\n    <section class=\"top-flex\">\n        <section class=\"statistic\">\n            <p class=\"statistics-text\">Lives: {{ lives }}</p>\n            <p class=\"statistics-text\">Score: {{ score.toFixed(0) }}</p>\n            <p class=\"statistics-text\">Multiplier: {{ scoreMultiplier.toFixed(2) }}</p>\n        </section>\n\n        <section class=\"\">\n            <button (click)=\"onClickRestart()\">Restart</button>\n            <button (click)=\"onClickHome()\">Home</button>\n        </section>\n    </section>\n\n    <section class=\"draw-container\">\n        <h1 class=\"draw-country\">Draw {{ countries[randomCountryIndex].name }}</h1>\n        <section class=\"form-padding\">\n            <form #form id=\"form\" action=\"\" ng-controller=\"ExampleController\">\n                <section *ngFor=\"let tile of tiles\" class=\"tile-outer\">\n                    <input type=\"checkbox\" id=\"Placeholder\" [ngClass]=\"['display-none', 'tile-checkbox']\">\n                    <label for=\"Placeholder\" class=\"tile-inner\"></label>\n                </section>\n            </form>\n        </section>\n        <app-button-component [color]=\"'blue'\" [label]=\"'Confirm'\" (onClick)=\"onCheckConfirm()\"></app-button-component>\n        <div #snackbar id=\"snackbar\"></div>\n    </section>\n</section>"
         }
     ],
     "modules": [],
@@ -1098,11 +1293,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
-<<<<<<< HEAD
                 "defaultValue": "{\n    providers: [provideRouter(routes)]\n}"
-=======
-                "defaultValue": "{\r\n    providers: [provideRouter(routes)]\r\n}"
->>>>>>> Angelica
             },
             {
                 "name": "Confirm",
@@ -1111,13 +1302,18 @@
                 "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-<<<<<<< HEAD
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button',\n    },\n}"
-=======
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Confirm',\n    color: 'blue',\n  },\n}"
->>>>>>> Angelica
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Confirm',\n        color: 'blue',\n    },\n}"
+            },
+            {
+                "name": "Credits",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button-component/button-component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Credits',\n        color: 'blue',\n    },\n}"
             },
             {
                 "name": "Easy",
@@ -1126,13 +1322,8 @@
                 "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-<<<<<<< HEAD
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe',\n        },\n    },\n}"
-=======
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Easy',\n    color: 'green',\n    \n  },\n}"
->>>>>>> Angelica
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Easy',\n        color: 'green',\n\n    },\n}"
             },
             {
                 "name": "Exit",
@@ -1141,13 +1332,8 @@
                 "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-<<<<<<< HEAD
-                "type": "Story",
-                "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement)\n        const loginButton = canvas.getByRole('button', { name: /Log in/i })\n        await expect(loginButton).toBeInTheDocument()\n        await userEvent.click(loginButton)\n        await expect(loginButton).not.toBeInTheDocument()\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i })\n        await expect(logoutButton).toBeInTheDocument()\n    },\n}"
-=======
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'EXTI',\n    color: 'none',\n    \n  },\n}"
->>>>>>> Angelica
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'EXIT',\n        color: 'none',\n\n    },\n}"
             },
             {
                 "name": "Extreme",
@@ -1157,7 +1343,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Extreme',\n    color: 'black',\n    \n  },\n}"
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Extreme',\n        color: 'black',\n\n    },\n}"
             },
             {
                 "name": "Hard",
@@ -1167,7 +1353,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Hard',\n    color: 'red',\n    \n  },\n}"
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Hard',\n        color: 'red',\n\n    },\n}"
+            },
+            {
+                "name": "Highscore",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button-component/button-component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Highscore',\n        color: 'blue',\n    },\n}"
             },
             {
                 "name": "Medium",
@@ -1176,43 +1372,18 @@
                 "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-<<<<<<< HEAD
-                "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    render: (args: ButtonComponent) => ({\n        props: {\n            backgroundColor: null,\n            ...args,\n        },\n    }),\n    argTypes: {\n        backgroundColor: {\n            control: 'color',\n        },\n    },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<HeaderComponent>",
-                "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<PageComponent>",
-                "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/tile.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<TileComponent>",
-                "defaultValue": "{\n    title: 'Components/Tile',\n    component: TileComponent,\n    tags: ['autodocs'],\n    render: (args: TileComponent) => ({\n        props: {\n            ...args,\n        },\n    }),\n}"
-=======
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Medium',\n    color: 'yellow',\n    \n  },\n}"
->>>>>>> Angelica
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Medium',\n        color: 'yellow',\n\n    },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/ending-screen/ending-screen.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<EndingScreenComponent>",
+                "defaultValue": "{\n    title: 'Pages/Ending Screen',\n    component: EndingScreenComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
             },
             {
                 "name": "preview",
@@ -1225,19 +1396,24 @@
                 "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/ending-screen/ending-screen.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n    },\n}"
+            },
+            {
                 "name": "Restart",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-<<<<<<< HEAD
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button',\n    },\n}"
-=======
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'RESTART',\n    color: 'none',\n    \n  },\n}"
->>>>>>> Angelica
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'RESTART',\n        color: 'none',\n\n    },\n}"
             },
             {
                 "name": "Return",
@@ -1246,13 +1422,8 @@
                 "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-<<<<<<< HEAD
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n    },\n}"
-=======
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Return',\n    color: 'none',\n    \n  },\n}"
->>>>>>> Angelica
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Return',\n        color: 'none',\n\n    },\n}"
             },
             {
                 "name": "Start",
@@ -1261,13 +1432,8 @@
                 "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-<<<<<<< HEAD
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Button',\n    },\n}"
-=======
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Start',\n    color: 'blue',\n  },\n}"
->>>>>>> Angelica
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Start',\n        color: 'blue',\n    },\n}"
             },
             {
                 "name": "Template",
@@ -1276,12 +1442,8 @@
                 "file": "src/app/button-component/button-component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-<<<<<<< HEAD
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button',\n    },\n}"
-=======
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  args: {},\n}"
+                "defaultValue": "{\n    args: {},\n}"
             },
             {
                 "name": "Tips",
@@ -1291,7 +1453,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Tips',\n    color: 'yellow',\n    \n  },\n}"
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Tips😀',\n        color: 'smallYellow',\n        \n    },\n}"
             },
             {
                 "name": "VeryEasy",
@@ -1301,8 +1463,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Very easy',\n    color: 'blue',\n    \n  },\n}"
->>>>>>> Angelica
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Very easy',\n        color: 'blue',\n\n    },\n}"
             }
         ],
         "functions": [],
@@ -1313,6 +1474,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonComponentComponent>",
                 "file": "src/app/button-component/button-component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<EndingScreenComponent>",
+                "file": "src/app/ending-screen/ending-screen.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1330,11 +1502,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
-<<<<<<< HEAD
                     "defaultValue": "{\n    providers: [provideRouter(routes)]\n}"
-=======
-                    "defaultValue": "{\r\n    providers: [provideRouter(routes)]\r\n}"
->>>>>>> Angelica
                 }
             ],
             "src/app/button-component/button-component.stories.ts": [
@@ -1345,13 +1513,18 @@
                     "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-<<<<<<< HEAD
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button',\n    },\n}"
-=======
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Confirm',\n    color: 'blue',\n  },\n}"
->>>>>>> Angelica
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Confirm',\n        color: 'blue',\n    },\n}"
+                },
+                {
+                    "name": "Credits",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button-component/button-component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Credits',\n        color: 'blue',\n    },\n}"
                 },
                 {
                     "name": "Easy",
@@ -1360,13 +1533,8 @@
                     "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-<<<<<<< HEAD
-                    "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    render: (args: ButtonComponent) => ({\n        props: {\n            backgroundColor: null,\n            ...args,\n        },\n    }),\n    argTypes: {\n        backgroundColor: {\n            control: 'color',\n        },\n    },\n}"
-=======
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Easy',\n    color: 'green',\n    \n  },\n}"
->>>>>>> Angelica
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Easy',\n        color: 'green',\n\n    },\n}"
                 },
                 {
                     "name": "Exit",
@@ -1375,13 +1543,8 @@
                     "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-<<<<<<< HEAD
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button',\n    },\n}"
-=======
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'EXTI',\n    color: 'none',\n    \n  },\n}"
->>>>>>> Angelica
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'EXIT',\n        color: 'none',\n\n    },\n}"
                 },
                 {
                     "name": "Extreme",
@@ -1390,13 +1553,8 @@
                     "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-<<<<<<< HEAD
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Button',\n    },\n}"
-=======
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Extreme',\n    color: 'black',\n    \n  },\n}"
->>>>>>> Angelica
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Extreme',\n        color: 'black',\n\n    },\n}"
                 },
                 {
                     "name": "Hard",
@@ -1405,25 +1563,18 @@
                     "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-<<<<<<< HEAD
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button',\n    },\n}"
-                }
-            ],
-            "src/stories/header.stories.ts": [
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Hard',\n        color: 'red',\n\n    },\n}"
+                },
                 {
-                    "name": "LoggedIn",
+                    "name": "Highscore",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/header.stories.ts",
+                    "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe',\n        },\n    },\n}"
-=======
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Hard',\n    color: 'red',\n    \n  },\n}"
->>>>>>> Angelica
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Highscore',\n        color: 'blue',\n    },\n}"
                 },
                 {
                     "name": "Medium",
@@ -1433,7 +1584,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Medium',\n    color: 'yellow',\n    \n  },\n}"
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Medium',\n        color: 'yellow',\n\n    },\n}"
                 },
                 {
                     "name": "Restart",
@@ -1442,25 +1593,8 @@
                     "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-<<<<<<< HEAD
-                    "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
-                }
-            ],
-            "src/stories/page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement)\n        const loginButton = canvas.getByRole('button', { name: /Log in/i })\n        await expect(loginButton).toBeInTheDocument()\n        await userEvent.click(loginButton)\n        await expect(loginButton).not.toBeInTheDocument()\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i })\n        await expect(logoutButton).toBeInTheDocument()\n    },\n}"
-=======
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'RESTART',\n    color: 'none',\n    \n  },\n}"
->>>>>>> Angelica
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'RESTART',\n        color: 'none',\n\n    },\n}"
                 },
                 {
                     "name": "Return",
@@ -1470,7 +1604,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Return',\n    color: 'none',\n    \n  },\n}"
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Return',\n        color: 'none',\n\n    },\n}"
                 },
                 {
                     "name": "Start",
@@ -1479,25 +1613,8 @@
                     "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-<<<<<<< HEAD
-                    "type": "Meta<PageComponent>",
-                    "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
-                }
-            ],
-            "src/stories/tile.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/tile.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<TileComponent>",
-                    "defaultValue": "{\n    title: 'Components/Tile',\n    component: TileComponent,\n    tags: ['autodocs'],\n    render: (args: TileComponent) => ({\n        props: {\n            ...args,\n        },\n    }),\n}"
-=======
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Start',\n    color: 'blue',\n  },\n}"
->>>>>>> Angelica
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Start',\n        color: 'blue',\n    },\n}"
                 },
                 {
                     "name": "Template",
@@ -1506,12 +1623,8 @@
                     "file": "src/app/button-component/button-component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-<<<<<<< HEAD
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n    },\n}"
-=======
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  args: {},\n}"
+                    "defaultValue": "{\n    args: {},\n}"
                 },
                 {
                     "name": "Tips",
@@ -1521,7 +1634,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Tips',\n    color: 'yellow',\n    \n  },\n}"
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Tips😀',\n        color: 'smallYellow',\n        \n    },\n}"
                 },
                 {
                     "name": "VeryEasy",
@@ -1531,8 +1644,29 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n  ...Template,\n  args: {\n    label: 'Very easy',\n    color: 'blue',\n    \n  },\n}"
->>>>>>> Angelica
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Very easy',\n        color: 'blue',\n\n    },\n}"
+                }
+            ],
+            "src/app/ending-screen/ending-screen.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/ending-screen/ending-screen.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<EndingScreenComponent>",
+                    "defaultValue": "{\n    title: 'Pages/Ending Screen',\n    component: EndingScreenComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen',\n    },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/ending-screen/ending-screen.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n    },\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -1563,12 +1697,25 @@
                     "description": "",
                     "kind": 183
                 }
+            ],
+            "src/app/ending-screen/ending-screen.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<EndingScreenComponent>",
+                    "file": "src/app/ending-screen/ending-screen.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
             ]
         }
     },
     "routes": [],
     "coverage": {
-        "count": 1,
+        "count": 0,
         "status": "low",
         "files": [
             {
@@ -1601,18 +1748,12 @@
                 "status": "low"
             },
             {
-<<<<<<< HEAD
-                "filePath": "src/app/background/background.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "BackgroundComponent",
-=======
                 "filePath": "src/app/button-component/button-component.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponentComponent",
-                "coveragePercent": 25,
-                "coverageCount": "1/4",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -1621,20 +1762,21 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Confirm",
->>>>>>> Angelica
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-<<<<<<< HEAD
-                "filePath": "src/app/ending-screen/ending-screen.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "EndingScreenComponent",
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Credits",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
-=======
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/button-component/button-component.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -1670,6 +1812,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Hard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Highscore",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1742,7 +1894,44 @@
                 "name": "VeryEasy",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
->>>>>>> Angelica
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/credits/credits.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CreditsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/ending-screen/ending-screen.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "EndingScreenComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/ending-screen/ending-screen.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/ending-screen/ending-screen.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -1751,7 +1940,7 @@
                 "linktype": "component",
                 "name": "GameComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -1760,14 +1949,14 @@
                 "linktype": "component",
                 "name": "HomeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
-                "filePath": "src/app/home/home.component.ts",
+                "filePath": "src/app/replay/replay.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "HomeComponent",
+                "name": "ReplayComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1778,177 +1967,7 @@
                 "linktype": "component",
                 "name": "TileComponent",
                 "coveragePercent": 0,
-<<<<<<< HEAD
-                "coverageCount": "0/15",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 83,
-                "coverageCount": "5/6",
-                "status": "very-good"
-            },
-            {
-                "filePath": "src/stories/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HeaderComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/tile.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/tile.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/user.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "User",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
-=======
-                "coverageCount": "0/11",
->>>>>>> Angelica
+                "coverageCount": "0/36",
                 "status": "low"
             }
         ]

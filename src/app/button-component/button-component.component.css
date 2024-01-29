@@ -1,55 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 .button {
+  color: rgb(0, 0, 0);
   display: inline-block;
   cursor: pointer;
   
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
   font-family: "VT323", monospace;
   line-height: 1;
 
-  width: 9em;
+  margin-top: 0.8em;
   padding: 6px;
-  border-width: 5px;
+  padding-left: 3em;
+  padding-right: 3em;
+  border-width: 10px;
   border-style: solid;
-  
 
-  color: rgb(0, 0, 0);
+  width: 400px;
+  max-width: 80vw;
+}
+
+@media (max-width: 840px) { 
+  .button {
+      width: 250px;
+  }
+}
+
+.button:hover{
+  transform: scale(1.2);
 }
 
 .button--blue {
-  border-color: #697d8a27;
+  border-color: #AAC2D2;
   background-color: #ceebff;
 }
+
 .button--green {
-  border-color: #697d8a27;
+  border-color: #78A372;
   background-color: #bcffb1;
 }
 
 .button--yellow {
-  border-color: #697d8a27;
+  border-color: #CCC057;
   background-color: #fff067;
 }
 
 .button--smallYellow {
-  border-color: #697d8a27;
+  border-color: #CCC057;
   background-color: #fff067;
   width: 4.5em;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .button--red {
-  border-color: #697d8a27;
+  border-color: #CC7A7A;
   background-color: #ff9999;
 }
 
 .button--black {
   color: #b92713;
-  border-color: #141414;
+  border-color: #222222;
   background-color: #2b2b2b;
 }
 
 .button--none {
   border-color: transparent;
   background-color: transparent;
+  color: white;
+}
+
+.button--white {
+  border-color: #cac8c8;
+  background-color: rgb(235, 232, 232);
+  width: 4.5em;
+  padding-left: 0;
+  padding-right: 0;
 }

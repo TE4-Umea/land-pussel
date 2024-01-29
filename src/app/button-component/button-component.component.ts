@@ -18,12 +18,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 export class ButtonComponentComponent {
 
     @Input()
-        color: 'blue' | 'green' | 'yellow' | 'smallYellow' | 'red' | 'black' | 'none' = 'blue'
+        color: 'blue' | 'green' | 'yellow' | 'smallYellow' | 'red' | 'black' | 'none'| 'white' = 'blue'
 
 
 
     @Input()
         label = 'Button'
+
 
 
     @Output()
