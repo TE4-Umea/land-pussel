@@ -1,1 +1,25 @@
-<p>replay works!</p>
+<section class="tile">
+    <section class="top-flex">
+        <section class="statistic">
+            <p class="statistics-text">Lives: </p>
+            <p class="statistics-text">Score: </p>
+            <p class="statistics-text">Multiplier: </p>
+        </section>
+    </section>
+
+    <section class="draw-container">
+        <h1 class="draw-country">Draw </h1>
+        <section class="form-padding">
+            <form #form id="form" action="" ng-controller="ExampleController">
+                <section *ngFor="let tile of tiles" class="tile-outer">
+                    <label for="Placeholder" class="tile-inner"></label>
+                </section>
+            </form>
+        </section>
+        <button (click)="onClickHome()">Home</button>
+        <button (click)="skipBackward()">Last Frame</button>
+        <button (click)="togglePlayPause()">Play/Pause</button>
+        <button (click)="skipForward()">Next Frame</button>
+        <button (click)="rewind()">Rewind</button>
+    </section>
+</section>

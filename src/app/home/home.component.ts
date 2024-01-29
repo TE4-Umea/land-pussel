@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
 
     @Output() sendMessage = new EventEmitter()
 
+    conditionToSend: string = 'game'
     conditionToSendGame: string = 'game'
     conditionToSendCredits: string = 'credits'
     conditionToSendEnd: string = 'end'

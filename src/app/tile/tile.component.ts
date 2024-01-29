@@ -180,6 +180,7 @@ export class TileComponent implements OnInit {
         const replayTurn = {
             'moves': replayTiles,
             'country': countries[this.randomCountryIndex].name,
+            'lives': this.lives,
             'score': this.score,
             'multiplier': this.scoreMultiplier
         }
