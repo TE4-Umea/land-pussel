@@ -111,13 +111,13 @@ export class TileComponent implements OnInit {
             })
         })
         this.scoreMultiplier += .15
-        this.showSnackbar('Horay! :D')
+        this.showSnackbar('<img style="width: 36px;" src="../../assets/images/correct.png" alt=""> <p>Horay! :D</p>')
     }
 
     invalidAnswer() {
         this.lives--
         this.scoreMultiplier = 1
-        this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)
+        this.showSnackbar('<img style="width: 36px;" src="../../assets/images/incorrect.png" alt=""> <p>Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles + '</p>')
         if (this.lives <= 0) {
             this.saveReplayToLocalStorage()
             this.getHighscoreSorted()
