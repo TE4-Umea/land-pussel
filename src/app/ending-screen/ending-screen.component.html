@@ -9,7 +9,7 @@
         <h2 class="highscore-title">Highscores</h2>
         <section class="highscore-text" *ngFor="let topScore of topScores">
             <p class="highscore-name">{{ [topScore + 1 + "."] }} {{ [highscore[topScore].name] }}</p>
-            <p>{{ [highscore[topScore].score] }}</p>
+            <p>{{ [highscore[topScore].score.toFixed(0)] }}</p>
         </section>
     </div>
     <div class="input-highscore" *ngIf="condition === 'inputHighscoreName'">

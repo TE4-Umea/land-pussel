@@ -26,6 +26,8 @@ export class TileComponent implements OnInit {
     correctMarkedTiles: number = 0
     numberOfCorrectTiles: number = 0
     replay: Array<object> = []
+    audio: HTMLAudioElement = new Audio()
+
 
 
     @Output() sendMessage = new EventEmitter()
@@ -52,6 +54,35 @@ export class TileComponent implements OnInit {
 
     ngOnInit(): void {
         this.getRandomCountry()
+        this.fadeIn()
+    }
+
+    fadeOut() {
+        let vol = 0.2
+        const intervalId = setInterval(() => {
+            if (vol > 0) {
+                vol -= 0.01
+                this.audio.volume = vol
+            } else {
+                clearInterval(intervalId)
+            }
+            if (vol < 0.01) {
+                this.audio.pause()
+            }
+        }, 150)
+    }
+
+    fadeIn() {
+        let vol = 0
+        this.playSound()
+        const intervalId = setInterval(() => {
+            if (vol < 0.2) {
+                vol += 0.01
+                this.audio.volume = vol
+            } else {
+                clearInterval(intervalId)
+            }
+        }, 150)
     }
 
     ngAfterViewInit(): void {
@@ -130,6 +161,7 @@ export class TileComponent implements OnInit {
         if (this.lives <= 0) {
             this.saveReplayToLocalStorage()
             this.getHighscoreSorted()
+            this.fadeOut()
             this.sendMessage.emit(this.conditionToSendEnd)
         }
     }
@@ -180,7 +212,15 @@ export class TileComponent implements OnInit {
         this.resetValues()
     }
     onClickHome() {
+        this.fadeOut()
         this.sendMessage.emit(this.conditionToSendStart)
+    }
+
+    playSound() {
+        this.audio.src = '../../assets/music/Land-Puzzle-Main-Music.mp3'
+        this.audio.volume = 0.3
+        this.audio.load()
+        this.audio.play()
     }
 }
 
