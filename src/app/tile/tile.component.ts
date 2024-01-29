@@ -8,7 +8,7 @@ import { ButtonComponentComponent } from '../button-component/button-component.c
 @Component({
     selector: 'app-tile',
     standalone: true,
-    imports: [CommonModule,ButtonComponentComponent,],
+    imports: [CommonModule, ButtonComponentComponent,],
     templateUrl: './tile.component.html',
     styleUrl: './tile.component.css'
 })
@@ -103,11 +103,13 @@ export class TileComponent implements OnInit {
     }
 
     pointsForCorrectTiles() {
+        let pointsForTiles = 20
         this.correctTestAnswerId.forEach((correctTile) => {
             this.numberOfCorrectTiles++
+            pointsForTiles -= 2
             this.markedTiles.forEach((tile) => {
                 if (tile === correctTile) {
-                    this.score += (11 * this.scoreMultiplier)
+                    this.score += (pointsForTiles * this.scoreMultiplier)
                     this.correctMarkedTiles++
                 }
             })
