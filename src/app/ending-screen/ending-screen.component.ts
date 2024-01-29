@@ -99,6 +99,7 @@ export class EndingScreenComponent implements OnInit {
     }
     onClickReplay() {
         this.sendMessage.emit(this.conditionToSendReplay)
+    }
     playSound() {
         this.audio.src = '../../assets/music/Land-Puzzle-Death-Music.mp3'
         this.audio.volume = 0
