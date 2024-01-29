@@ -7,7 +7,7 @@ import { ButtonComponentComponent } from '../button-component/button-component.c
 @Component({
     selector: 'app-end',
     standalone: true,
-    imports: [CommonModule, TileComponent,ButtonComponentComponent,],
+    imports: [CommonModule, TileComponent, ButtonComponentComponent,],
     templateUrl: './ending-screen.component.html',
     styleUrl: './ending-screen.component.css'
 })
@@ -44,7 +44,14 @@ export class EndingScreenComponent implements OnInit {
         })
     }
 
+    checkIfFromStart() {
+        if (localStorage.getItem('score') === JSON.stringify(-1)) {
+            this.condition = 'fromStartHighscore'
+        }
+    }
+
     ngOnInit(): void {
+        this.checkIfFromStart()
         this.checkIfHighscore()
     }
 

@@ -26,7 +26,7 @@ export class HomeComponent {
         this.sendMessage.emit(this.conditionToSendCredits)
     }
     onClickHighscore() {
-        localStorage.setItem('score', JSON.stringify(0))
+        localStorage.setItem('score', JSON.stringify(-1))
         this.sendMessage.emit(this.conditionToSendEnd)
     }
 }

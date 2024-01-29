@@ -1,11 +1,11 @@
-
 <section class="ending-screen">
     <section class="highscore-top-container">
-        <h1>You died!</h1>
-      <app-button-component [color]="'none'" [label]="'Restart'" (onClick)="onClickRestart()"></app-button-component>
-      <app-button-component [color]="'none'" [label]="'Exit'" (onClick)="onClickExit()"></app-button-component>
+        <h1 *ngIf="condition === 'highscoreChart'">You died!</h1>
+        <h1 *ngIf="condition === 'fromStartHighscore'">Highscore</h1>
+        <app-button-component [color]="'none'" [label]="'Restart'" (onClick)="onClickRestart()"></app-button-component>
+        <app-button-component [color]="'none'" [label]="'Exit'" (onClick)="onClickExit()"></app-button-component>
     </section>
-    <div class="highscore" *ngIf="condition === 'highscoreChart'">
+    <div class="highscore" *ngIf="condition === 'highscoreChart' || 'fromStartHighscore'">
         <h2 class="highscore-title">Highscores</h2>
         <section class="highscore-text" *ngFor="let topScore of topScores">
             <p class="highscore-name">{{ [topScore + 1 + "."] }} {{ [highscore[topScore].name] }}</p>
