@@ -2,7 +2,7 @@
     <section class="top-flex">
         <section class="statistic">
             <p class="statistics-text">Lives: {{ lives }}</p>
-            <p class="statistics-text">Score: {{ score }}</p>
+            <p class="statistics-text">Score: {{ score.toFixed(0) }}</p>
             <p class="statistics-text">Multiplier: {{ scoreMultiplier.toFixed(2) }}</p>
         </section>
 
@@ -22,7 +22,8 @@
                 </section>
             </form>
         </section>
-        <button type="button" (click)="onCheckConfirm()">Confirm</button>
+        <app-button-component [color]="'blue'" [label]="'Confirm'" (onClick)="onCheckConfirm()"></app-button-component>
+        <div #snackbar id="snackbar"></div>
     </section>
     <div #snackbar id="snackbar"></div>
 </section>

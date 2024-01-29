@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core'
+import { ButtonComponentComponent } from '../button-component/button-component.component'
 
 @Component({
     selector: 'app-credits',
     standalone: true,
-    imports: [],
+    imports: [ButtonComponentComponent],
     templateUrl: './credits.component.html',
     styleUrl: './credits.component.css'
 })

@@ -69,7 +69,7 @@
         },
         {
             "name": "ButtonComponentComponent",
-            "id": "component-ButtonComponentComponent-454b0613d50036c8143d0ab22ee9f8afdc186b80d0706c192ae5d79dc64901ccad89e5c9dd7c81548cad9b804ccf040e67da09df4aa39b1cbf8d881a4e38d6cc",
+            "id": "component-ButtonComponentComponent-a90a717821809a126676d1d9a01f418e6a58812aaef1a4109791ae270c3982f1630e88e02fa164a224344945bf9c501a9025c8c61d9692987c447d3ad468d638",
             "file": "src/app/button-component/button-component.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -111,7 +111,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 30,
+                    "line": 31,
                     "type": "EventEmitter"
                 }
             ],
@@ -131,11 +131,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, Input, Output, EventEmitter } from '@angular/core'\n\n@Component({\n    selector: 'app-button-component',\n    standalone: true,\n    imports: [CommonModule],\n    template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n  >\n    {{ label }}\n  </button>`,\n    styleUrls: ['./button-component.component.css'],\n})\nexport class ButtonComponentComponent {\n\n    @Input()\n        color: 'blue' | 'green' | 'yellow' | 'smallYellow' | 'red' | 'black' | 'none' = 'blue'\n\n\n\n    @Input()\n        label = 'Button'\n\n\n    @Output()\n        onClick = new EventEmitter<Event>()\n\n    public get classes(): string[] {\n        return ['button', `button--${this.color}`,]\n    }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, Input, Output, EventEmitter } from '@angular/core'\n\n@Component({\n    selector: 'app-button-component',\n    standalone: true,\n    imports: [CommonModule],\n    template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n  >\n    {{ label }}\n  </button>`,\n    styleUrls: ['./button-component.component.css'],\n})\nexport class ButtonComponentComponent {\n\n    @Input()\n        color: 'blue' | 'green' | 'yellow' | 'smallYellow' | 'red' | 'black' | 'none' = 'blue'\n\n\n\n    @Input()\n        label = 'Button'\n\n\n\n    @Output()\n        onClick = new EventEmitter<Event>()\n\n    public get classes(): string[] {\n        return ['button', `button--${this.color}`,]\n    }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import url(\"https://fonts.googleapis.com/css2?family=VT323&display=swap\");\n\n.button {\n  display: inline-block;\n  cursor: pointer;\n  \n  font-weight: 700;\n  font-size: 25px;\n  font-family: \"VT323\", monospace;\n  line-height: 1;\n\n  width: 9em;\n  padding: 6px;\n  border-width: 5px;\n  border-style: solid;\n  \n\n  color: rgb(0, 0, 0);\n}\n\n.button--blue {\n  border-color: #697d8a27;\n  background-color: #ceebff;\n}\n.button--green {\n  border-color: #697d8a27;\n  background-color: #bcffb1;\n}\n\n.button--yellow {\n  border-color: #697d8a27;\n  background-color: #fff067;\n}\n\n.button--smallYellow {\n  border-color: #697d8a27;\n  background-color: #fff067;\n  width: 4.5em;\n}\n\n.button--red {\n  border-color: #697d8a27;\n  background-color: #ff9999;\n}\n\n.button--black {\n  color: #b92713;\n  border-color: #141414;\n  background-color: #2b2b2b;\n}\n\n.button--none {\n  border-color: transparent;\n  background-color: transparent;\n}\n",
+                    "data": "@import url(\"https://fonts.googleapis.com/css2?family=VT323&display=swap\");\n\n.button {\n  color: rgb(0, 0, 0);\n  display: inline-block;\n  cursor: pointer;\n  \n  font-weight: 700;\n  font-size: 30px;\n  font-family: \"VT323\", monospace;\n  line-height: 1;\n\n  margin-top: 0.5em;\n  padding: 6px;\n  padding-left: 3em;\n  padding-right: 3em;\n  border-width: 10px;\n  border-style: solid;\n\n  width: 400px;\n  max-width: 80vw;\n}\n\n@media (max-width: 840px) { \n  .button {\n      width: 250px;\n  }\n}\n\n.button:hover{\n  transform: scale(1.2);\n}\n\n.button--blue {\n  border-color: #AAC2D2;\n  background-color: #ceebff;\n}\n\n.button--green {\n  border-color: #78A372;\n  background-color: #bcffb1;\n}\n\n.button--yellow {\n  border-color: #CCC057;\n  background-color: #fff067;\n}\n\n.button--smallYellow {\n  border-color: #CCC057;\n  background-color: #fff067;\n  width: 4.5em;\n}\n\n.button--red {\n  border-color: #CC7A7A;\n  background-color: #ff9999;\n}\n\n.button--black {\n  color: #b92713;\n  border-color: #222222;\n  background-color: #2b2b2b;\n}\n\n.button--none {\n  border-color: transparent;\n  background-color: transparent;\n  color: white;\n}\n",
                     "styleUrl": "./button-component.component.css"
                 }
             ],
@@ -148,14 +148,83 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 32
+                        "line": 33
                     }
                 }
             }
         },
         {
+            "name": "CreditsComponent",
+            "id": "component-CreditsComponent-1022ba604c1605969859d29bca2172dbb8f8a74efb503fca901e362ffee59aeafd9fb6fdf0af180e77a2281bf274abf64c8d83217c692922d2298acb5f74e30c",
+            "file": "src/app/credits/credits.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-credits",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./credits.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "sendMessage",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "conditionToSendStart",
+                    "defaultValue": "'start'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onClickHome",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\n\n@Component({\n    selector: 'app-credits',\n    standalone: true,\n    imports: [],\n    templateUrl: './credits.component.html',\n    styleUrl: './credits.component.css'\n})\nexport class CreditsComponent {\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendStart: string = 'start'\n\n    onClickHome() {\n        this.sendMessage.emit(this.conditionToSendStart)\n    }\n}\n",
+            "styleUrl": "./credits.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<button (click)=\"onClickHome()\">Back</button>"
+        },
+        {
             "name": "EndingScreenComponent",
-            "id": "component-EndingScreenComponent-06a2fed37c4c01e8d83b728f2c230d45953bf0cf4bc9a97631d2db56586ef08e2f13e5b704f965eeae7291aa1dcfaea9fd6b0f0b1829f139bfd463db0d792f86",
+            "id": "component-EndingScreenComponent-45f83a2294475130cf154e5157415da2b249ef47b9db4310951333b7cca3481b0da84cd305c83bedbe3fd3980fc61e63a22d2c80014032d7bf65f086568b40b5",
             "file": "src/app/ending-screen/ending-screen.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -177,7 +246,7 @@
                     "defaultValue": "new EventEmitter()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 49,
+                    "line": 51,
                     "type": "EventEmitter"
                 }
             ],
@@ -190,7 +259,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 19
                 },
                 {
                     "name": "conditionToSendExit",
@@ -200,7 +269,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 14
+                    "line": 16
                 },
                 {
                     "name": "conditionToSendRestart",
@@ -210,7 +279,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 13
+                    "line": 15
                 },
                 {
                     "name": "highscore",
@@ -220,7 +289,7 @@
                     "type": "[literal type]",
                     "optional": false,
                     "description": "",
-                    "line": 16
+                    "line": 18
                 },
                 {
                     "name": "nameInput",
@@ -229,7 +298,7 @@
                     "type": "ElementRef",
                     "optional": false,
                     "description": "",
-                    "line": 19,
+                    "line": 21,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -248,7 +317,7 @@
                     "type": "number[]",
                     "optional": false,
                     "description": "",
-                    "line": 15
+                    "line": 17
                 }
             ],
             "methodsClass": [
@@ -258,7 +327,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 37,
+                    "line": 39,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -268,7 +337,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 45,
+                    "line": 47,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -278,7 +347,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 54,
+                    "line": 56,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -288,7 +357,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 51,
+                    "line": 53,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -298,7 +367,7 @@
                     "optional": false,
                     "returnType": "any",
                     "typeParameters": [],
-                    "line": 32,
+                    "line": 34,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -308,7 +377,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -326,12 +395,16 @@
                 {
                     "name": "TileComponent",
                     "type": "component"
+                },
+                {
+                    "name": "ButtonComponentComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'\nimport { TileComponent } from '../tile/tile.component'\n\n@Component({\n    selector: 'app-end',\n    standalone: true,\n    imports: [CommonModule, TileComponent],\n    templateUrl: './ending-screen.component.html',\n    styleUrl: './ending-screen.component.css'\n})\nexport class EndingScreenComponent implements OnInit {\n    conditionToSendRestart: string = 'game'\n    conditionToSendExit: string = 'start'\n    topScores: number[] = [0, 1, 2]\n    highscore: [{ name: string, score: number }] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]\n    condition: string = 'highscoreChart'\n\n    @ViewChild('nameInput') nameInput!: ElementRef\n\n    sortHighscore() {\n        const score: number = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('score')!) : 0\n        this.highscore.push({ name: this.setNameForHighscore().toUpperCase(), score: score })\n        this.highscore.sort((a, b) => b.score - a.score)\n        if (this.highscore.length > 3) {\n            this.highscore.pop()\n        }\n        localStorage.setItem('highscore', JSON.stringify(this.highscore))\n        this.condition = 'highscoreChart'\n    }\n\n    setNameForHighscore() {\n        const nameInput: HTMLInputElement = this.nameInput.nativeElement\n        return nameInput.value\n    }\n\n    checkIfHighscore() {\n        this.highscore.forEach((element) => {\n            if (element.score < JSON.parse(localStorage.getItem('score')!)) {\n                this.condition = 'inputHighscoreName'\n            }\n        })\n    }\n\n    ngOnInit(): void {\n        this.checkIfHighscore()\n    }\n\n    @Output() sendMessage = new EventEmitter()\n\n    onClickRestart() {\n        this.sendMessage.emit(this.conditionToSendRestart)\n    }\n    onClickExit() {\n        this.sendMessage.emit(this.conditionToSendExit)\n    }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common'\nimport { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'\nimport { TileComponent } from '../tile/tile.component'\n\nimport { ButtonComponentComponent } from '../button-component/button-component.component'\n\n@Component({\n    selector: 'app-end',\n    standalone: true,\n    imports: [CommonModule, TileComponent,ButtonComponentComponent,],\n    templateUrl: './ending-screen.component.html',\n    styleUrl: './ending-screen.component.css'\n})\nexport class EndingScreenComponent implements OnInit {\n    conditionToSendRestart: string = 'game'\n    conditionToSendExit: string = 'start'\n    topScores: number[] = [0, 1, 2]\n    highscore: [{ name: string, score: number }] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]\n    condition: string = 'highscoreChart'\n\n    @ViewChild('nameInput') nameInput!: ElementRef\n\n    sortHighscore() {\n        const score: number = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('score')!) : 0\n        this.highscore.push({ name: this.setNameForHighscore().toUpperCase(), score: score })\n        this.highscore.sort((a, b) => b.score - a.score)\n        if (this.highscore.length > 3) {\n            this.highscore.pop()\n        }\n        localStorage.setItem('highscore', JSON.stringify(this.highscore))\n        this.condition = 'highscoreChart'\n    }\n\n    setNameForHighscore() {\n        const nameInput: HTMLInputElement = this.nameInput.nativeElement\n        return nameInput.value\n    }\n\n    checkIfHighscore() {\n        this.highscore.forEach((element) => {\n            if (element.score < JSON.parse(localStorage.getItem('score')!)) {\n                this.condition = 'inputHighscoreName'\n            }\n        })\n    }\n\n    ngOnInit(): void {\n        this.checkIfHighscore()\n    }\n\n    @Output() sendMessage = new EventEmitter()\n\n    onClickRestart() {\n        this.sendMessage.emit(this.conditionToSendRestart)\n    }\n    onClickExit() {\n        this.sendMessage.emit(this.conditionToSendExit)\n    }\n}\n",
             "styleUrl": "./ending-screen.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -340,11 +413,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<section class=\"ending-screen\">\n    <section class=\"highscore-top-container\">\n        <h1>You died!</h1>\n        <button type=\"button\" (click)=\"onClickRestart()\">Restart</button>\n        <button type=\"button\" (click)=\"onClickExit()\">Exit</button>\n    </section>\n    <div class=\"highscore\" *ngIf=\"condition === 'highscoreChart'\">\n        <h2 class=\"highscore-title\">Highscores</h2>\n        <section class=\"highscore-text\" *ngFor=\"let topScore of topScores\">\n            <p class=\"highscore-name\">{{ [topScore + 1 + \".\"] }} {{ [highscore[topScore].name] }}</p>\n            <p>{{ [highscore[topScore].score] }}</p>\n        </section>\n    </div>\n    <div class=\"input-highscore\" *ngIf=\"condition === 'inputHighscoreName'\">\n        <h2>New Highscore!</h2>\n        <p>Enter your initials</p>\n        <section class=\"input-highscore-name\">\n            <input type=\"text\" name=\"\" maxlength=\"3\" id=\"\" #nameInput>\n            <button type=\"button\" (click)=\"sortHighscore()\">Confirm</button>\n        </section>\n    </div>\n</section>\n"
+            "templateData": "\n<section class=\"ending-screen\">\n    <section class=\"highscore-top-container\">\n        <h1>You died!</h1>\n      <app-button-component [color]=\"'none'\" [label]=\"'Restart'\" (onClick)=\"onClickRestart()\"></app-button-component>\n      <app-button-component [color]=\"'none'\" [label]=\"'Exit'\" (onClick)=\"onClickExit()\"></app-button-component>\n    </section>\n    <div class=\"highscore\" *ngIf=\"condition === 'highscoreChart'\">\n        <h2 class=\"highscore-title\">Highscores</h2>\n        <section class=\"highscore-text\" *ngFor=\"let topScore of topScores\">\n            <p class=\"highscore-name\">{{ [topScore + 1 + \".\"] }} {{ [highscore[topScore].name] }}</p>\n            <p>{{ [highscore[topScore].score] }}</p>\n        </section>\n    </div>\n    <div class=\"input-highscore\" *ngIf=\"condition === 'inputHighscoreName'\">\n        <h2>New Highscore!</h2>\n        <p>Enter your initials</p>\n        <section class=\"input-highscore-name\">\n            <input type=\"text\" name=\"\" maxlength=\"3\" id=\"\" #nameInput>\n            <button type=\"button\" (click)=\"sortHighscore()\">Confirm</button>\n        </section>\n    </div>\n</section>"
         },
         {
             "name": "GameComponent",
-            "id": "component-GameComponent-8ef6ba90f885e63f7009461730137de70e30259afeaf575d2ce2b736da5fde0b03eb81a0ffd3f6e366dd397ad696c8aaa39cea3690280db7df6c4ad72fe75a9a",
+            "id": "component-GameComponent-7ca8721a87c022f7606030fffa8338b852e1462e0ba0be9cee60db945b6562a775c03d0d97f0e582a70581a0cbdfa0f52fd34e2397f905421fd51b7f43e09fd2",
             "file": "src/app/game/game.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -384,6 +457,34 @@
                 }
             ],
             "methodsClass": [
+                {
+                    "name": "getMsgFromCredits",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "$event",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
                 {
                     "name": "getMsgFromEndingScreen",
                     "args": [
@@ -500,22 +601,26 @@
                 {
                     "name": "EndingScreenComponent",
                     "type": "component"
+                },
+                {
+                    "name": "CreditsComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\nimport { } from '@storybook/angular'\nimport { ReactiveFormsModule } from '@angular/forms'\nimport countries from '../../assets/countries.json'\n\nimport { TileComponent } from '../tile/tile.component'\nimport { HomeComponent } from '../home/home.component'\nimport { EndingScreenComponent } from '../ending-screen/ending-screen.component'\n\n\n@Component({\n    selector: 'app-game',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent, HomeComponent, EndingScreenComponent],\n    templateUrl: './game.component.html',\n    styleUrl: './game.component.css'\n})\n\nexport class GameComponent {\n    countries = countries\n\n    condition = 'start'\n\n    getMsgFromHome($event: string) { this.condition = $event }\n    getMsgFromEndingScreen($event: string) { this.condition = $event }\n    getMsgFromTile($event: string) { this.condition = $event }\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\nimport { } from '@storybook/angular'\nimport { ReactiveFormsModule } from '@angular/forms'\nimport countries from '../../assets/countries.json'\n\nimport { TileComponent } from '../tile/tile.component'\nimport { HomeComponent } from '../home/home.component'\nimport { EndingScreenComponent } from '../ending-screen/ending-screen.component'\nimport { CreditsComponent } from '../credits/credits.component'\n\n@Component({\n    selector: 'app-game',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule, TileComponent, HomeComponent, EndingScreenComponent, CreditsComponent],\n    templateUrl: './game.component.html',\n    styleUrl: './game.component.css'\n})\n\nexport class GameComponent {\n    countries = countries\n\n    condition = 'start'\n\n    getMsgFromHome($event: string) { this.condition = $event }\n    getMsgFromEndingScreen($event: string) { this.condition = $event }\n    getMsgFromTile($event: string) { this.condition = $event }\n    getMsgFromCredits($event: string) { this.condition = $event }\n\n}\n",
             "styleUrl": "./game.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "\n<app-home (sendMessage)='getMsgFromHome($event)' *ngIf=\"condition == 'start'\"></app-home>\n<app-tile (sendMessage)='getMsgFromTile($event)' *ngIf=\"condition == 'game'\"></app-tile>\n<app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf=\"condition == 'end'\"></app-end>\n<router-outlet></router-outlet>\n"
+            "templateData": "<app-home (sendMessage)='getMsgFromHome($event)' *ngIf=\"condition == 'start'\"></app-home>\n<app-tile (sendMessage)='getMsgFromTile($event)' *ngIf=\"condition == 'game'\"></app-tile>\n<app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf=\"condition == 'end'\"></app-end>\n<app-credits (sendMessage)=\"getMsgFromCredits($event)\" *ngIf=\"condition == 'credits'\"></app-credits>\n<router-outlet></router-outlet>"
         },
         {
             "name": "HomeComponent",
-            "id": "component-HomeComponent-965ffe47a8f3618c6db86d34f30356180aac0a466a3a8043adb1fabc9de199303e287c693abc624ea16fa772a19d755f7c185d9bf0ad8e160d73fd58079d0ea8",
+            "id": "component-HomeComponent-bec4360b7ccc5dc79533b8387e1c0a276313277a54c7b996d449403c06ca7e5383c6993c0a5f134dab799284a97595ecca168994c427d70e706a8d7525aabfd7",
             "file": "src/app/home/home.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -543,7 +648,27 @@
             ],
             "propertiesClass": [
                 {
-                    "name": "conditionToSend",
+                    "name": "conditionToSendCredits",
+                    "defaultValue": "'credits'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "conditionToSendEnd",
+                    "defaultValue": "'end'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "conditionToSendGame",
                     "defaultValue": "'game'",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -555,12 +680,32 @@
             ],
             "methodsClass": [
                 {
+                    "name": "onClickCredits",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onClickHighscore",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
                     "name": "onClickStart",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 22,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -589,13 +734,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\n\nimport { ButtonComponentComponent } from '../button-component/button-component.component'\n\n@Component({\n    selector: 'app-home',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ButtonComponentComponent],\n    templateUrl: './home.component.html',\n    styleUrl: './home.component.css'\n})\nexport class HomeComponent {\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSend = 'game'\n\n    onClickStart() {\n        this.sendMessage.emit(this.conditionToSend)\n    }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Output } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { RouterLink, RouterOutlet } from '@angular/router'\n\nimport { ButtonComponentComponent } from '../button-component/button-component.component'\n\n@Component({\n    selector: 'app-home',\n    standalone: true,\n    imports: [CommonModule, RouterLink, RouterOutlet, ButtonComponentComponent],\n    templateUrl: './home.component.html',\n    styleUrl: './home.component.css'\n})\nexport class HomeComponent {\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendGame: string = 'game'\n    conditionToSendCredits: string = 'credits'\n    conditionToSendEnd: string = 'end'\n\n    onClickStart() {\n        this.sendMessage.emit(this.conditionToSendGame)\n    }\n    onClickCredits() {\n        this.sendMessage.emit(this.conditionToSendCredits)\n    }\n    onClickHighscore() {\n        localStorage.setItem('score', JSON.stringify(0))\n        this.sendMessage.emit(this.conditionToSendEnd)\n    }\n}\n",
             "styleUrl": "./home.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<section class=\"home-flex\">\n    <img class=\"logo\" src=\"../../assets/images/landpuzzle2.png\" alt=\"Land Puzzle\">\n    <app-button-component [color]=\"'blue'\" [label]=\"'Start'\" (onClick)=\"onClickStart()\"></app-button-component>\n</section>"
+            "templateData": "<section class=\"home-flex\">\n    <img class=\"logo\" src=\"../../assets/images/landpuzzle2.png\" alt=\"Land Puzzle\">\n    <app-button-component [color]=\"'blue'\" [label]=\"'Start'\" (onClick)=\"onClickStart()\"></app-button-component>\n    <app-button-component [color]=\"'blue'\" [label]=\"'Credits'\" (onClick)=\"onClickCredits()\"></app-button-component>\n    <app-button-component [color]=\"'blue'\" [label]=\"'Highscore'\" (onClick)=\"onClickHighscore()\"></app-button-component>\n</section>"
         },
         {
             "name": "ReplayComponent",
@@ -637,7 +782,7 @@
         },
         {
             "name": "TileComponent",
-            "id": "component-TileComponent-5bec6779c7dc398fa345422f98246d42e8807c0be8a94b2b40842aecb4ed452adef63d27c75343b4565f9a6b7be4b925089856093b375714fd25512852d8b113",
+            "id": "component-TileComponent-09d2a6056f7d141d7e6e1755cffb3c1f97c67eed3ac48839af1e3b2594f7902b052a5da5b576aa6683b732fab37212ad43469832f872f878a2b598ec3e053bcf",
             "file": "src/app/tile/tile.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -659,7 +804,7 @@
                     "defaultValue": "new EventEmitter()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 29,
+                    "line": 31,
                     "type": "EventEmitter"
                 }
             ],
@@ -672,7 +817,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 31
+                    "line": 33
                 },
                 {
                     "name": "conditionToSendStart",
@@ -682,7 +827,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 32
+                    "line": 34
                 },
                 {
                     "name": "correctMarkedTiles",
@@ -692,7 +837,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 24
+                    "line": 26
                 },
                 {
                     "name": "correctTestAnswerId",
@@ -702,7 +847,7 @@
                     "type": "number[]",
                     "optional": false,
                     "description": "",
-                    "line": 18
+                    "line": 20
                 },
                 {
                     "name": "countries",
@@ -712,7 +857,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 33
+                    "line": 35
                 },
                 {
                     "name": "form",
@@ -721,7 +866,7 @@
                     "type": "ElementRef",
                     "optional": false,
                     "description": "",
-                    "line": 39,
+                    "line": 41,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -740,7 +885,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 21
+                    "line": 23
                 },
                 {
                     "name": "markedTiles",
@@ -750,7 +895,7 @@
                     "type": "number[]",
                     "optional": false,
                     "description": "",
-                    "line": 23
+                    "line": 25
                 },
                 {
                     "name": "numberOfCorrectTiles",
@@ -760,7 +905,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 25
+                    "line": 27
                 },
                 {
                     "name": "randomCountryIndex",
@@ -770,7 +915,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 22
+                    "line": 24
                 },
                 {
                     "name": "replay",
@@ -780,7 +925,7 @@
                     "type": "Array<object>",
                     "optional": false,
                     "description": "",
-                    "line": 26
+                    "line": 28
                 },
                 {
                     "name": "score",
@@ -790,7 +935,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 20
+                    "line": 22
                 },
                 {
                     "name": "scoreMultiplier",
@@ -800,7 +945,7 @@
                     "type": "number",
                     "optional": false,
                     "description": "",
-                    "line": 19
+                    "line": 21
                 },
                 {
                     "name": "snackbar",
@@ -809,7 +954,7 @@
                     "type": "ElementRef",
                     "optional": false,
                     "description": "",
-                    "line": 40,
+                    "line": 42,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -828,7 +973,7 @@
                     "type": "number[]",
                     "optional": false,
                     "description": "",
-                    "line": 15
+                    "line": 17
                 },
                 {
                     "name": "tiles",
@@ -838,7 +983,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 16
+                    "line": 18
                 },
                 {
                     "name": "userSelectedInputTiles",
@@ -848,7 +993,7 @@
                     "type": "HTMLInputElement[]",
                     "optional": false,
                     "description": "",
-                    "line": 17
+                    "line": 19
                 }
             ],
             "methodsClass": [
@@ -858,7 +1003,7 @@
                     "optional": false,
                     "returnType": "number[]",
                     "typeParameters": [],
-                    "line": 71,
+                    "line": 73,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -868,7 +1013,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 90,
+                    "line": 92,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -878,7 +1023,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 35,
+                    "line": 37,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -888,7 +1033,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 117,
+                    "line": 119,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -898,7 +1043,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 55,
+                    "line": 57,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -908,7 +1053,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 51,
+                    "line": 53,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -918,7 +1063,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 94,
+                    "line": 96,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -928,7 +1073,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 173,
+                    "line": 175,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -938,7 +1083,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 166,
+                    "line": 168,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -948,7 +1093,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 103,
+                    "line": 105,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -958,7 +1103,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 157,
+                    "line": 159,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -968,7 +1113,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 128,
+                    "line": 130,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -978,7 +1123,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 149,
+                    "line": 151,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -1001,7 +1146,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 75,
+                    "line": 77,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1044,7 +1189,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 83,
+                    "line": 85,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1081,7 +1226,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 42,
+                    "line": 44,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1102,7 +1247,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 132,
+                    "line": 134,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1116,12 +1261,16 @@
                 {
                     "name": "CommonModule",
                     "type": "module"
+                },
+                {
+                    "name": "ButtonComponentComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { ElementRef } from '@angular/core'\nimport countries from '../../assets/countries.json'\n\n@Component({\n    selector: 'app-tile',\n    standalone: true,\n    imports: [CommonModule],\n    templateUrl: './tile.component.html',\n    styleUrl: './tile.component.css'\n})\n\nexport class TileComponent implements OnInit {\n    tileElementId: number[] = []\n    tiles = new Array(9)\n    userSelectedInputTiles: HTMLInputElement[] = []\n    correctTestAnswerId: number[] = []\n    scoreMultiplier: number = 1\n    score: number = 0\n    lives: number = 3\n    randomCountryIndex: number = 0\n    markedTiles: number[] = []\n    correctMarkedTiles: number = 0\n    numberOfCorrectTiles: number = 0\n    replay: Array<object> = []\n\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendEnd: string = 'end'\n    conditionToSendStart: string = 'start'\n    countries = countries\n\n    getRandomCountry() {\n        this.randomCountryIndex = Math.floor(Math.random() * countries.length)\n    }\n\n    @ViewChild('form') form!: ElementRef\n    @ViewChild('snackbar') snackbar!: ElementRef\n\n    showSnackbar(message: string) {\n        const snackbarHTML: Element = this.snackbar.nativeElement\n        snackbarHTML.innerHTML = message\n        snackbarHTML.className = 'show'\n        setTimeout(function () {\n            snackbarHTML.className = snackbarHTML.className.replace('show', '')\n        }, 3000)\n    }\n\n    ngOnInit(): void {\n        this.getRandomCountry()\n    }\n\n    ngAfterViewInit(): void {\n        this.correctTestAnswerId = this.getCorrectTestAnswerId()\n        const tileElements: Element[] = Array.from(this.form.nativeElement.children)\n        tileElements.forEach((tile, id) => {\n            tile.id = id.toString()\n            Array.from(tile.children).forEach((element: Element, index) => {\n                if (index === 0) {\n                    this.setupTileInputElement(element, id)\n                }\n                else {\n                    this.setupTileLabelElement(element, id)\n                }\n            })\n        })\n    }\n\n    getCorrectTestAnswerId(): number[] {\n        return countries[this.randomCountryIndex].easy\n    }\n\n    setupTileInputElement(element: Element, id: number) {\n        const inputElement = element as HTMLInputElement\n        inputElement.id = 'tile' + id.toString()\n        inputElement.checked = false\n        this.userSelectedInputTiles.push(inputElement)\n        this.tileElementId.push(id)\n    }\n\n    setupTileLabelElement(element: Element, id: number) {\n        const labelElement = element as HTMLLabelElement\n        labelElement.htmlFor = 'tile' + id.toString()\n    }\n\n\n\n    getHighscoreSorted() {\n        localStorage.setItem('score', JSON.stringify(this.score))\n    }\n\n    onCheckConfirm() {\n        this.saveTileGrid()\n        this.pointsForCorrectTiles()\n        if (this.markedTiles.toString() !== this.correctTestAnswerId.toString()) {\n            this.invalidAnswer()\n        }\n        this.resetValues()\n    }\n\n    pointsForCorrectTiles() {\n        this.correctTestAnswerId.forEach((correctTile) => {\n            this.numberOfCorrectTiles++\n            this.markedTiles.forEach((tile) => {\n                if (tile === correctTile) {\n                    this.score += (11 * this.scoreMultiplier)\n                    this.correctMarkedTiles++\n                }\n            })\n        })\n        this.scoreMultiplier += .15\n        this.showSnackbar('Horay! :D')\n    }\n\n    invalidAnswer() {\n        this.lives--\n        this.scoreMultiplier = 1\n        this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)\n        if (this.lives <= 0) {\n            this.saveReplayToLocalStorage()\n            this.getHighscoreSorted()\n            this.sendMessage.emit(this.conditionToSendEnd)\n        }\n    }\n\n    saveReplayToLocalStorage() {\n        localStorage.setItem('latestReplay', JSON.stringify(this.replay))\n    }\n\n    updateReplayTiles() {\n        const replayTiles: number[] = []\n        this.tileElementId.forEach((id) => {\n            if (this.userSelectedInputTiles[id].checked) {\n                replayTiles.push(id)\n            }\n        })\n        const replayTurn = {\n            'moves': replayTiles,\n            'country': countries[this.randomCountryIndex].name,\n            'score': this.score,\n            'multiplier': this.scoreMultiplier\n        }\n        this.replay.push(replayTurn)\n        console.log(this.replay)\n    }\n\n    saveTileGrid() {\n        this.tileElementId.forEach((id) => {\n            if (this.userSelectedInputTiles[id].checked) {\n                this.markedTiles.push(id)\n            }\n        })\n    }\n\n    resetValues() {\n        this.getRandomCountry()\n        this.markedTiles = []\n        this.userSelectedInputTiles = []\n        this.tileElementId = []\n        this.correctMarkedTiles = 0\n        this.numberOfCorrectTiles = 0\n        this.ngAfterViewInit()\n    }\n    onClickRestart() {\n        this.getRandomCountry()\n        this.lives = 3\n        this.score = 0\n        this.scoreMultiplier = 1\n        this.resetValues()\n    }\n    onClickHome() {\n        this.sendMessage.emit(this.conditionToSendStart)\n    }\n}\n\n",
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core'\nimport { CommonModule } from '@angular/common'\nimport { ElementRef } from '@angular/core'\nimport countries from '../../assets/countries.json'\n\nimport { ButtonComponentComponent } from '../button-component/button-component.component'\n\n@Component({\n    selector: 'app-tile',\n    standalone: true,\n    imports: [CommonModule,ButtonComponentComponent,],\n    templateUrl: './tile.component.html',\n    styleUrl: './tile.component.css'\n})\n\nexport class TileComponent implements OnInit {\n    tileElementId: number[] = []\n    tiles = new Array(9)\n    userSelectedInputTiles: HTMLInputElement[] = []\n    correctTestAnswerId: number[] = []\n    scoreMultiplier: number = 1\n    score: number = 0\n    lives: number = 3\n    randomCountryIndex: number = 0\n    markedTiles: number[] = []\n    correctMarkedTiles: number = 0\n    numberOfCorrectTiles: number = 0\n    replay: Array<object> = []\n\n\n    @Output() sendMessage = new EventEmitter()\n\n    conditionToSendEnd: string = 'end'\n    conditionToSendStart: string = 'start'\n    countries = countries\n\n    getRandomCountry() {\n        this.randomCountryIndex = Math.floor(Math.random() * countries.length)\n    }\n\n    @ViewChild('form') form!: ElementRef\n    @ViewChild('snackbar') snackbar!: ElementRef\n\n    showSnackbar(message: string) {\n        const snackbarHTML: Element = this.snackbar.nativeElement\n        snackbarHTML.innerHTML = message\n        snackbarHTML.className = 'show'\n        setTimeout(function () {\n            snackbarHTML.className = snackbarHTML.className.replace('show', '')\n        }, 3000)\n    }\n\n    ngOnInit(): void {\n        this.getRandomCountry()\n    }\n\n    ngAfterViewInit(): void {\n        this.correctTestAnswerId = this.getCorrectTestAnswerId()\n        const tileElements: Element[] = Array.from(this.form.nativeElement.children)\n        tileElements.forEach((tile, id) => {\n            tile.id = id.toString()\n            Array.from(tile.children).forEach((element: Element, index) => {\n                if (index === 0) {\n                    this.setupTileInputElement(element, id)\n                }\n                else {\n                    this.setupTileLabelElement(element, id)\n                }\n            })\n        })\n    }\n\n    getCorrectTestAnswerId(): number[] {\n        return countries[this.randomCountryIndex].easy\n    }\n\n    setupTileInputElement(element: Element, id: number) {\n        const inputElement = element as HTMLInputElement\n        inputElement.id = 'tile' + id.toString()\n        inputElement.checked = false\n        this.userSelectedInputTiles.push(inputElement)\n        this.tileElementId.push(id)\n    }\n\n    setupTileLabelElement(element: Element, id: number) {\n        const labelElement = element as HTMLLabelElement\n        labelElement.htmlFor = 'tile' + id.toString()\n    }\n\n\n\n    getHighscoreSorted() {\n        localStorage.setItem('score', JSON.stringify(this.score))\n    }\n\n    onCheckConfirm() {\n        this.saveTileGrid()\n        this.pointsForCorrectTiles()\n        if (this.markedTiles.toString() !== this.correctTestAnswerId.toString()) {\n            this.invalidAnswer()\n        }\n        this.resetValues()\n    }\n\n    pointsForCorrectTiles() {\n        this.correctTestAnswerId.forEach((correctTile) => {\n            this.numberOfCorrectTiles++\n            this.markedTiles.forEach((tile) => {\n                if (tile === correctTile) {\n                    this.score += (11 * this.scoreMultiplier)\n                    this.correctMarkedTiles++\n                }\n            })\n        })\n        this.scoreMultiplier += .15\n        this.showSnackbar('Horay! :D')\n    }\n\n    invalidAnswer() {\n        this.lives--\n        this.scoreMultiplier = 1\n        this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)\n        if (this.lives <= 0) {\n            this.saveReplayToLocalStorage()\n            this.getHighscoreSorted()\n            this.sendMessage.emit(this.conditionToSendEnd)\n        }\n    }\n\n    saveReplayToLocalStorage() {\n        localStorage.setItem('latestReplay', JSON.stringify(this.replay))\n    }\n\n    updateReplayTiles() {\n        const replayTiles: number[] = []\n        this.tileElementId.forEach((id) => {\n            if (this.userSelectedInputTiles[id].checked) {\n                replayTiles.push(id)\n            }\n        })\n        const replayTurn = {\n            'moves': replayTiles,\n            'country': countries[this.randomCountryIndex].name,\n            'score': this.score,\n            'multiplier': this.scoreMultiplier\n        }\n        this.replay.push(replayTurn)\n        console.log(this.replay)\n    }\n\n    saveTileGrid() {\n        this.tileElementId.forEach((id) => {\n            if (this.userSelectedInputTiles[id].checked) {\n                this.markedTiles.push(id)\n            }\n        })\n    }\n\n    resetValues() {\n        this.getRandomCountry()\n        this.markedTiles = []\n        this.userSelectedInputTiles = []\n        this.tileElementId = []\n        this.correctMarkedTiles = 0\n        this.numberOfCorrectTiles = 0\n        this.ngAfterViewInit()\n    }\n    onClickRestart() {\n        this.getRandomCountry()\n        this.lives = 3\n        this.score = 0\n        this.scoreMultiplier = 1\n        this.resetValues()\n    }\n    onClickHome() {\n        this.sendMessage.emit(this.conditionToSendStart)\n    }\n}\n\n",
             "styleUrl": "./tile.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -1130,7 +1279,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<section class=\"tile\">\n    <section class=\"top-flex\">\n        <section class=\"statistic\">\n            <p class=\"statistics-text\">Lives: {{ lives }}</p>\n            <p class=\"statistics-text\">Score: {{ score }}</p>\n            <p class=\"statistics-text\">Multiplier: {{ scoreMultiplier.toFixed(2) }}</p>\n        </section>\n\n        <section class=\"\">\n            <button (click)=\"onClickRestart()\">Restart</button>\n            <button (click)=\"onClickHome()\">Home</button>\n        </section>\n    </section>\n\n    <section class=\"draw-container\">\n        <h1 class=\"draw-country\">Draw {{ countries[randomCountryIndex].name }}</h1>\n        <section class=\"form-padding\">\n            <form #form id=\"form\" action=\"\" ng-controller=\"ExampleController\">\n                <section *ngFor=\"let tile of tiles\" class=\"tile-outer\">\n                    <input type=\"checkbox\" id=\"Placeholder\" [ngClass]=\"['display-none', 'tile-checkbox']\">\n                    <label for=\"Placeholder\" class=\"tile-inner\"></label>\n                </section>\n            </form>\n        </section>\n        <button type=\"button\" (click)=\"onCheckConfirm()\">Confirm</button>\n        <div #snackbar id=\"snackbar\"></div>\n    </section>\n</section>"
+            "templateData": "<section class=\"tile\">\n    <section class=\"top-flex\">\n        <section class=\"statistic\">\n            <p class=\"statistics-text\">Lives: {{ lives }}</p>\n            <p class=\"statistics-text\">Score: {{ score.toFixed(0) }}</p>\n            <p class=\"statistics-text\">Multiplier: {{ scoreMultiplier.toFixed(2) }}</p>\n        </section>\n\n        <section class=\"\">\n            <button (click)=\"onClickRestart()\">Restart</button>\n            <button (click)=\"onClickHome()\">Home</button>\n        </section>\n    </section>\n\n    <section class=\"draw-container\">\n        <h1 class=\"draw-country\">Draw {{ countries[randomCountryIndex].name }}</h1>\n        <section class=\"form-padding\">\n            <form #form id=\"form\" action=\"\" ng-controller=\"ExampleController\">\n                <section *ngFor=\"let tile of tiles\" class=\"tile-outer\">\n                    <input type=\"checkbox\" id=\"Placeholder\" [ngClass]=\"['display-none', 'tile-checkbox']\">\n                    <label for=\"Placeholder\" class=\"tile-inner\"></label>\n                </section>\n            </form>\n        </section>\n        <app-button-component [color]=\"'blue'\" [label]=\"'Confirm'\" (onClick)=\"onCheckConfirm()\"></app-button-component>\n        <div #snackbar id=\"snackbar\"></div>\n    </section>\n</section>"
         }
     ],
     "modules": [],
@@ -1155,6 +1304,16 @@
                 "deprecationMessage": "",
                 "type": "ButtonComponentStory",
                 "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Confirm',\n        color: 'blue',\n    },\n}"
+            },
+            {
+                "name": "Credits",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button-component/button-component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Credits',\n        color: 'blue',\n    },\n}"
             },
             {
                 "name": "Easy",
@@ -1195,6 +1354,16 @@
                 "deprecationMessage": "",
                 "type": "ButtonComponentStory",
                 "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Hard',\n        color: 'red',\n\n    },\n}"
+            },
+            {
+                "name": "Highscore",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button-component/button-component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ButtonComponentStory",
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Highscore',\n        color: 'blue',\n    },\n}"
             },
             {
                 "name": "Medium",
@@ -1284,7 +1453,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ButtonComponentStory",
-                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Tips 😀',\n        color: 'smallYellow',\n    },\n}"
+                "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Tips😀',\n        color: 'smallYellow',\n        \n    },\n}"
             },
             {
                 "name": "VeryEasy",
@@ -1348,6 +1517,16 @@
                     "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Confirm',\n        color: 'blue',\n    },\n}"
                 },
                 {
+                    "name": "Credits",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button-component/button-component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Credits',\n        color: 'blue',\n    },\n}"
+                },
+                {
                     "name": "Easy",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1386,6 +1565,16 @@
                     "deprecationMessage": "",
                     "type": "ButtonComponentStory",
                     "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Hard',\n        color: 'red',\n\n    },\n}"
+                },
+                {
+                    "name": "Highscore",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button-component/button-component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ButtonComponentStory",
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Highscore',\n        color: 'blue',\n    },\n}"
                 },
                 {
                     "name": "Medium",
@@ -1445,7 +1634,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ButtonComponentStory",
-                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Tips 😀',\n        color: 'smallYellow',\n    },\n}"
+                    "defaultValue": "{\n    ...Template,\n    args: {\n        label: 'Tips😀',\n        color: 'smallYellow',\n        \n    },\n}"
                 },
                 {
                     "name": "VeryEasy",
@@ -1582,6 +1771,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Credits",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Easy",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -1613,6 +1812,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Hard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button-component/button-component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Highscore",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1688,6 +1897,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/credits/credits.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CreditsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/ending-screen/ending-screen.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1722,7 +1940,7 @@
                 "linktype": "component",
                 "name": "GameComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -1731,7 +1949,7 @@
                 "linktype": "component",
                 "name": "HomeComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
