@@ -47,7 +47,7 @@ export class TileComponent implements OnInit {
         snackbarHTML.className = 'show'
         setTimeout(function () {
             snackbarHTML.className = snackbarHTML.className.replace('show', '')
-        }, 3000)
+        }, 4000)
     }
 
     ngOnInit(): void {
@@ -121,7 +121,12 @@ export class TileComponent implements OnInit {
     invalidAnswer() {
         this.lives--
         this.scoreMultiplier = 1
-        this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)
+        if (this.markedTiles.length > this.correctTestAnswerId.length) {
+            this.showSnackbar('Oh no! You got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles + ' but you marked too many tiles!')
+        }
+        else {
+            this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)
+        }
         if (this.lives <= 0) {
             this.saveReplayToLocalStorage()
             this.getHighscoreSorted()
