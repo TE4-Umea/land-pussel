@@ -25,11 +25,11 @@
     transition: 0.2s;
 }
 
-.tile-inner:hover {
-    opacity: 0.35;
+.tile-checkbox:checked+label {
+    opacity: 0.6;
 }
 
-.tile-checkbox:checked+label {
+.tile-checked {
     opacity: 0.6;
 }
 
