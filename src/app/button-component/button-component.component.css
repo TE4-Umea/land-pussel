@@ -10,7 +10,7 @@
   font-family: "VT323", monospace;
   line-height: 1;
 
-  margin-top: 0.5em;
+  margin-top: 0.8em;
   padding: 6px;
   padding-left: 3em;
   padding-right: 3em;
@@ -50,6 +50,8 @@
   border-color: #CCC057;
   background-color: #fff067;
   width: 4.5em;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .button--red {
@@ -67,4 +69,12 @@
   border-color: transparent;
   background-color: transparent;
   color: white;
+}
+
+.button--white {
+  border-color: #cac8c8;
+  background-color: rgb(235, 232, 232);
+  width: 4.5em;
+  padding-left: 0;
+  padding-right: 0;
 }

@@ -1,3 +1,53 @@
+@font-face {
+    font-family: o;
+    src: url(../../assets/Minercraftory.ttf);
+} 
+
+@font-face {
+    font-family: ok;
+    src: url(../../assets/Underground.ttf);
+} 
+
+@font-face {
+    font-family: oke;
+    src: url(../../assets/Beard.ttf);
+} 
+
+@font-face {
+    font-family: okej;
+    src: url(../../assets/Alarm.ttf);
+} 
+
+@font-face {
+    font-family: okejj;
+    src: url(../../assets/KleinHeadline-BoldOblique.ttf);
+} 
+@font-face {
+    font-family: weed;
+    src: url(../../assets/Smoke\ Weed.otf);
+} 
+.titleLand{
+    position: absolute;
+
+    font-size: 150px;
+    font-family: o;
+    color: orange;
+    text-align: center;
+}
+.titlePuzzle{
+    position: relative;
+    padding-top: 170px;
+
+    font-size: 150px;
+    font-family: okejj;
+    color: orange;
+    text-align: center;
+}
+.titleDiv{
+    display: flex;
+    flex-direction: column;
+}
+
 .home-flex {
     box-shadow: inset 0px 40vh 40vh -40vh black;
     display: flex;
@@ -6,6 +56,8 @@
     justify-content: center;
     height: 100vh;
 }
+
+
 
 .logo {
     width: 500px;
