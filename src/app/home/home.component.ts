@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
 
     @Output() sendMessage = new EventEmitter()
 
-    conditionToSend: string = 'game'
     conditionToSendGame: string = 'game'
     conditionToSendCredits: string = 'credits'
     conditionToSendEnd: string = 'end'
@@ -30,13 +29,13 @@ export class HomeComponent implements OnInit {
         let vol = 0.2
         const intervalId = setInterval(() => {
             if (vol > 0) {
-                vol -= 0.01
+                vol = Math.max(0, vol - 0.01)
                 this.audio.volume = vol
+                if (vol < 0.02) {
+                    this.audio.pause()
+                }
             } else {
                 clearInterval(intervalId)
-            }
-            if (vol < 0.01) {
-                this.audio.pause()
             }
         }, 150)
     }
@@ -59,6 +58,7 @@ export class HomeComponent implements OnInit {
         this.sendMessage.emit(this.conditionToSendGame)
     }
     onClickCredits() {
+        this.fadeOut()
         this.sendMessage.emit(this.conditionToSendCredits)
     }
     onClickHighscore() {
@@ -71,6 +71,6 @@ export class HomeComponent implements OnInit {
         this.audio.src = '../../assets/music/Land-Puzzle-Start-Menu.mp3'
         this.audio.volume = 0
         this.audio.load()
-        this.audio.play()
+        this.audio.autoplay = true
     }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core'
+import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core'
 
 @Component({
     selector: 'app-replay',
@@ -17,6 +17,7 @@ export class ReplayComponent implements AfterViewInit {
     isPlaying: boolean = false
     playbackSpeedMS: number = 500
     totalMovesCount: number = 0
+    conditionToSendStart: string = 'start'
 
     //TODO Lägga till index för varje runda som spelaren kan välja mellan 
 
@@ -81,7 +82,7 @@ export class ReplayComponent implements AfterViewInit {
     }
 
     resetTiles() {
-        this.markedTiles.forEach((markedTileId, index) => {
+        this.markedTiles.forEach((markedTileId) => {
             const tileLabel: Element = this.tileElements[markedTileId].children[0]
             tileLabel.classList.remove('tile-checked')
         })
@@ -100,13 +101,15 @@ export class ReplayComponent implements AfterViewInit {
     }
 
     fillInMarkedTiles() {
-        this.markedTiles.forEach((markedTileId, index) => {
+        this.markedTiles.forEach((markedTileId) => {
             const tileLabel: Element = this.tileElements[markedTileId].children[0]
             tileLabel.classList.add('tile-checked')
         })
     }
 
+    @Output() sendMessage = new EventEmitter()
+
     onClickHome() {
-        console.log('Home')
+        this.sendMessage.emit(this.conditionToSendStart)
     }
 }
