@@ -14,6 +14,7 @@ import { ButtonComponentComponent } from '../button-component/button-component.c
 export class EndingScreenComponent implements OnInit {
     conditionToSendRestart: string = 'game'
     conditionToSendExit: string = 'start'
+    conditionToSendReplay: string = 'replay'
     topScores: number[] = [0, 1, 2]
     highscore: [{ name: string, score: number }] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]
     condition: string = 'highscoreChart'
@@ -96,7 +97,9 @@ export class EndingScreenComponent implements OnInit {
         this.fadeOut()
         this.sendMessage.emit(this.conditionToSendExit)
     }
-
+    onClickReplay() {
+        this.sendMessage.emit(this.conditionToSendReplay)
+    }
     playSound() {
         this.audio.src = '../../assets/music/Land-Puzzle-Death-Music.mp3'
         this.audio.volume = 0
