@@ -17,6 +17,7 @@ export class ReplayComponent implements AfterViewInit {
     isPlaying: boolean = false
     playbackSpeedMS: number = 500
     totalMovesCount: number = 0
+    percentViewed: number = 0
 
     //TODO Lägga till index för varje runda som spelaren kan välja mellan 
 
@@ -24,10 +25,14 @@ export class ReplayComponent implements AfterViewInit {
 
     clamp = (val: number, min: number, max: number) => Math.min(Math.max(val, min), max - 1)
 
+    getPercentageViewed() {
+        this.percentViewed = this.frameIndex / this.totalMovesCount - 1
+    }
+
     getTotalMovesCount() {
-        this.replay.forEach((replayObject) => {
-            this.totalMovesCount = replayObject.moves.length
-        })
+        for (let index = 0; index < this.replay.length; index++) {
+            this.totalMovesCount++
+        }
     }
 
     ngAfterViewInit(): void {
@@ -38,14 +43,12 @@ export class ReplayComponent implements AfterViewInit {
     skipForward() {
         this.frameIndex++
         this.frameIndex = this.clamp(this.frameIndex, -1, this.totalMovesCount)
-        console.log(this.frameIndex)
         this.displayFrame()
     }
 
     skipBackward() {
         this.frameIndex--
         this.frameIndex = this.clamp(this.frameIndex, -1, this.totalMovesCount)
-        console.log(this.frameIndex)
         this.displayFrame()
     }
 
@@ -57,12 +60,12 @@ export class ReplayComponent implements AfterViewInit {
     togglePlayPause() {
         this.isPlaying = !this.isPlaying
         const timer = window.setInterval(() => {
-            if (this.isPlaying) {
+            if (this.isPlaying && this.frameIndex < this.totalMovesCount - 1) {
                 this.play()
             }
             else {
                 clearInterval(timer)
-                console.log('Stop')
+                this.isPlaying = false
             }
         }, this.playbackSpeedMS)
 
@@ -81,7 +84,7 @@ export class ReplayComponent implements AfterViewInit {
     }
 
     resetTiles() {
-        this.markedTiles.forEach((markedTileId, index) => {
+        this.markedTiles.forEach((markedTileId) => {
             const tileLabel: Element = this.tileElements[markedTileId].children[0]
             tileLabel.classList.remove('tile-checked')
         })
@@ -100,7 +103,7 @@ export class ReplayComponent implements AfterViewInit {
     }
 
     fillInMarkedTiles() {
-        this.markedTiles.forEach((markedTileId, index) => {
+        this.markedTiles.forEach((markedTileId) => {
             const tileLabel: Element = this.tileElements[markedTileId].children[0]
             tileLabel.classList.add('tile-checked')
         })
