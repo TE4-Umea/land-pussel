@@ -17,12 +17,17 @@ export class ReplayComponent implements AfterViewInit {
     isPlaying: boolean = false
     playbackSpeedMS: number = 500
     totalMovesCount: number = 0
+    percentViewed: number = 0
 
     //TODO Lägga till index för varje runda som spelaren kan välja mellan 
 
     @ViewChild('form') form!: ElementRef
 
     clamp = (val: number, min: number, max: number) => Math.min(Math.max(val, min), max - 1)
+
+    getPercentageViewed() {
+        this.percentViewed = this.frameIndex / this.totalMovesCount - 1
+    }
 
     getTotalMovesCount() {
         for (let index = 0; index < this.replay.length; index++) {
