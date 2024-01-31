@@ -4,8 +4,9 @@
         <h1 *ngIf="condition === 'fromStartHighscore'">Highscore</h1>
         <app-button-component *ngIf="condition === 'highscoreChart'" [color]="'none'" [label]="'Restart'"
             (onClick)="onClickRestart()"></app-button-component>
+        <app-button-component *ngIf="condition === 'highscoreChart'" [color]="'none'" [label]="'Replay'"
+            (onClick)="onClickReplay()"></app-button-component>
         <app-button-component [color]="'none'" [label]="'Exit'" (onClick)="onClickExit()"></app-button-component>
-        <button *ngIf="condition === 'highscoreChart'" type="button" (click)="onClickReplay()">Replay</button>
     </section>
     <div class="highscore" *ngIf="condition === 'highscoreChart' || 'fromStartHighscore'">
         <h2 class="highscore-title">Highscores</h2>
