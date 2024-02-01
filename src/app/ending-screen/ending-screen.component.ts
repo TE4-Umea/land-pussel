@@ -63,13 +63,14 @@ export class EndingScreenComponent implements OnInit {
         let vol = 0.2
         const intervalId = setInterval(() => {
             if (vol > 0) {
-                vol -= 0.01
+                vol = Math.max(0, vol - 0.01)
                 this.audio.volume = vol
+                if (vol < 0.02) {
+                    this.audio.pause()
+                    this.audio.volume = 0
+                }
             } else {
                 clearInterval(intervalId)
-            }
-            if (vol < 0.01) {
-                this.audio.pause()
             }
         }, 150)
     }
