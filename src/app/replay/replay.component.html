@@ -14,13 +14,13 @@
             <div id="progressBar" class="progress-bar-inner"></div>
         </div>
         <section class="replay-buttons">
-            <button (click)="onClickHome()"><img src="../../assets/images/home.png" alt="Home"></button>
+            <button (click)="onClickHome()" class="home"></button>
             <section class="replay-buttons-middle">
-                <button (click)="skipBackward()"><img src="../../assets/images/lastFrame.png" alt="Previous frame"></button>
+                <button (click)="skipBackward()" class="last-frame"></button>
                 <button (click)="togglePlayPause()" class="play-paus"></button>
-                <button (click)="skipForward()"><img src="../../assets/images/nextFrame.png" alt="Next frame"></button>
+                <button (click)="skipForward()" class="next-frame"></button>
             </section>
-            <button (click)="rewind()"><img src="../../assets/images/rewind.png" alt="Rewind"></button>
+            <button (click)="rewind()" class="rewind"></button>
         </section>
     </section>
 </section>

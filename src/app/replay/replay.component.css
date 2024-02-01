@@ -86,7 +86,7 @@
     position: absolute;
     width: 90vw;
     left: calc(5vw - 10px);
-    bottom: 5vh;
+    bottom: 3vh;
     background-color: var(--color-secondary);
     padding: 10px;
 }
@@ -111,21 +111,38 @@
     justify-content: space-between;
 }
 
+
 .replay-buttons img {
     color: var(--color-light);
-    width: 45px;
+    width: 80%;
     filter: drop-shadow(var(--shadow1));
+}
+
+.home {
+    background-image: url(../../assets/images/home.png);
 }
 
 .play-paus {
     background-image: var(--play-paus);
 }
 
+.last-frame {
+    background-image: url(../../assets/images/lastFrame.png);
+}
+
+.next-frame {
+    background-image: url(../../assets/images/nextFrame.png);
+}
+
+.rewind {
+    background-image: url(../../assets/images/rewind.png);
+}
+
 .replay-buttons button {
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    width: 45px;
+    width: 60px;
     aspect-ratio: 1;
     display: flex;
     align-items: center;
