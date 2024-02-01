@@ -18,6 +18,7 @@ export class ReplayComponent implements AfterViewInit {
     playbackSpeedMS: number = 500
     totalMovesCount: number = 0
     percentViewed: number = 0
+    root = document.documentElement
 
     //TODO Lägga till index för varje runda som spelaren kan välja mellan 
 
@@ -25,8 +26,10 @@ export class ReplayComponent implements AfterViewInit {
 
     clamp = (val: number, min: number, max: number) => Math.min(Math.max(val, min), max - 1)
 
+
     getPercentageViewed() {
-        this.percentViewed = this.frameIndex / this.totalMovesCount - 1
+        this.percentViewed = ((this.frameIndex + 1) / this.totalMovesCount) * 100   
+        this.root.style.setProperty('--progress-bar-width', this.percentViewed + '%')
     }
 
     getTotalMovesCount() {
@@ -43,17 +46,20 @@ export class ReplayComponent implements AfterViewInit {
     skipForward() {
         this.frameIndex++
         this.frameIndex = this.clamp(this.frameIndex, -1, this.totalMovesCount)
+        this.getPercentageViewed()
         this.displayFrame()
     }
 
     skipBackward() {
         this.frameIndex--
         this.frameIndex = this.clamp(this.frameIndex, -1, this.totalMovesCount)
+        this.getPercentageViewed()
         this.displayFrame()
     }
 
     rewind() {
         this.frameIndex = -1
+        this.getPercentageViewed()
         this.displayFrame()
     }
 
@@ -62,16 +68,19 @@ export class ReplayComponent implements AfterViewInit {
         const timer = window.setInterval(() => {
             if (this.isPlaying && this.frameIndex < this.totalMovesCount - 1) {
                 this.play()
+                this.root.style.setProperty('--play-paus', 'url(./assets/images/pause.png)')
             }
             else {
                 clearInterval(timer)
                 this.isPlaying = false
+                this.root.style.setProperty('--play-paus', 'url(./assets/images/play.png)')
             }
         }, this.playbackSpeedMS)
 
     }
 
     play() {
+        this.getPercentageViewed()
         this.skipForward()
         this.displayFrame()
     }

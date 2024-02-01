@@ -10,6 +10,10 @@
     --color-tertiary: #ceebff;
 
     --shadow1: 0px 5px 0px rgba(0, 0, 0, 0.3);
+
+    --progress-bar-width: 0%;
+    
+    --play-paus: url(./assets/images/play.png);
 }
 
 h1, h2, h3, h4, p {

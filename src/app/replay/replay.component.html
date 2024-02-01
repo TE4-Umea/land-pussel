@@ -1,12 +1,4 @@
 <section class="tile">
-    <section class="top-flex">
-        <section class="statistic">
-            <p class="statistics-text">Lives: </p>
-            <p class="statistics-text">Score: </p>
-            <p class="statistics-text">Multiplier: </p>
-        </section>
-    </section>
-
     <section class="draw-container">
         <h1 class="draw-country">Draw </h1>
         <section class="form-padding">
@@ -16,10 +8,20 @@
                 </section>
             </form>
         </section>
-        <button (click)="onClickHome()">Home</button>
-        <button (click)="skipBackward()">Last Frame</button>
-        <button (click)="togglePlayPause()">Play/Pause</button>
-        <button (click)="skipForward()">Next Frame</button>
-        <button (click)="rewind()">Rewind</button>
+    </section>
+    <section class="replay">
+        <div class="progress-bar-outer">
+            <div id="progressBar" class="progress-bar-inner"></div>
+        </div>
+        <section class="replay-buttons">
+            <button (click)="onClickHome()"><img src="../../assets/images/home.png" alt="Home"></button>
+            <section class="replay-buttons-middle">
+                <button (click)="skipBackward()"><img src="../../assets/images/lastFrame.png" alt="Previous frame"></button>
+                <button (click)="togglePlayPause()" class="play-paus"></button>
+                <button (click)="skipForward()"><img src="../../assets/images/nextFrame.png" alt="Next frame"></button>
+            </section>
+            <button (click)="rewind()"><img src="../../assets/images/rewind.png" alt="Rewind"></button>
+        </section>
     </section>
 </section>
+
