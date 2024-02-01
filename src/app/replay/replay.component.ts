@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core'
+import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core'
 
 @Component({
     selector: 'app-replay',
@@ -17,7 +17,9 @@ export class ReplayComponent implements AfterViewInit {
     isPlaying: boolean = false
     playbackSpeedMS: number = 500
     totalMovesCount: number = 0
+    conditionToSendStart: string = 'start'
     percentViewed: number = 0
+
 
     //TODO Lägga till index för varje runda som spelaren kan välja mellan 
 
@@ -109,7 +111,9 @@ export class ReplayComponent implements AfterViewInit {
         })
     }
 
+    @Output() sendMessage = new EventEmitter()
+
     onClickHome() {
-        console.log('Home')
+        this.sendMessage.emit(this.conditionToSendStart)
     }
 }

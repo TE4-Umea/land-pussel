@@ -2,5 +2,5 @@
 <app-tile (sendMessage)='getMsgFromTile($event)' *ngIf="condition === 'game'"></app-tile>
 <app-end (sendMessage)='getMsgFromEndingScreen($event)' *ngIf="condition === 'end'"></app-end>
 <app-credits (sendMessage)="getMsgFromCredits($event)" *ngIf="condition === 'credits'"></app-credits>
-<app-replay *ngIf="condition === 'replay'"></app-replay>
+<app-replay (sendMessage)='getMsgFromReplay($event)' *ngIf="condition === 'replay'"></app-replay>
 <router-outlet></router-outlet>

@@ -26,4 +26,5 @@ export class GameComponent {
     getMsgFromEndingScreen($event: string) { this.condition = $event }
     getMsgFromTile($event: string) { this.condition = $event }
     getMsgFromCredits($event: string) { this.condition = $event }
+    getMsgFromReplay($event: string) { this.condition = $event }
 }
