@@ -1,53 +1,3 @@
-@font-face {
-    font-family: o;
-    src: url(../../assets/Minercraftory.ttf);
-} 
-
-@font-face {
-    font-family: ok;
-    src: url(../../assets/Underground.ttf);
-} 
-
-@font-face {
-    font-family: oke;
-    src: url(../../assets/Beard.ttf);
-} 
-
-@font-face {
-    font-family: okej;
-    src: url(../../assets/Alarm.ttf);
-} 
-
-@font-face {
-    font-family: okejj;
-    src: url(../../assets/KleinHeadline-BoldOblique.ttf);
-} 
-@font-face {
-    font-family: weed;
-    src: url(../../assets/Smoke\ Weed.otf);
-} 
-.titleLand{
-    position: absolute;
-
-    font-size: 150px;
-    font-family: o;
-    color: orange;
-    text-align: center;
-}
-.titlePuzzle{
-    position: relative;
-    padding-top: 170px;
-
-    font-size: 150px;
-    font-family: okejj;
-    color: orange;
-    text-align: center;
-}
-.titleDiv{
-    display: flex;
-    flex-direction: column;
-}
-
 .home-flex {
     box-shadow: inset 0px 40vh 40vh -40vh black;
     display: flex;
@@ -60,13 +10,23 @@
 
 
 .logo {
-    width: 500px;
+    width: 700px;
     max-width: 80vw;
+    filter: drop-shadow(5px 0 0 var(--color-light)) drop-shadow(0 5px 0 var(--color-light)) drop-shadow(-5px 0 0 var(--color-light)) drop-shadow(0 -5px 0 var(--color-light)) drop-shadow(0 5px 10px #00000075)
 }
 
 
-@media (max-width: 840px) { 
+
+@media (max-width: 840px) {
     .logo {
-        width: 300px;
+        width: 400px;
+        filter: drop-shadow(3px 0 0 var(--color-light)) drop-shadow(0 3px 0 var(--color-light)) drop-shadow(-3px 0 0 var(--color-light)) drop-shadow(0 -3px 0 var(--color-light)) drop-shadow(0 5px 10px #00000075)
+    }
+}
+
+@media (max-height: 840px) {
+    .logo {
+        width: 400px;
+        filter: drop-shadow(3px 0 0 var(--color-light)) drop-shadow(0 3px 0 var(--color-light)) drop-shadow(-3px 0 0 var(--color-light)) drop-shadow(0 -3px 0 var(--color-light)) drop-shadow(0 5px 10px #00000075)
     }
 }
