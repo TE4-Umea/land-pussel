@@ -3,6 +3,7 @@ import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '
 import { TileComponent } from '../tile/tile.component'
 
 import { ButtonComponentComponent } from '../button-component/button-component.component'
+import { HttpClient, HttpParams } from '@angular/common/http'
 
 @Component({
     selector: 'app-end',
@@ -16,21 +17,52 @@ export class EndingScreenComponent implements OnInit {
     conditionToSendExit: string = 'start'
     conditionToSendReplay: string = 'replay'
     topScores: number[] = [0, 1, 2]
-    highscore: [{ name: string, score: number }] = localStorage.getItem('highscore') ? JSON.parse(localStorage.getItem('highscore')!) : [{ name: ' ', score: 0 }, { name: ' ', score: 0 }, { name: ' ', score: 0 }]
+    scores: number[] = []
+    names: string[] = []
     condition: string = 'highscoreChart'
     audio: HTMLAudioElement = new Audio()
+    url = 'http://localhost:8080/'
 
+    constructor(private http: HttpClient) { }
+
+
+
+    getHighscoreFromDatabase = async () => {
+        interface ScoreData {
+            id: number;
+            name: string;
+            score: number;
+        }
+        interface ApiResponse {
+            data: ScoreData[];
+        }
+        await this.http.get<ApiResponse>(this.url + 'getHighscore').subscribe(response => {
+            this.names = response.data.map(item => item.name)
+            this.scores = response.data.map(item => item.score)
+        })
+    }
+
+    postHighscoreToDatabase(name: string, score: number) {
+        const params = new HttpParams()
+            .set('name', name)
+            .set('score', score)
+        this.http.post(this.url + 'postHighscore?name=' + name + '&score=' + score, params).subscribe(() => {
+        })
+    }
+
+    deleteHighscoreFromDatabase() {
+        this.http.delete(this.url + 'removeLowestHighscore').subscribe(() => {
+        })
+    }
 
     @ViewChild('nameInput') nameInput!: ElementRef
 
     sortHighscore() {
-        const score: number = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('score')!) : 0
-        this.highscore.push({ name: this.setNameForHighscore().toUpperCase(), score: score })
-        this.highscore.sort((a, b) => b.score - a.score)
-        if (this.highscore.length > 3) {
-            this.highscore.pop()
+        this.postHighscoreToDatabase(this.setNameForHighscore(), JSON.parse(localStorage.getItem('score')!))
+        this.getHighscoreFromDatabase()
+        if (this.scores.length > 3) {
+            this.deleteHighscoreFromDatabase()
         }
-        localStorage.setItem('highscore', JSON.stringify(this.highscore))
         this.condition = 'highscoreChart'
     }
 
@@ -40,11 +72,10 @@ export class EndingScreenComponent implements OnInit {
     }
 
     checkIfHighscore() {
-        this.highscore.forEach((element) => {
-            if (element.score < JSON.parse(localStorage.getItem('score')!)) {
-                this.condition = 'inputHighscoreName'
-            }
-        })
+        if (this.scores < JSON.parse(localStorage.getItem('score')!)) {
+            this.condition = 'inputHighscoreName'
+        }
+
     }
 
     checkIfFromStart() {
@@ -54,6 +85,7 @@ export class EndingScreenComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.getHighscoreFromDatabase()
         this.fadeIn()
         this.checkIfFromStart()
         this.checkIfHighscore()
