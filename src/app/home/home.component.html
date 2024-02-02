@@ -1,8 +1,10 @@
 <section class="home-flex">
     <img class="logo" src="../../assets/images/landPuzzleLogo.gif" alt="">
-    
-    <app-button-component [color]="'blue'" [label]="'Start'" (onClick)="onClickStart()"></app-button-component>
-    <app-button-component [color]="'blue'" [label]="'Credits'" (onClick)="onClickCredits()"></app-button-component>
-    <app-button-component [color]="'blue'" [label]="'Highscore'" (onClick)="onClickHighscore()"></app-button-component>
+
+    <section class="home-buttons">
+        <app-button-component [color]="'blue'" [label]="'Start'" (onClick)="onClickStart()"></app-button-component>
+        <app-button-component [color]="'blue'" [label]="'Credits'" (onClick)="onClickCredits()"></app-button-component>
+        <app-button-component [color]="'blue'" [label]="'Highscore'" (onClick)="onClickHighscore()"></app-button-component>
+    </section>
 
 </section>

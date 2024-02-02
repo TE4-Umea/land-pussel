@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    gap: 10px;
 }
 
 
@@ -16,6 +17,11 @@
 }
 
 
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 @media (max-width: 840px) {
     .logo {
@@ -28,5 +34,9 @@
     .logo {
         width: 400px;
         filter: drop-shadow(3px 0 0 var(--color-light)) drop-shadow(0 3px 0 var(--color-light)) drop-shadow(-3px 0 0 var(--color-light)) drop-shadow(0 -3px 0 var(--color-light)) drop-shadow(0 5px 10px #00000075)
+    }
+    .home-buttons {
+        flex-direction: row;
+        gap: 20px;
     }
 }
