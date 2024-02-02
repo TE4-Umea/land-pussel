@@ -19,7 +19,6 @@ import { CreditsComponent } from '../credits/credits.component'
 })
 
 export class GameComponent {
-
     condition: string = 'start'
 
     getMsgFromHome($event: string) { this.condition = $event }

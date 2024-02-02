@@ -11,8 +11,8 @@
     <div class="highscore" *ngIf="condition === 'highscoreChart' || 'fromStartHighscore'">
         <h2 class="highscore-title">Highscores</h2>
         <section class="highscore-text" *ngFor="let topScore of topScores">
-            <p class="highscore-name">{{ [topScore + 1 + "."] }} {{ [highscore[topScore].name] }}</p>
-            <p>{{ [highscore[topScore].score.toFixed(0)] }}</p>
+            <p class="highscore-name">{{ [topScore + 1 + "."] }} {{ [names[topScore]] }}</p>
+            <p>{{ [scores[topScore]] }}</p>
         </section>
     </div>
     <div class="input-highscore" *ngIf="condition === 'inputHighscoreName'">

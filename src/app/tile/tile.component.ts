@@ -185,7 +185,6 @@ export class TileComponent implements OnInit {
             'multiplier': this.scoreMultiplier
         }
         this.replay.push(replayTurn)
-        console.log(this.replay)
     }
 
     saveTileGrid() {
