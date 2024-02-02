@@ -4,7 +4,6 @@ import { TileComponent } from '../tile/tile.component'
 
 import { ButtonComponentComponent } from '../button-component/button-component.component'
 import { HttpClient, HttpParams } from '@angular/common/http'
-import { databaseURL } from '../../../env'
 
 @Component({
     selector: 'app-end',
@@ -22,11 +21,9 @@ export class EndingScreenComponent implements OnInit {
     names: string[] = []
     condition: string = 'highscoreChart'
     audio: HTMLAudioElement = new Audio()
-    url = databaseURL.DATABASE_URL
+    url = 'http://jupiter.umea-ntig.se:6900/'
 
     constructor(private http: HttpClient) { }
-
-
 
     async getHighscoreFromDatabase() {
         interface ScoreData {
