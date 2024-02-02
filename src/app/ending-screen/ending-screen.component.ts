@@ -80,9 +80,11 @@ export class EndingScreenComponent implements OnInit {
     }
 
     checkIfHighscore() {
-        if (this.scores < JSON.parse(localStorage.getItem('score')!)) {
-            this.condition = 'inputHighscoreName'
-        }
+        this.scores.forEach(scores => {
+            if (scores < JSON.parse(localStorage.getItem('score')!)) {
+                this.condition = 'inputHighscoreName'
+            }
+        })
 
     }
 
