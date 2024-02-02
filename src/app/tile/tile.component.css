@@ -131,7 +131,6 @@
 }
 
 .restart-home button {
-    aspect-ratio: 1;
     display: flex;
     justify-content: center;
     background-color: transparent;
@@ -193,7 +192,7 @@
             width: 360px;
             max-width: 55vh;
         }
-    
+
         .statistics-text {
             font-size: 32px;
             max-width: 35vw;
