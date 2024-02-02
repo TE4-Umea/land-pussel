@@ -4,6 +4,7 @@ import { TileComponent } from '../tile/tile.component'
 
 import { ButtonComponentComponent } from '../button-component/button-component.component'
 import { HttpClient, HttpParams } from '@angular/common/http'
+import { databaseURL } from '../../../env'
 
 @Component({
     selector: 'app-end',
@@ -21,7 +22,7 @@ export class EndingScreenComponent implements OnInit {
     names: string[] = []
     condition: string = 'highscoreChart'
     audio: HTMLAudioElement = new Audio()
-    url = 'http://localhost:8080/'
+    url = databaseURL.DATABASE_URL
 
     constructor(private http: HttpClient) { }
 
@@ -63,6 +64,7 @@ export class EndingScreenComponent implements OnInit {
         if (this.scores.length > 3) {
             this.deleteHighscoreFromDatabase()
         }
+        this.getHighscoreFromDatabase()
         this.condition = 'highscoreChart'
     }
 
