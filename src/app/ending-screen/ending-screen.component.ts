@@ -4,6 +4,7 @@ import { TileComponent } from '../tile/tile.component'
 
 import { ButtonComponentComponent } from '../button-component/button-component.component'
 import { HttpClient, HttpParams } from '@angular/common/http'
+import { databaseURL } from '../../../env'
 
 @Component({
     selector: 'app-end',
@@ -21,13 +22,13 @@ export class EndingScreenComponent implements OnInit {
     names: string[] = []
     condition: string = 'highscoreChart'
     audio: HTMLAudioElement = new Audio()
-    url = 'http://localhost:8080/'
+    url = databaseURL.DATABASE_URL
 
     constructor(private http: HttpClient) { }
 
 
 
-    getHighscoreFromDatabase = async () => {
+    async getHighscoreFromDatabase() {
         interface ScoreData {
             id: number;
             name: string;
@@ -40,6 +41,7 @@ export class EndingScreenComponent implements OnInit {
             this.names = response.data.map(item => item.name)
             this.scores = response.data.map(item => item.score)
         })
+        console.log('fetch')
     }
 
     postHighscoreToDatabase(name: string, score: number) {
@@ -57,12 +59,21 @@ export class EndingScreenComponent implements OnInit {
 
     @ViewChild('nameInput') nameInput!: ElementRef
 
+    async onClickSortHighscore() {
+        this.sortHighscore()
+        await setTimeout(() => {
+            this.getHighscoreFromDatabase()
+        }, 500)
+    }
+
     sortHighscore() {
         this.postHighscoreToDatabase(this.setNameForHighscore(), JSON.parse(localStorage.getItem('score')!))
-        this.getHighscoreFromDatabase()
-        if (this.scores.length > 3) {
-            this.deleteHighscoreFromDatabase()
+        for (let i = 0; i < this.scores.length; i++) {
+            if (this.scores.length > 2) {
+                this.deleteHighscoreFromDatabase()
+            }
         }
+        this.getHighscoreFromDatabase()
         this.condition = 'highscoreChart'
     }
 
@@ -121,6 +132,7 @@ export class EndingScreenComponent implements OnInit {
     }
 
     @Output() sendMessage = new EventEmitter()
+
 
     onClickRestart() {
         this.fadeOut()
