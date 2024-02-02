@@ -156,7 +156,7 @@ export class TileComponent implements OnInit {
             this.showSnackbar('<img style="width: 36px;" src="../../assets/images/incorrect.png" alt=""> Oh no! You got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles + ' but you marked too many tiles!')
         }
         else {
-            this.showSnackbar('Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)
+            this.showSnackbar('<img style="width: 36px;" src="../../assets/images/incorrect.png" alt=""> Oh no! You only got ' + this.correctMarkedTiles + ' correct tiles out of ' + this.numberOfCorrectTiles)
         }
         if (this.lives <= 0) {
             this.saveReplayToLocalStorage()

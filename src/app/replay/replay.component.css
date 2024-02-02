@@ -1,3 +1,4 @@
+
 .display-none {
     display: none;
 }
@@ -44,28 +45,12 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-#snackbar {
-    visibility: hidden;
-}
-
-#snackbar.show {
-    visibility: visible;
-}
-
 
 .form-padding {
     padding: 20px;
     background-color: var(--color-secondary);
 }
 
-
-.statistics-text {
-    color: var(--color-light);
-    font-family: 'VT323', monospace;
-    font-size: 56px;
-    text-shadow: var(--shadow1);
-    margin: 0;
-}
 
 .draw-container {
     position: absolute;
@@ -96,11 +81,81 @@
 }
 
 
-.top-flex {
+
+.replay {
+    position: absolute;
+    width: 90vw;
+    left: calc(5vw - 10px);
+    bottom: 3vh;
+    background-color: var(--color-secondary);
+    padding: 10px;
+}
+
+.progress-bar-outer {
+    height: 15px;
+    width: 100%;
+    background-color: var(--color-light);
+    margin-bottom: 10px;
+}
+
+.progress-bar-inner {
+    transition: 0.5s linear;
+    height: 100%;
+    width: var(--progress-bar-width);
+    background-color: var(--color-background);
+
+}
+
+.replay-buttons {
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px 4vh 30px;
 }
+
+
+.replay-buttons img {
+    color: var(--color-light);
+    width: 80%;
+    filter: drop-shadow(var(--shadow1));
+}
+
+.home {
+    background-image: url(../../assets/images/home.png);
+}
+
+.play-paus {
+    background-image: var(--play-paus);
+}
+
+.last-frame {
+    background-image: url(../../assets/images/lastFrame.png);
+}
+
+.next-frame {
+    background-image: url(../../assets/images/nextFrame.png);
+}
+
+.rewind {
+    background-image: url(../../assets/images/rewind.png);
+}
+
+.replay-buttons button {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    background-color: #3A5369;
+    border: none;
+    padding: 8px;
+}
+
+.replay-buttons-middle {
+    display: flex;
+    gap: 7px;
+}
+
 
 
 
@@ -113,6 +168,12 @@
         }
     }
 
+    .replay-buttons img {
+        width: 38px;
+    }
+
+  
+    
     .tile-outer {
         border: 2px #E5E6E7 solid;
     }
@@ -128,10 +189,6 @@
     .draw-country {
         font-size: 48px;
     }
-
-    .statistics-text {
-        font-size: 32px;
-    }
 }
 
 
@@ -140,7 +197,21 @@
         .draw-container {
             width: 360px;
             max-width: 55vh;
+            top: 40%;
         }
+    }
+
+    .progress-bar-outer {
+        height: 10px;
+        margin-bottom: 10px;
+    }
+
+    .replay-buttons img {
+        width: 34px;
+    }
+
+    .replay-buttons button {
+        padding: 5px;
     }
 
     .tile-outer {
@@ -153,9 +224,5 @@
 
     .draw-country {
         font-size: 36px;
-    }
-
-    .statistics-text {
-        font-size: 32px;
     }
 }
