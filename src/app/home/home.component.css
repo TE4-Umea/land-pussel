@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    gap: 10px;
+    gap: 15px;
 }
 
 
@@ -35,8 +35,9 @@
         width: 400px;
         filter: drop-shadow(3px 0 0 var(--color-light)) drop-shadow(0 3px 0 var(--color-light)) drop-shadow(-3px 0 0 var(--color-light)) drop-shadow(0 -3px 0 var(--color-light)) drop-shadow(0 5px 10px #00000075)
     }
+    @media (orientation: landscape) {
     .home-buttons {
         flex-direction: row;
-        gap: 20px;
+    }
     }
 }

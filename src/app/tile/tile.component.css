@@ -57,13 +57,13 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 60px;
+    top: 10px;
 
     gap: 20px;
     transition: 0.5s;
     opacity: 0;
     padding: 20px;
-    width: 90vw;
+    width: 40vw;
     background-color: var(--color-tertiary);
     font-family: 'VT323', monospace;
     font-weight: 400;
@@ -73,7 +73,7 @@
 #snackbar.show {
     visibility: visible;
     opacity: 1;
-    bottom: 80px;
+    top: 30px;
 }
 
 .form-padding {
@@ -149,6 +149,19 @@
             width: 420px;
             max-width: 75vw;
         }
+        #snackbar {
+            font-size: 28px;
+            top: auto;
+            bottom: 10px;
+            width: 90vw;
+        }
+    
+        #snackbar.show {
+            visibility: visible;
+            opacity: 1;
+            top: auto;
+            bottom: 30px;
+        }
     }
 
     .restart-home {
@@ -158,10 +171,6 @@
 
     .restart-home img {
         height: 40px;
-    }
-
-    #snackbar {
-        font-size: 28px;
     }
 
     .tile-outer {
@@ -197,6 +206,22 @@
             font-size: 32px;
             max-width: 35vw;
         }
+
+        #snackbar {
+            font-size: 20px;
+            top: auto;
+            bottom: 10px;
+            left: 30px;
+            width: 30vw;
+            transform: translateX(0);
+        }
+    
+        #snackbar.show {
+            visibility: visible;
+            opacity: 1;
+            top: auto;
+            bottom: 30px;
+        }
     }
 
     .restart-home {
@@ -209,11 +234,6 @@
 
     #snackbar {
         font-size: 28px;
-        bottom: 0px;
-    }
-
-    #snackbar.show {
-        bottom: 20px;
     }
 
     .tile-outer {

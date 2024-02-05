@@ -1,0 +1,147 @@
+.credits {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000069;
+    box-shadow: inset 0px 40vh 40vh -40vh black;
+}
+
+.credits-inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+    width: 600px;
+    max-width: 80vw;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    color: var(--color-light);
+    position: absolute;
+    animation: credits 32s linear 1;
+}
+
+.credits-inner>h1 {
+    font-size: 40px;
+}
+
+.credits-inner>p {
+    font-size: 32px;
+}
+
+.credits-inner>p>a {
+    color: #a7b2d1;
+}
+
+.credits-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    box-shadow: 0 5px 20px #00000055;
+}
+
+
+.credits-logo {
+    width: 550px;
+    max-width: 80vw;
+    filter: drop-shadow(3px 0 0 var(--color-light)) drop-shadow(0 3px 0 var(--color-light)) drop-shadow(-3px 0 0 var(--color-light)) drop-shadow(0 -3px 0 var(--color-light)) drop-shadow(0 5px 10px #00000075);
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    animation: creditsLogo 28s linear 1;
+
+}
+
+
+.tim {
+    filter: drop-shadow(0 5px 0px #00000075);
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%) scaleX(-1);
+   
+    left: 60px;
+    width: 300px;
+}
+
+.tim2 {
+    filter: drop-shadow(0 5px 0px #00000075);
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 60px;
+    width: 300px;
+}
+
+
+@keyframes credits {
+    0% {
+        top: 200px;
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -2000px;
+        opacity: 0;
+    }
+}
+
+@keyframes creditsLogo {
+    0% {
+        opacity: 0;
+        bottom: 0;
+    }
+
+    91% {
+        bottom: 0%;
+    }
+
+    92% {
+        opacity: 0;
+        bottom: 48%;
+    }
+
+    100% {
+        bottom: 50%;
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 840px) {
+    @media (orientation: portrait) {
+        .credits-logo {
+            width: 400px;
+            filter: drop-shadow(2px 0 0 var(--color-light)) drop-shadow(0 2px 0 var(--color-light)) drop-shadow(-2px 0 0 var(--color-light)) drop-shadow(0 -2px 0 var(--color-light)) drop-shadow(0 5px 10px #00000075);
+            animation-duration: 32s;
+        }
+        .tim {
+            display: none;
+        }
+        
+        .tim2 {
+            display: none;
+        }
+    }
+}
+
+@media (max-height: 840px) {
+    @media (orientation: landscape) {
+        .credits-logo {
+            width: 400px;
+            filter: drop-shadow(2px 0 0 var(--color-light)) drop-shadow(0 2px 0 var(--color-light)) drop-shadow(-2px 0 0 var(--color-light)) drop-shadow(0 -2px 0 var(--color-light)) drop-shadow(0 5px 10px #00000075);
+            animation-duration: 28s;
+        }
+        .tim {
+            display: none;
+        }
+        
+        .tim2 {
+            display: none;
+        }
+    }
+}
