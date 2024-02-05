@@ -6,29 +6,35 @@
   cursor: pointer;
   
   font-weight: 700;
-  font-size: 30px;
+  font-size: 32px;
   font-family: "VT323", monospace;
   line-height: 1;
 
-  margin-top: 0.8em;
   padding: 6px;
-  padding-left: 3em;
-  padding-right: 3em;
   border-width: 10px;
   border-style: solid;
 
   width: 400px;
-  max-width: 80vw;
+  max-width: 100%;
+  transition: transform 0.1s;
 }
 
 @media (max-width: 840px) { 
   .button {
       width: 250px;
+      font-size: 24px;
   }
 }
 
+@media (max-height: 840px) { 
+  .button {
+    width: 220px;
+    font-size: 24px;
+  }
+} 
+
 .button:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .button--blue {
