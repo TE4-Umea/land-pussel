@@ -220,7 +220,8 @@ export class TileComponent implements OnInit {
         this.audio.src = '../../assets/music/Land-Puzzle-Main-Music.mp3'
         this.audio.volume = 0.3
         this.audio.load()
-        this.audio.play()
+        this.audio.autoplay = true
+        this.audio.loop = true
     }
 }
 
