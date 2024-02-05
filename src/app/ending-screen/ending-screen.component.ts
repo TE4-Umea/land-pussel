@@ -38,7 +38,6 @@ export class EndingScreenComponent implements OnInit {
             this.names = response.data.map(item => item.name)
             this.scores = response.data.map(item => item.score)
         })
-        console.log('fetch')
     }
 
     postHighscoreToDatabase(name: string, score: number) {
@@ -60,7 +59,7 @@ export class EndingScreenComponent implements OnInit {
         this.sortHighscore()
         await setTimeout(() => {
             this.getHighscoreFromDatabase()
-        }, 500)
+        }, 900)
     }
 
     sortHighscore() {
@@ -80,25 +79,30 @@ export class EndingScreenComponent implements OnInit {
     }
 
     checkIfHighscore() {
-        this.scores.forEach(scores => {
-            if (scores < JSON.parse(localStorage.getItem('score')!)) {
-                this.condition = 'inputHighscoreName'
-            }
-        })
-
-    }
-
-    checkIfFromStart() {
-        if (localStorage.getItem('score') === JSON.stringify(-1)) {
-            this.condition = 'fromStartHighscore'
+        this.getHighscoreFromDatabase()
+        if (this.scores.length === 0) {
+            this.condition = 'inputHighscoreName'
+        }
+        else {
+            this.scores.forEach(scores => {
+                if (scores < JSON.parse(localStorage.getItem('score')!)) {
+                    this.condition = 'inputHighscoreName'
+                }
+            })
         }
     }
 
     ngOnInit(): void {
-        this.getHighscoreFromDatabase()
+        setTimeout(() => {
+            this.getHighscoreFromDatabase()
+        }, 300)
         this.fadeIn()
-        this.checkIfFromStart()
-        this.checkIfHighscore()
+        if (localStorage.getItem('score') === JSON.stringify(-1)) {
+            this.condition = 'fromStartHighscore'
+        }
+        else {
+            this.checkIfHighscore()
+        }
     }
 
     fadeOut() {
@@ -148,6 +152,7 @@ export class EndingScreenComponent implements OnInit {
         this.audio.src = '../../assets/music/Land-Puzzle-Death-Music.mp3'
         this.audio.volume = 0
         this.audio.load()
-        this.audio.play()
+        this.audio.autoplay = true
+        this.audio.loop = true
     }
 }

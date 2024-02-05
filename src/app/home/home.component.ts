@@ -72,5 +72,6 @@ export class HomeComponent implements OnInit {
         this.audio.volume = 0
         this.audio.load()
         this.audio.autoplay = true
+        this.audio.loop = true
     }
 }
